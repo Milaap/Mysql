@@ -1,0 +1,6 @@
+one:
+  loan_id: 1
+  amount: 1000
+  repayment_date: '2010-07-24'
+
+

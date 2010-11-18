@@ -5,6 +5,7 @@ class CreateLoanLenders < ActiveRecord::Migration
       t.float :amount
       t.string :lender_email
       t.integer :transaction_id
+      t.integer :loan_id
 
       t.timestamps
     end

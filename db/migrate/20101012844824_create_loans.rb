@@ -27,6 +27,7 @@ class CreateLoans < ActiveRecord::Migration
       t.float :loan_amount_in_rupees
       t.float :loan_amount_remaining_in_rupees
       t.float :date_of_final_payment
+      t.string :purpose
 
 
       t.timestamps

@@ -27,6 +27,13 @@ class CreateBorrowers < ActiveRecord::Migration
       t.string :credit_rating
       t.string :name_of_student
       t.string :relationship_with_applicant
+      t.string :SHG
+      t.string :purpose
+      t.datetime :date_disbursed
+      t.date :date_of_final_payment
+      t.float :interest_rate
+      t.float :loan_amount
+      t.integer :term
 
       t.timestamps
     end

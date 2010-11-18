@@ -6,7 +6,7 @@ Millap::Application.routes.draw do
 
   controller :fieldpartner do
     get 'fp/new', :to => :new, :as => :new
-    post 'fp/create', :to => :create, :as => :create
+    post 'fieldpartner/create', :to => :create, :as => :create
   end  
 
   #devise_for :users, :path => "users", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'signup' }

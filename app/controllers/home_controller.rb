@@ -93,11 +93,12 @@ end
 				p params[:id]
 				session[:email] = current_user.email
 				session[:id] = params[:id]
+    		session[:borrower_id] = params[:borrower_id]
 				session[:loan_id] = params[:loan_id]
 				session[:amount] = params[:amount_1]  
 				@borrower = Borrower.first(:conditions => {:id => params[:id]})
-			  @loan = Loan.first(:conditions => {:loan_id =>session[:loan_id]})
-				@category =  Category.first(:conditions => {:category_id => @loan.category_id})
+			  @loan = Loan.first(:conditions => {:id =>@borrower.loan_id})
+				@category =  Category.first(:conditions => {:id => @loan.category_id})
 				@loan_funded_percentage = (100 * (@loan.loan_amount_in_dollar - @loan.amount_remaining))/@loan.loan_amount_in_dollar
 				#@loan_funded_percentage = Loan.first(:conditions => {:loan_id =>params[:loan_id]})
 				if $visiting_user_country == "India"
@@ -122,7 +123,7 @@ end
          end 
          @new_loan_funded_percentage = ((100 * (@loan.loan_amount_in_dollar - @drop_down_amt))/@loan.loan_amount_in_dollar).round(2).ceil
 	       @actual_new_loan_funded_percentage = 100  - @new_loan_funded_percentage ;
-         @actual_new_loan_funded_percentage = @actual_new_loan_funded_percentage.round(2).ceil
+         @actual_new_loan_funded_percentage = @actual_new_loan_funded_percentage.round().ceil
 				
 				
 				

@@ -1,7 +1,7 @@
 class CreateCommunities < ActiveRecord::Migration
   def self.up
     create_table :communities do |t|
-      t.string :info
+      t.text :info
       t.string :name
       t.timestamps
     end

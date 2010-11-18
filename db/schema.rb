@@ -48,6 +48,13 @@ ActiveRecord::Schema.define(:version => 20101117095115) do
     t.string   "credit_rating"
     t.string   "name_of_student"
     t.string   "relationship_with_applicant"
+    t.string   "SHG"
+    t.string   "purpose"
+    t.datetime "date_disbursed"
+    t.date     "date_of_final_payment"
+    t.float    "interest_rate"
+    t.float    "loan_amount"
+    t.integer  "term"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -61,7 +68,7 @@ ActiveRecord::Schema.define(:version => 20101117095115) do
   end
 
   create_table "communities", :force => true do |t|
-    t.string   "info"
+    t.text     "info"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -153,6 +160,7 @@ ActiveRecord::Schema.define(:version => 20101117095115) do
     t.float    "amount"
     t.string   "lender_email"
     t.integer  "transaction_id"
+    t.integer  "loan_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -191,6 +199,7 @@ ActiveRecord::Schema.define(:version => 20101117095115) do
     t.float    "loan_amount_in_rupees"
     t.float    "loan_amount_remaining_in_rupees"
     t.float    "date_of_final_payment"
+    t.string   "purpose"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

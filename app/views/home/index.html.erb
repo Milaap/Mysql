@@ -3,13 +3,12 @@
 <%= javascript_include_tag "jquery.nivo.slider.pack.js" %>
 <%#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "jquery.rails.js" %>
 
-
 <div class="content">
 <div style="background:url(/images/home-bg.jpg) repeat-x 0 -50px;">
 	<div class="wrapper"><!-- Wrapper div -->
 <% if notice %>
 		<div id="notification" style="text-align:left;">
-			<p><%= notice.gsub("<br>","<br/>") %></p>
+			<p><%= notice.gsub("<br>","<br/>") %></p> 
 		</div>
 	<% end %>
 	<% if alert %>
@@ -20,121 +19,69 @@
 
 				<div id="home" class="clear"><!-- Home-slider div -->
 					<div id="slider">
-						<img src="/images/home-carousel-1.jpg" alt="Unmet Needs"/>
-						<img src="/images/home-carousel-2.jpg" alt="Opportunity, not Charity"/>
-						<img src="/images/home-carousel-3.jpg" alt="Ready to make a difference"/>
+						<img src="/images/<%= @image_path %>/home-carousel-1.jpg" alt="Unmet Needs"/>
+						<img src="/images/<%= @image_path %>/home-carousel-2.jpg" alt="Opportunity, not Charity"/>
+						<img src="/images/<%= @image_path %>/home-carousel-3.jpg" alt="Ready to make a difference"/>
 					</div>
 				</div><!-- /Home-slider div -->
-				<div class="slider-button">
-				  <% unless user_signed_in? %>
-					  <% unless  cookies[:loan_pledged].blank? %>
-					  	<a href="<%= pledge_url %>"><div id="pledge-btn" title="Pledge a loan"><input value="" type="button"></div></a>
-            <% else %>
-						   <a href="<%= pledge_url %>"><div id="pledge-btn"  title="Pledge a loan"><input value="" type="button"></div></a>
-						<% end %>
-      <% else %>
-            <% if current_user.loan_pledged == true %>
-						    <a href="<%= view_all_projects_url  %>"><div id="give-loan-btn"  title="Give a loan"><input value="" type="button"></div></a>
-            <%else %>
-						   <a href="<%= pledge_url %>"><div id="pledge-btn"  title="Pledge a loan"><input value="" type="button"></div></a>
-						<% end %>
-					<% end %>
-
-
-				</div>
+				
 				<div class="home-slider-shadow"></div>
-								<h2 class="home-heading">Support featured projects or  <% unless user_signed_in? %>
-					  <% unless  cookies[:loan_pledged].blank? %><a href="<%= pledge_url %>">discover more</a><% else %><a href="<%= pledge_url %>">discover more</a><% end %><% else %> <% if current_user.loan_pledged == true %><a href="<%= view_all_projects_url %>">discover more</a><% else %><a href="<%= pledge_url %>">discover more</a><% end %><% end %></h2>
-				<div id="projects">
+								<h2 class="home-heading">Support featured projects or
 
+                                          <a href="<%= view_all_projects_url %>">discover more</a>
+
+                                             </h2>
+				<div id="projects">
+				
 			<% unless @borrowers.blank? %>
       <%  @borrowers.each_with_index do |borrower,i| %>
-			<%# p borrower.loan_id %>
-
+			<%# p borrower.loan_id %>	
+			
 			<% @loan = Loan.find(borrower.loan_id)%>
 			<%#= @loan %>
 					<div class="project-details" <% if i ==2 %>style="margin-right: 0pt;"<% end %>>
-					 <% unless user_signed_in? %>
-			      	<% unless  cookies[:loan_pledged].blank? %>
-							   <a href="<%= pledge_url %>" title="pledge a loan">
+					 
+							    <a href="<%= borrower_profile_path(:id=>borrower.id,:name=>escape_url("#{borrower.name}")) %>" title=<%= borrower.name %>>
 					   		     <img src="/images/borrower/<%= borrower.home_image %>"  alt="<% if @loan.category_id == 3 %><%= borrower.name_of_student.titleize %><% else %><%= borrower.name.titleize %><% end %>" />
-						      </a>
+						      </a> 
 
-              <% else %>
-							    <a href="<%= pledge_url %>" title="pledge a loan">
-					   		     <img src="/images/borrower/<%= borrower.home_image %>"  alt="<% if @loan.category_id == 3 %><%= borrower.name_of_student.titleize %><% else %><%= borrower.name.titleize %><% end %>" />
-						      </a>
 
-							<% end %>
-						<% else %>
-						    <% if current_user.loan_pledged == true %>
-							     <a href="<%= borrower_profile_path(:borrower_id=>borrower.borrower_id,:name=>escape_url("#{borrower.name}")) %>" title="Give a loan">
-					   		     <img src="/images/borrower/<%= borrower.home_image %>"  alt="<% if @loan.category_id == 3 %><%= borrower.name_of_student.titleize %><% else %><%= borrower.name.titleize %><% end %>" />
-						      </a>
-                <% else %>
-                    <a href="<%= pledge_url %>" title="pledge a loan">
-					   		     <img src="/images/borrower/<%= borrower.home_image %>"  alt="<% if @loan.category_id == 3 %><%= borrower.name_of_student.titleize %><% else %><%= borrower.name.titleize %><% end %>"/>
-						      </a>
-							   <% end %>
-					  	<% end %>
-							 <% unless user_signed_in? %>
-			      	   <% unless  cookies[:loan_pledged].blank? %>
-							     <a href="<%= pledge_url %>" title="<%= @loan.title %>"><h3><%= @loan.title unless @loan.blank? %></h3></a>
-								  <% else %>
-                    <a href="<%= pledge_url %>" title="<%= @loan.title %>"><h3><%= @loan.title unless @loan.blank? %></h3></a>
-						      <% end %>
-								<% else %>
-									  <% if current_user.loan_pledged == true %>
-									      <a href="<%= borrower_profile_path(:borrower_id=>borrower.borrower_id,:name=>escape_url("#{borrower.name}")) %>" title="<%= @loan.title %>"><h3><%= @loan.title unless @loan.blank? %></h3></a>
-										<% else %>
-										   <a href="<%= pledge_url %>" title="<%= @loan.title %>"><h3><%= @loan.title unless @loan.blank? %></h3></a>
-									  <% end %>
-						    <% end %>
+							 
+							     <a href="<%= borrower_profile_path(:id=>borrower.id,:name=>escape_url("#{borrower.name}")) %>" title="<%= @loan.title %>"><h3><%= @loan.title unless @loan.blank? %></h3></a>
+								
 						<p id="short_story_<%= borrower.loan_id %>">
 						<%= borrower.borrower_story[0..209] unless @loan.blank? %> <% if borrower.borrower_story.length > 209  %><a  class="collapsed slide" id="more_<%=borrower.loan_id %>">more+</a><% end %>
 						</p>
-
-
+						
+						
 						<p style="display:none"  id="full_story_<%= borrower.loan_id %>">
 								<span class="view"><%= borrower.borrower_story %>
 								<a class="slide expanded" id="expanded_more_story_<%= borrower.loan_id %>" title="less">less-</a>
 								</span>
 						</p>
+				   		<a href="<%= borrower_profile_path(:id=>borrower.id,:name=>escape_url("#{borrower.name}")) %>"><div class="give-loan-btn"  title="Give a loan"><input value="" type="button"></div></a>
 
-						 <% unless user_signed_in? %>
-					  <% unless  cookies[:loan_pledged].blank? %>
-					  	<a href="<%= pledge_url %>"><div class="pledge-btn" title="Pledge a loan"><input value="" type="button"></div></a>
-            <% else %>
-						   <a href="<%= pledge_url %>"><div class="pledge-btn"  title="Pledge a loan"><input value="" type="button"></div></a>
-						<% end %>
-      <% else %>
-	         <% if current_user.loan_pledged == true %>
-				   		<a href="<%= borrower_profile_path(:borrower_id=>borrower.borrower_id,:name=>escape_url("#{borrower.name}")) %>"><div class="give-loan-btn"  title="Give a loan"><input value="" type="button"></div></a>
-			      <% else %>
-						    <a href="<%= pledge_url %>"><div class="pledge-btn"  title="Pledge a loan"><input value="" type="button"></div></a>
-             <% end %>
-<% end %>
-
-
+						
+						
 					</div>
-         <% end %>
+         <% end %> 
 				 <% end %>
 
-
+				
 					<div class="clear"></div>
 				</div>
 				<h2 class="home-heading">More about Milaap</h2>
 				<div id="video-blurb" class="left">
-					<object width="590" height="332"><param name="movie" value="http://www.youtube.com/v/qabhKUmE3qM?hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/qabhKUmE3qM?hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="590" height="332"></embed></object>
+					<object width="590" height="332"><param name="movie" value="http://www.youtube.com/v/qabhKUmE3qM?hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/qabhKUmE3qM?hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="590" height="332"></embed></object>				
 				</div>
 
 				<div class="left" id="other-blurbs">
-
+					
 
 					<div id="email-updates">
 					<% form_tag save_email_info_url, :method => :post do %>
 						<%= render :partial=>"/home/email_updates"%>
-					<% end %>
+					<% end %>	
 					</div>
 
       <div id="facebook">
@@ -149,11 +96,19 @@
 					</div>
 				</div>
 				<div class="clear">
-			</div><!-- /Wrapper div -->
+			</div>
+			
+			<div class="slider-button">
+				    <a href="<%= view_all_projects_url  %>"><div id="give-loan-btn"  title="Give a loan"><input value="" type="button"></div></a>
+    		</div>
+			
+			
+			
+			<!-- /Wrapper div -->
 
 		</div>
 	</div>
-
+	
 	<script type="text/javascript">
 $(document).ready(function() {
 
@@ -162,14 +117,14 @@ $(document).ready(function() {
 
 $('#more_<%= borrower.loan_id %>').click(function() {
 $('#more_<%= borrower.loan_id %>').hide();
-$('#short_story_<%= borrower.loan_id %>').hide();
+$('#short_story_<%= borrower.loan_id %>').hide();   
 $('#full_story_<%= borrower.loan_id %>').show();
 
 
 });
 $('#expanded_more_story_<%= borrower.loan_id %>').click(function() {
 $('#more_<%= borrower.loan_id %>').show();
-$('#short_story_<%= borrower.loan_id %>').show();
+$('#short_story_<%= borrower.loan_id %>').show();   
 $('#full_story_<%= borrower.loan_id %>').hide();
 });
 
@@ -184,7 +139,7 @@ $('#full_story_<%= borrower.loan_id %>').hide();
 
 
 
-
+		
 <script type="text/javascript">
 $(".pledge-btn input").hover(
   function () {
@@ -233,12 +188,12 @@ $('#email_update_id').click(function() {
   {
 	  alert("Enter email address.");
        return false;
-  }
- else if($("#email_address_id").val().match(/^\s+$/))
+  } 
+ else if($("#email_address_id").val().match(/^\s+$/)) 
 		  {
-         alert("Enter email address.");
-				 return false;
-			 }
+         alert("Enter email address."); 
+				 return false; 
+			 }	
  else
   {
 	  var email = $("#email_address_id").val();
@@ -248,24 +203,24 @@ $('#email_update_id').click(function() {
 			}
 		else
 			{
-			  alert("Enter a valid email address.");
+			  alert("Enter a valid email address."); 
 				return false;
 			}
-	}
+	} 	
  });
-
+ 
  $('#email_address_id').focus(function() {
     if ($("#email_address_id").val() == "Enter email address") {$("#email_address_id").val("");}
   });
-
+	
 	$('#email_address_id').blur(function() {
     if ($("#email_address_id").val() == "") {$("#email_address_id").val("Enter email address");}
   });
+ 
+ 
 
-
-
-
-
+ 
+ 
 });
 </script>
 <script type="text/javascript">
@@ -277,3 +232,22 @@ $('#email_update_id').click(function() {
 
 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
 <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/milaapdotorg.json?callback=twitterCallback2&count=1"></script>
+
+
+
+
+<script type="text/javascript" charset="utf-8">
+ var is_ssl = ("https:" == document.location.protocol);
+ var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+ document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" charset="utf-8">
+ var feedback_widget_options = {};
+
+ feedback_widget_options.display = "overlay";
+ feedback_widget_options.company = "milaap_";
+ feedback_widget_options.placement = "right";
+ feedback_widget_options.color = "#522F45";
+ feedback_widget_options.style = "idea";
+ var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>

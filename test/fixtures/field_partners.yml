@@ -1,0 +1,25 @@
+one:
+  url: www.sskindia.com
+  field_partner_type: Non-profit Company
+  total_loan_portfolio: 129.55 Mn INR
+  lending_rate: 12%-22%
+  repayment_rate: 97.8%
+  no_of_SHGS: 3167
+  total_no_of_borrowers: 12955
+  no_of_districts_operating: 7
+  no_of_poorest_districts: 2
+  percentage_of_women_borrowers: 100%
+
+two:
+  url: www.guardianmfi.org
+  field_partner_type: Non-profit Company
+  total_loan_portfolio: 96.659m
+  lending_rate: 18%
+  repayment_rate: 99.99%
+  no_of_SHGS: nil
+  total_no_of_borrowers: 13424
+  no_of_districts_operating: 1
+  no_of_poorest_districts: 0
+  percentage_of_women_borrowers: 100%
+  credit_rating: Beta Plus
+  rating_agency: M-CRIL

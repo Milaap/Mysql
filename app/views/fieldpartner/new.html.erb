@@ -1,2 +1,31 @@
-<h1>Fieldpartner#new</h1>
-<p>Find me in app/views/fieldpartner/new.html.erb</p>
+<h1>Fieldpartner Form</h1>
+
+
+<%= form_for :fp, :url => {:contoller => :fieldpartner, :action => :create} do |f| %>
+
+    <%= f.label :community_id%>  <%= f.text_field :community_id %> <br />\
+    <%= f.label :info %>  <%= f.text_field :info %> <br />
+    <%= f.label :name %>  <%= f.text_field :name %> <br />
+    <%= f.label :yrs_of_existance %>  <%= f.text_field :yrs_of_existance %> <br />
+    <%= f.label :repayment_rate  %>  <%= f.text_field :repayment_rate %> <br />
+    <%= f.label :deliquency_rate %>  <%= f.text_field :deliquency_rate %> <br />
+    <%= f.label :credit_rating  %>  <%= f.text_field :credit_rating %> <br />
+    <%= f.label :information %>  <%= f.text_field :information %> <br />
+    <%= f.label :logo %>  <%= f.text_field :logo %> <br />
+    <%= f.label :url %>  <%= f.text_field :url %> <br />
+    <%= f.label :field_partner_type %>  <%= f.text_field :field_partner_type %> <br />
+    <%= f.label :total_loan_portfolio %>  <%= f.text_field :total_loan_portfolio %> <br />
+    <%= f.label :rating_agency %>  <%= f.text_field :rating_agency %> <br />
+    <%= f.label :total_no_of_borrowers %>  <%= f.text_field :total_no_of_borrowers %> <br />
+    <%= f.label :no_of_SHGS %>  <%= f.text_field :no_of_SHGS %> <br />
+    <%= f.label :no_of_villages %>  <%= f.text_field :no_of_villages %> <br />
+    <%= f.label :no_of_districts_operating %>  <%= f.text_field :no_of_districts_operating %> <br />
+    <%= f.label :no_of_poorest_districts %>  <%= f.text_field :no_of_poorest_districts %> <br />
+    <%= f.label :percentage_of_women_borrowers %>  <%= f.text_field :percentage_of_women_borrowers %> <br />
+    <%= f.label :percentage_rural %>  <%= f.text_field :percentage_rural %> <br />
+
+    <%= f.submit %>
+
+<% end %>
+
+

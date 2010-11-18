@@ -1,0 +1,23 @@
+one:
+  id: 1
+  gender: Female
+  age: nil
+  SHG: nil
+  village: Akluj
+  taluka: Malshiras
+  state: 'Maharashtra'
+  country: INDIA
+  loan_amount: nil
+  interest_rate: 12%
+  date_disbursed: '2010-07-24'
+  date_of_final_payment: '2010-07-23'
+  photo: 0.85
+  borrower_story: Nirmala Prakash Shah is from the Akluj Village near Solapur. She has been working with Sakhi retail for nearly 4 years. Her retailing business hands her a decent monthly income of 2,000 Rupees (~$45) a month. Her husband is currently working for a small private company. They also own around 2.5 acres of land yet persistent drought conditions meant little or no farming activity. She doesn't have any children yet, and so all the money earned goes towards savings.
+  poverty_level: nil
+  district: Solapur
+  term: 12
+  name: Nirmala Shah
+  home_image: 7.Nirmala_Prakash_Shah.jpg
+  loan_id: 1
+  community_id: 1
+  
