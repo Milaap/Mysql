@@ -1,0 +1,51 @@
+<div>
+
+
+	<title>Welcome to <%= if @user.first_name.nil? then "there" else @user.first_name.capitalize end %>!</title>
+
+
+  <div>
+
+
+	<title>Welcome to Milaap!</title>
+<center>
+		<table cellspacing="0" cellpadding="0" style="width: 550px; font-family: Arial,sans-serif; border: 1px solid #cecece; font-size: 13px; line-height: 18px; color: rgb(51, 51, 51); border: medium none; text-align: left;">
+
+
+			<tbody><tr>
+				<td colspan="1" style="padding: 10px; background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(238, 238, 238); font-size: 16px; color: rgb(0, 111, 177);"><img alt="Milaap" src="http://www.milaap.org/images/milaap.png"></td>
+				<td style="padding: 10px; background-color: rgb(255, 255, 255); text-align: right; vertical-align: bottom; border-bottom: 1px solid rgb(238, 238, 238);"><h1 style="font-size: 22px; font-weight: normal; margin: 0pt; border: medium none; color: rgb(136, 136, 136); padding-bottom: 20px;">Welcome to Milaap!</h1></td>
+			</tr>
+			<tr>
+				<td valign="top" colspan="2" style="padding: 10pt 10px 10px; background-color: rgb(255, 255, 255);">
+
+				<p>Hi <%= if @user.first_name.nil? then "there" else @user.first_name.capitalize end %> !</p>
+
+				<p>Thanks for joining Milaap. We are happy that you want to be part of this noble initiative.</p>
+
+				<p>You are all set to make a difference now! Here's what you can do:</p>
+				<p>
+				<a style="float:left;padding:8px 15px; width:160px; margin:10px 0;  margin-right:10px; background:#b91141; font-size:15px; color:#fff; text-decoration:none; font-weight:bold;" href="http://www.milaap.org/view-all-projects">View borrower profiles</a>
+				<a style="float:left; padding:8px 15px; width:82px; margin:10px 0;background:#b91141; font-size:15px; color:#fff; text-decoration:none; font-weight:bold;" href="http://www.milaap.org/how-it-works">Learn more</a>
+				<p style="clear:both;"></p>
+				</p>
+
+
+				<p>Cheers,<br/>
+				The Milaap Team
+				</p>
+
+
+		<div style="background:#efefef; padding:0px 15px;"><p style="float:left;">Need help? Have <a href="mailto:feedback@milaap.org" target=_"blank">feedback</a>?</p><p style="float:right;"><span>Spread the word :</span> <a href="http://www.facebook.com/Milaap.org"><img style="margin:0 5px -4px 0;" src="images/team-fb.gif" alt="Facebook"/></a><a href="http://twitter.com/milaapdotorg"><img style="margin:0 0 -4px 0;" src="images/team-twitter.gif" alt="Twitter"/></a></p><p style="clear:both;"></p></div>
+
+
+
+				</td>
+			</tr>
+		</tbody></table>
+	</center>
+
+</div>
+
+
+

@@ -1,0 +1,9 @@
+Hello Milaap,<br />
+
+You have <%= @users.count %> new users signed up today <br />
+Email ids of New user follows <br />
+
+<% @users.each do |f| %>
+  <%= f.email %> <br />
+<% end %>
+

@@ -1,0 +1,131 @@
+
+
+
+<% if @loan_funded_percentage  != 100 %>
+<% if $visiting_user_country == "India"%>
+
+
+<% if loan.loan_amount_remaining_in_rupees > 0 %>
+<div class="right sidebar">
+<!-- Right Sidebar div -->
+<div id="choose-amount">
+
+
+<form action="<%= lend_money_to_borrower_path %>"  method="post" >
+
+
+<select name="amount_1" id="amount_paying_option_<%= loan.id %>"/>
+
+<% unless @loan_drop_down_values.blank? %>
+<option>Choose your amount</option>
+      <!--option class="valuename1">$150</option-->
+<% @loan_drop_down_values.each_with_index do |loan_amt,i| %>
+
+	
+<% if @loan_drop_down_values.last == loan_amt %>
+<% if @loan_drop_down_values.last < loan.loan_amount_remaining_in_rupees %>
+<option >Rs.. <%= loan_amt %></option>
+<option value="<%= loan.loan_amount_remaining_in_rupees.round() %>">Complete the Loan</option>
+<% elsif @loan_drop_down_values.last == loan.loan_amount_remaining_in_rupees %>
+<option value="<%= loan.loan_amount_remaining_in_rupees.round() %>">Complete the Loan</option>
+<% end %>
+<% else %>
+ <%  selected_drop_down_index  =  @loan_drop_down_values.length/2  %> 
+<option class="hover_change_<%= loan.id %>" <% if @loan_drop_down_values[ selected_drop_down_index] == loan_amt %>selected="selected"<% end %> value="<%= loan_amt %>">Rs. <%= loan_amt %></option>
+<% end %>
+<% end %>
+<% end %>
+</select>
+<input type="hidden" name="borrower_id" value="<%= @borrower.id %>">
+<input type="hidden" name="id" value="<%= loan.id %>">
+
+<div id="complete-loan">
+<input type="checkbox" class="left" id="complete_check_box_<%= loan.id %>"/>
+<span class="left">I want to complete the loan</span> </div>
+	
+	
+<% if user_signed_in? %>
+<input name="" type="submit" class="botton" value="" title="Lend now"  id="submit_amount_<%= loan.id %>"/>
+<% else %>
+<a href="/users/login" title="Please Login/signup to lend money to borower">
+<input name="" type="button" class="botton" value="" title="Lend now" />
+</a>
+<% end %>
+	
+
+
+
+</form>
+
+</div>
+</div>
+<!-- /Right Sidebar div -->
+<% end %>
+<% else %>
+
+
+<div class="right sidebar">
+<!-- Right Sidebar div -->
+<div id="choose-amount">
+<% if loan.amount_remaining > 0 %>
+<form action="<%= lend_money_to_borrower_path %>"  method="post" >
+  <select name="amount_1" id="amount_paying_option_<%= loan.id %>"/>
+
+<% unless @loan_drop_down_values.blank? %>
+<option>Choose your amount</option>	
+<% @loan_drop_down_values.each_with_index do |loan_amt,i| %>
+<% if @loan_drop_down_values.last == loan_amt %>
+<% if @loan_drop_down_values.last < loan.amount_remaining %>
+<option value="<%= loan_amt %>">$<%= loan_amt %></option>
+<option value="<%= loan.amount_remaining.round() %>">Complete the Loan</option>
+<% elsif @loan_drop_down_values.last == loan.amount_remaining %>
+<option value="<%= loan.amount_remaining.round() %>">Complete the Loan</option>
+<% end %>
+<% else %>
+ <%  selected_drop_down_index  =  @loan_drop_down_values.length/2  %> 
+<option <% if @loan_drop_down_values[ selected_drop_down_index] == loan_amt %>selected="selected"<% end %> value="<%= loan_amt %>">$<%= loan_amt %></option>
+<% end %>
+<% end %>
+<% end %>
+</select>
+<input type="hidden" name="borrower_id" value="<%= @borrower.id %>">
+<input type="hidden" name="id" value="<%= loan.id %>">
+
+ 
+	 
+	 
+  <div id="complete-loan">
+    <input type="checkbox" class="left" id="complete_check_box_<%= loan.id %>"/>
+    <span class="left">I want to complete the loan</span>
+ 	</div>
+  	
+<% if user_signed_in? %>
+<input name="" type="submit" class="botton" value="" title="Lend now"  id="submit_amount_<%= loan.id %>"/>
+<% else %>
+<a href="/users/login" title="Please Login/signup to lend money to borower">
+<input name="" type="button" class="botton" value="" title="Lend now" />
+</a>
+<% end %>
+</form>
+<% end %>
+	
+	
+	
+	
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<% end %>
+
+
+<% end %>

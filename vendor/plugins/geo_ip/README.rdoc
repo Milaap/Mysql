@@ -1,0 +1,95 @@
+= GeoIp
+
+Retreive the geolocation of an IP address based on the {ipinfodb.com}[http://ipinfodb.com/] webservice.
+
+Consider making a donation to {ipinfodb.com}[http://ipinfodb.com/] at {http://ipinfodb.com/donate.php}[http://ipinfodb.com/donate.php]
+
+== Usage
+
+=== Retreive geolocation
+  GeoIp.geolocation(ip_address)
+
+=== Example
+
+  # 209.85.227.104 = google.be (US)
+  GeoIp.geolocation('209.85.227.104')
+
+returns:
+
+  {
+    :status           =>"OK",
+    :ip               =>"209.85.227.104"
+    :country_code     =>"US",
+    :country_name     =>"United States",
+    :region_code      =>"06",
+    :region_name      =>"California",
+    :city             =>"Mountain View",
+    :zip_postal_code  =>"94043",
+    :latitude         =>"37.4192",
+    :longitude        =>"-122.057"
+  }
+
+=== Country only
+
+There is an option to only retreive the country information and thus excluding the city details. This results in a faster response from the service since less queries need to be done.
+
+  GeoIp.geolocation('209.85.227.104', {:precision => :country})
+
+returns:
+
+  {
+    :status           => "OK",
+    :ip               => "209.85.227.104"
+    :country_code     => "US",
+    :country_name     => "United States"
+  }
+
+=== Timezone information
+
+There is an option now to retrieve optional timezone information too:
+
+  GeoIp.geolocation('209.85.227.104', {:timezone => true})
+
+returns:
+
+  {
+    :status           =>"OK",
+    :ip               =>"209.85.227.104"
+    :country_code     =>"US",
+    :country_name     =>"United States",
+    :region_code      =>"06",
+    :region_name      =>"California",
+    :city             =>"Mountain View",
+    :zip_postal_code  =>"94043",
+    :latitude         =>"37.4192",
+    :longitude        =>"-122.057"
+    :timezone_name    =>"America/Los_Angeles",
+    :utc_offset       =>-25200,
+    :dst?             =>true
+  }
+
+Obviously it is not possible to have the country precision enabled while retrieving the timezone information.
+
+== Getting it
+
+GeoIp can be installed as a Ruby Gem:
+
+  gem install geo_ip
+
+Alternatively, you can also install it as a Rails plugin:
+
+  ./script/plugin install git://github.com/jeroenj/geo_ip.git
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2010 Jeroen Jacobs, {redstorm sprl}[http://www.redstorm.be]. See LICENSE for details.

@@ -1,0 +1,177 @@
+<script src="/javascripts/jquery-1.2.1.min.js" type="text/javascript"></script>
+<script src="/javascripts/menu-collapsed.js" type="text/javascript"></script> 
+	
+	<!--CheckBox Script Start-->
+	<script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+
+	<script type="text/javascript" src="/javascripts/customInput.jquery.js"></script>
+
+		
+	<script type="text/javascript">
+	// Run the script on DOM ready:
+	$(function(){
+		$('input').customInput();
+	});
+	</script>	
+	<!--CheckBox Script End-->
+<link rel="stylesheet" type="text/css" href="/stylesheets/CheckBoxStyle.css" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/AccodianStyle.css" />
+
+
+<div id="toppanelbotmborder"></div>
+
+
+<div id="Borrowersmainpanel">
+	<div id="Borrowerspanel" style="height:753px;">
+		<div id="paymentcontent">
+			<div id="advance_search_id"><%= render :partial=>"/home/search_filter"%></div>
+			<div id="paymentRight">
+			
+		  		<div id="paymenttopHead">
+					<img src="images/My_loans.jpg" width="204" height="38"/>
+                    <ul class="paymenttopHeadmenu">
+                        <li class="myloans"><span class="linknum">1</span><span class="linkShow">My loans</span></li>
+                        <li class="review"><span class="linknum">2</span><span class="linkHide">Review & Confirm</span></li>
+
+                        <li class="payoption"><span class="linknum">3</span><span class="linkHide">Payment Options</span></li>
+                    </ul>
+			  </div>
+
+ 
+
+              <div id="paymentResultBox">
+              		<div id="paymentResultBox1">
+                    	<img class="mylonsimg" src="/images/borrower/<%=@borrower.home_image%>" />  
+                        <div id="ResultInnerhead">
+                        	<span class="headstyle"><%= @loan.title.gsub("of their son","").gsub("of their daugther","") unless @loan.blank?%></span>
+                             <img src="/images/remove_btn.jpg" />
+                        </div>
+                        <div id="ResultInnerB_Main">
+                       	  <div id="ResultInnerB1">
+                            	<span class="textstyle">Loan Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            	        <span class="textstyle2">-</span>
+                                        <span class="textstyle1"><strong>$<%= @amount.to_f.round() %></strong></span>
+
+                          	        
+                       	  </div>
+
+                             
+
+
+                            <div id="ResultInnerB2">
+                            	<span class="textstyle">Your Milaap Credits&nbsp;<br />
+                                	<input name="mychkbx" style=" display:block; left:0px; top:5px; margin:0; padding:0; float:left;" type="checkbox" value="" />
+                                    <span style="float:left; padding-left:1.6em;font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#7c180c; font-style:italic; margin-top:0px;">Don’t use them now</span>
+                                </span>
+                            	<img src="images/what_is_this_img.jpg" />
+                            	<span class="textstyle2">-</span>
+
+                         	    <span class="textstyle1"><strong>$0</strong></span>
+                            </div>
+                            <div id="ResultInnerB3">
+                            	<span class="textstyle">Transaction fees (4%) *<br />
+                                	<input name="mychkbx" style=" display:block; left:0px; top:5px; margin:0; padding:0; float:left;" type="checkbox" value="" checked disabled/>
+                                    <span style=" display:block; width:130px; float:left; padding-left:1.6em;font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#7c180c; font-style:italic; margin-bottom:5px;">Add the 4% so that <br />100%
+ of the loan goes to the entrepreneur</span>
+                                </span>
+
+                            	<img src="images/what_is_this_img.jpg" />
+                            	<span class="textstyle2">-</span>
+                         	    <span class="textstyle1"><strong>$<%= ((@amount.to_f * 4)/100).round(2) %></strong></span>
+                            </div>
+                      </div>
+                    </div>
+                    <div id="paymentResultBox2">
+                    	<span class="textstyle1">Total amount to be paid</span>
+
+                        <span class="textstyle2">-</span>
+                        <span class="textstyle3">$<%= (@amount.to_f + ((@amount.to_f * 4)/100)).round(2) %></span>
+                    </div> 
+                    <div id="paymentResultBox3">
+                    	<div id="paymentResultBox3inner">
+                       	  <img class="pie-graph" src="images/payment_Resultimg_graphImg1.jpg" />
+                       	  <img class="dataimg" src="images/payment_Resultimg_DATAimg1.jpg" />
+                   	    <div id="graphdata">
+
+                            	<span style="display:block;float:left; width:12px; font-family:'Arial', Helvetica, sans-serif; font-size:18px; color:#7c180c;">*</span>
+                                <span style="display:block; width:320px; float:left; font-family:'Arial', Helvetica, sans-serif; font-size:12px; color:#858585; font-style:italic;">There is a cost attached to the process of collecting 
+entrepreneur profiles, filtering the good ones from the bad, 
+publishing and maintaining the website and disbursing the 
+loans to entrepreneurs. We try to our best to optimize the 
+cost per loan and the transaction fee of 3% is essentially to 
+cover this. Please see the pie chart  and <span style="color:#7d180c; text-decoration:underline;">read our FAQs</span> here  
+for a detailed breakup of our cost per loan
+
+                                <br />
+                                <br />
+                                <strong>Total cost comes to around 6% but we only charge 3%. 
+Rest of the costs are mitigated by corporate loans & 
+MFI fees</strong></span>                            </div>
+                        </div>
+
+                    </div>   
+					
+                    <div id="paymentResultBox4">
+                    	<div id="paymentResultBox4White">
+                        	<span style="display:block; width:660px; text-align:right; margin-top:5px;"><font style="font-family:Arial, Helvetica, sans-serif; font-size:24px; font-weight:bold; color:#868686;">Total Amount due**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font> <font style="font-family:'Georgia', Times New Roman, Times, serif; font-size:30px; font-weight:bold;">$<%= (@amount.to_f + ((@amount.to_f * 4)/100)).round(2) %></font></span>
+                            <span style="display:block; margin-top:10px; padding-left:18px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#3e3b38; font-style:italic;">**Please note that this does not include the merchant fees aka payment gateway fees which is entirely dependent on the <br />
+payment option you choose (credit/debit/PayPal/internet-banking etc)</span>
+                        </div>
+  
+ <form action="<%= PAYPAL_PATH %>"  method="post"  name="paypal_form">
+       
+            <input type="hidden" name="notify_url" value="<%= HOST_PATH%>/paypal-ipn">
+             <input type="hidden" name="business" value="<%= PAYPAL_BUSINESS %>">
+            <input name="cmd" type="hidden" value="_cart" >
+            <input name="upload" type="hidden" value="1" >
+            <input name="currency_code" type="hidden" value="USD">
+            <input type="hidden" name="custom" value="<%= @borrower.id %>">
+            <input type="hidden" name="return" value="<%= HOST_PATH%>/paypal-ipn">
+            <input type="hidden" name="cancel_return" value="<%= HOST_PATH%>">
+            <input type="hidden" name="item_name_1" value="Add credit for <%= @loan.title %>">
+            <input type="hidden" name="item_number" value="1">
+            <input type="hidden" name="NOSHIPPING" value="1">
+            <input type="hidden" name="amount_1" value="<%=  (@amount.to_f + ((@amount.to_f * 4)/100)).round(2)  %>">
+
+
+         <input type="hidden" name="METHOD" value="SetExpressCheckout">
+         <input type="hidden" name="USER" value="<%= PAYPAL_USER %>">
+         <input type="hidden" name="PWD" value="<%= PAYPAL_PWD %>">  
+         <input type="hidden" name="SIGNATURE" value="<%= PAYPAL_SIGNATURE %>"> 
+         
+
+
+
+                        <div id="paymentResultBox4Btns">
+                        	<span style="display:block;  float:left; width:625px; padding-left:10px;"><!--img src="images/ass_entreprneur_btn.jpg" /--></span>
+                            <span style="display:block; float:right;"><%=image_submit_tag("pay_now.jpg",:alt=>"Pay Now",:title=>"Pay Now")%></span>
+                        </div>
+                    </div>
+              </div>
+		  </div>
+	  </div>
+	</div>
+
+
+
+</form>
+</div>
+<div id="middleBorrowerpanBot"></div>
+<div class="clear"></div>
+
+
+<SCRIPT>
+$("#accordion > li").click(function(){
+
+	if(false == $(this).next().is(':visible')) {
+		$('#accordion > ul').slideUp(300);
+	}
+	$(this).next().slideToggle(300);
+});
+
+$('#accordion > ul:eq(0)').show();
+
+</SCRIPT>
+
+
+

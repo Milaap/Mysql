@@ -1,0 +1,34 @@
+#accordion {
+	list-style: none;
+	padding: 0 0 0 0;
+	margin-left:4px;
+	width: 209px;
+}
+#accordion li{
+	display: block;
+	background-color: #faf7f4;
+	background-image:url(../images/loanStatus_btn.jpg); background-repeat:no-repeat;
+	font-weight: bold;
+	width:209px;height:32px;
+	margin: 1px;
+	cursor: pointer;
+}
+#accordion ul {
+	list-style: none;
+	padding: 0 0 0 0;
+	display: none;
+}
+#accordion ul li{
+	background:none;
+	font-weight: normal;
+	cursor: auto;
+	background-color: #fff;
+	padding: 0 0 0 0px;
+}
+#accordion a {
+	text-decoration: none;
+	
+}
+#accordion a:hover {
+	text-decoration: underline;
+}

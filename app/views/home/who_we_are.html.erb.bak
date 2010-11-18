@@ -1,0 +1,179 @@
+<%= stylesheet_link_tag "slideshow.css" %>
+<%= javascript_include_tag "slideshow.js" %>
+<%= javascript_include_tag "jquery-ui-personalized-1.5.2.packed.js" %>
+<%= javascript_include_tag "sprinkle.js" %>
+
+ <div id="tabvanilla" class="widget">
+            <ul id="who-we-are" class="tabnav">
+				<li><a href="#team-content">Meet our team</a></li>
+				<li><a href="#advisors-content">Meet our advisors</a></li>
+            </ul>
+ <div id="team-content" class="tabdiv">
+	<div class="team">
+		<img src="/images/sourabh.png" class="left"/>
+		<div class="team-content left">
+			<h3 class="left">Sourabh Sharma</h3> <div class="social-links right">
+				<p class="left team-twitter"><span class="left">Follow him on: </span><a href="http://twitter.com/sourabhs" class="left" target="_blank"> <img src="/images/team-twitter.gif"></a><a href="http://www.linkedin.com/in/sourabhs" class="left" target="_blank"><img src="/images/team-linkedin.gif"></a><span class="clear"></span></p>
+			</div>
+			<div class="clear"></div>
+			<h4>Co-Founder, Web Strategy & Capital Raising</h4>						
+			<p>Sourabh is the old man in the team and looks into the overall execution and online marketing strategy of Milaap. </p>
+				<p>Sourabh is a second time entrepreneur & brings the experience & learnings from his previous startup MicroAppli. After running MicroAppli for two years, Sourabh successfully sold his media sharing mobile application to OnMobile Global (BSE: 532944) where he defined product strategy for multiple mobile products & services and was responsible for revenues in excess of 1 mn USD. </p>
+				<p>Sourabh holds an honors degree in Computer Science from National University of Singapore (NUS).  
+				When not working or busy networking with people, Sourabh likes to run. He has ran a bunch of half marathons and plans to run his first full marathon at the end of 2010.
+			</p>
+			<div class="clear"></div>
+		</div>
+
+<div class="clear"></div><br/><br/><br/><br/>
+
+		<img src="/images/anoj.png" class="left"/>
+		<div class="team-content left">
+			<h3 class="left">Anoj Viswanathan </h3> <div class="social-links right">
+				<p class="left team-twitter"><span class="left">Follow him on: </span><a href="http://twitter.com/anojviswanathan" class="left" target="_blank"> <img src="/images/team-twitter.gif"></a><a href="http://www.linkedin.com/in/anojviswanathan" class="left" target="_blank"><img src="/images/team-linkedin.gif"></a><span class="clear"></span></p>
+			</div>
+			<div class="clear"></div>
+			<h4>Co-Founder, Generalist </h4>						
+			<p>A Jack-of-few-trades, Anoj leads the product strategy with a focus on defining target loan segments and sector partnerships. He is a Starting Bloc Fellow for the year 2010.</p><p>Before co-founding Milaap, Anoj worked at SKS Microfinance where he was involved in energy and water services through microfinance. Previously, he worked at ReEx Capital Asia, a cleantech investment boutique in Singapore. He also served as a fellow at D.light Design where he worked with Mayukh to develop mapping and consumer financing models for rural electrification.</p><p>Anoj got exposed to the world of web 2.0 when he was Sourabh's Man-Friday at MicroAppli during its early stages.</p><p>Anoj graduated from the National University of Singapore and is a co-founder of the Microfinance Society in Singapore.
+			</p>
+		</div>
+
+<div class="clear"></div><br/><br/><br/><br/>
+		<img src="/images/mayukh.png" class="left"/>
+		<div class="team-content left">
+			<h3 class="left">Mayukh Choudhury </h3> <div class="social-links right">
+				<p class="left team-twitter"><span class="left">Follow him on: </span><a href="" class="left"> <img src="/images/team-twitter.gif"></a><a href="http://in.linkedin.com/pub/mayukh-choudhury/8/9b4/a25" class="left" target="_blank"><img src="/images/team-linkedin.gif"></a><span class="clear"></span></p>
+			</div><div class="clear"></div>
+			<h4>Co-Founder, Field Partnerships</h4>						
+			<p>Mayukh is our man in the field. He leads the operations and field partnerships for Milaap. </p><p>
+				At his previous job at D.light Design; a social start-up on affordable solar lighting solutions, Mayukh was responsible for setting up distribution channels and financing partnerships across India. Through that experience he has developed acute field inspection and partner analysis skills. His philosophy of 'Not to trust unless proven otherwise'  helps Milaap is finding the right partners.  </p><p>
+				Prior to D.light, he worked as a senior consultant with the financial risk management team at Ernst & Young, Dubai. </p><p>
+				Mayukh holds a Bachelors in Electrical Engineering from Indian Institute of Technology (IIT) Madras and MBA from Indian Institute of Management (IIM). </p>
+
+			</p>
+		</div>
+
+<div class="clear"></div><br/><br/><br/><br/>
+
+		<!--img src="/images/roshni.png" class="left"/--->
+		<!--div class="team-content left">
+			<h3 class="left">Roshni Mohapatra </h3> <div class="social-links right">
+				<p class="left team-twitter"><span class="left">Follow her on: </span><a href="http://twitter.com/roshnimo" class="left" target="_blank"> <img src="/images/team-twitter.gif"></a><a href="http://sg.linkedin.com/pub/mohapatra-roshni/2/407/3b0" class="left" target="_blank"><img src="/images/team-linkedin.gif"><span class="clear"></span></a></p>
+			</div><div class="clear"></div>
+			<h4>Content Writer, Community Evangelist</h4>						
+			<p>Roshni moonlights as a content writer and also takes care of our social media and community engagement.</p>
+
+				<p>During the day, she transforms into a corporate zombie. She currently holds a day job in a small mobile financial services company working specifically on micro-payments and micro-remittances. Prior to this, she was a Senior consultant with a Treasury systems firm, Murex.  </p>
+
+				<p>She holds a Bachelor's degree in Computer Science & Engineering  from R.V. College of Engineering and a Master's degree from National University of Singapore. For her research work, she was awarded the Tan Kah Kee young inventors' award in 2006.</p>
+
+				<p>She started working with Milaap because of her personal interest in Microfinance. She also brings some grey-haired wisdom to the team and hopes that her words and conversations will wield hypnotic powers to get this movement go viral. </p>
+
+				<p>When not sitting beady eyed front of her computer, you can find her trekking in the mountains, or diving in the deep blue sea. 
+
+			</p>
+		</div-->
+		<img src="/images/nitin.png" class="left"/>
+		<div class="team-content left">
+			<h3 class="left">Nitin Bantwal Rao  </h3> <div class="social-links right">
+				<p class="left team-twitter"><span class="left">Follow him on: </span><a href="" class="left"> <img src="/images/team-twitter.gif"></a><a href="http://www.linkedin.com/in/nitinrao" class="left" target="_blank"><img src="/images/team-linkedin.gif"></a><span class="clear"></span></p>
+			</div><div class="clear"></div>
+			<h4>Co-Entrepreneur, Strategic Advisor </h4>						
+			<p>Nitin (TED Fellow'09, MIT Sloan MBA Candidate), serves as an involved adviser, leveraging his firsthand experience in founding / helping launch disruptive startups such as E4SI (a solutions delivery firm supporting MFIs and other development ventures), Bodhi (the rural education arm of SKS Microfinance) and Let Me Know (India's largest website on youth opportunities).  
+			</p>
+			<p>
+ 
+			Nitin developed an interest in strategy as the first Asian Staff Writer at NextBillion.net analyzing the 'bottom of the pyramid' market, and at The Boston Consulting Group.</p>
+			 
+			<p>He is currently building an Internet startup, and serves as an adviser to dplay, an MIT design startup. </p>
+
+			<p>Nitin is excited about Milaap's ability to bring much needed breadth and scale to the online micro-lending market.
+
+
+			</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+ <div id="advisors-content" class="tabdiv">
+<div class="team">
+
+		<img src="/images/paul.png" class="left"/>
+		<div class="team-content left">
+			<h3 class="left">Paul Breloff  </h3> <div class="social-links right">
+				<p class="left team-twitter"><span class="left">Follow him on: </span><a href="" class="left"> <img src="/images/team-twitter.gif"></a><a href="" class="left"><img src="/images/team-linkedin.gif"></a><span class="clear"></span></p>
+			</div><div class="clear"></div>
+			<h4>Advisor </h4>						
+			<p>Paul is an independent consultant focusing on capacity development and capital mobilization for social enterprises. From 2006 until July 2009, Paul worked with SKS Microfinance, India's largest microfinance institution, working on business planning and equity raising as well as serving as vice president of business development & strategy. </p><p>He researched and implemented new business initiatives and oversaw a variety of products and programs, including the marketing and financing of cell phones, solar lights, water purifiers, and FMCGs/groceries; mobile banking; a chain of budget primary schools; research on new insurance products, remittances, and investment products; and international expansion (focusing on China). Prior to SKS, Paul practiced corporate and real estate law with Mayer Brown.</p><p> He has also worked as a consultant for McKinsey & Co. and as an account executive for the advertising agency Leo Burnett. Paul has a bachelor of arts from Amherst College and a law degree from Yale Law School. 
+
+			</p>
+		</div>
+	<div class="clear"></div><br/><br/><br/><br/>
+
+
+		<img src="/images/vijay.png" class="left"/>
+			<div class="team-content left">
+				<h3 class="left">Vijay Shekhar Sharma  </h3> <div class="social-links right">
+					<p class="left team-twitter"><span class="left">Follow him on: </span><a href="" class="left"> <img src="/images/team-twitter.gif"></a><a href="" class="left"><img src="/images/team-linkedin.gif"></a><span class="clear"></span></p>
+				</div><div class="clear"></div>
+				<h4>Investor </h4>						
+				<p>Vijay Shekhar Sharma, aged 31 years, is the Chairman, Managing Director and Founder of One97 Communications Limited. He is currently responsible for the strategy and direction of One97 and leads the company in all areas relating to business expansion as well as product road map.</p><p> Vijay has more than 10 years of experience in the telecom and new media industries, having founded his first venture XS Corps while he was at college, which he sold to Lotus Interworks LLC, New Jersey in 1999. </p><p>Prior to founding One97 in 2000, Vijay played key roles in a number of organisations such as Riverrun Software Services Group Limited, Inter Solutions Software Private Limited, Startec Global Communications Limited, focusing on the design and development of various products and applications for the technology, media and telecom industries. Vijay holds a Bachelors degree in Engineering from Delhi College of Engineering.
+
+				</p>
+			</div>
+
+	<div class="clear"></div><br/><br/><br/><br/>
+
+			<img src="images/rajiv.png" class="left"/>
+			<div class="team-content left">
+				<h3 class="left">Rajiv Madhok  </h3> <div class="social-links right">
+					<p class="left team-twitter"><span class="left">Follow him on: </span><a href="" class="left"> <img src="/images/team-twitter.gif"></a><a href="" class="left"><img src="/images/team-linkedin.gif"></a><span class="clear"></span></p>
+				</div><div class="clear"></div>
+				<h4>Investor </h4>						
+				<p>Rajiv Madhok, aged 36 years, is a non-executive, non-independent Director of One97 Communications Limited. Rajiv started his career with Aura W.A., West Africa, in 1998, where he was managing the product marketing and distribution activities. He stepped into telecom industry in 2000 working with the Bharti Group and was instrumental in a number of industry innovations including ring back tones, which remains the single largest value added service in the country. </p><p>Prior to joining One97 Communications, Rajiv was associated with OnMobile Singapore Pvt Limited as Head (Business Development, South East Asia) where he initiated operations in multiple countries including Indonesia and Brazil. Rajiv holds a Bachelor's degree in Economics and is an MBA from Punjab University, Chandigarh.
+
+				</p>
+			</div>
+
+	<div class="clear"></div>
+
+
+ </div>
+ </div>
+</div>
+
+<div id="investors-content" class="tabdiv">
+	<div class="team">
+			<img src="/images/vijay.png" class="left"/>
+			<div class="team-content left">
+				<h3 class="left">Vijay Shekhar Sharma  </h3> <div class="social-links right">
+					<p class="left team-twitter"><span class="left">Follow him on: </span><a href="" class="left"> <img src="/images/team-twitter.gif"></a><a href="" class="left"><img src="/images/team-linkedin.gif"></a><span class="clear"></span></p>
+				</div><div class="clear"></div>
+				<h4>Investor </h4>						
+				<p>Vijay Shekhar Sharma, aged 31 years, is the Chairman, Managing Director and Founder of One97 Communications Limited. He is currently responsible for the strategy and direction of One97 and leads the company in all areas relating to business expansion as well as product road map.</p><p> Vijay has more than 10 years of experience in the telecom and new media industries, having founded his first venture XS Corps while he was at college, which he sold to Lotus Interworks LLC, New Jersey in 1999. </p><p>Prior to founding One97 in 2000, Vijay played key roles in a number of organisations such as Riverrun Software Services Group Limited, Inter Solutions Software Private Limited, Startec Global Communications Limited, focusing on the design and development of various products and applications for the technology, media and telecom industries. Vijay holds a Bachelors degree in Engineering from Delhi College of Engineering.
+
+				</p>
+			</div>
+
+	<div class="clear"></div><br/><br/><br/><br/>
+
+			<img src="images/rajiv.png" class="left"/>
+			<div class="team-content left">
+				<h3 class="left">Rajiv Madhok  </h3> <div class="social-links right">
+					<p class="left team-twitter"><span class="left">Follow him on: </span><a href="" class="left"> <img src="/images/team-twitter.gif"></a><a href="" class="left"><img src="/images/team-linkedin.gif"></a><span class="clear"></span></p>
+				</div><div class="clear"></div>
+				<h4>Investor </h4>						
+				<p>Rajiv Madhok, aged 36 years, is a non-executive, non-independent Director of One97 Communications Limited. Rajiv started his career with Aura W.A., West Africa, in 1998, where he was managing the product marketing and distribution activities. He stepped into telecom industry in 2000 working with the Bharti Group and was instrumental in a number of industry innovations including ring back tones, which remains the single largest value added service in the country. </p><p>Prior to joining One97 Communications, Rajiv was associated with OnMobile Singapore Pvt Limited as Head (Business Development, South East Asia) where he initiated operations in multiple countries including Indonesia and Brazil. Rajiv holds a Bachelor's degree in Economics and is an MBA from Punjab University, Chandigarh.
+
+				</p>
+			</div>
+
+	<div class="clear"></div>
+
+	 </div>
+ </div>
+
+
+</div>
+

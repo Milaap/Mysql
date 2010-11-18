@@ -1,0 +1,25 @@
+<p>
+Dear <%= @invitation.first_name  %>,
+</p>
+
+<p>After many months of waiting, we are happy to tell you that the alpha version of our site is ready.
+Since you have been one of our ardent believers,  we are happy to give you a free pass to take part in our Alpha launch.
+By  typing in the code below when you visit <a href="<%= alpha_home_url %>"><%= alpha_home_url %></a> you will be able to see the very very first set of borrowers who need loans for a variety of purposes – from microfranchisee to education to organic farming.
+</p>
+<p> <%=content_tag(:h2, @invitation.invitation_token) %> </p>
+<p>
+We hope that you will not only make a loan to some of these people but also give us detailed feedback on what we need to improve on our website. May be some of the loan details are not clear? May be we skip a step while explaining how it works? Etc.
+</p>
+<p>
+Once you have made a loan, we will request you to fill up a short  feedback form online.
+</p>
+<p>
+Get Started now!
+</p>
+<p>
+Thanks & Happy Loaning!<br/>
+The Milaap Team.<br/>
+<a href="http://www.facebook.com/Milaap.org">Join Us on Facebook</a><br/>
+<a href="http://twitter.com/milaapdotorg">Follow us on Twitter</a><br/>
+</p>
+

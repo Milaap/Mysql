@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MILAAP - Beyond Just Credit</title>
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<%= stylesheet_link_tag "common.css" %>
+<%#= javascript_include_tag "unitpngfix.js" %>
+<% if session[:tab] == "home"%> 
+  <%= javascript_include_tag "jquery.min.js" %>
+	<% end %>
+
+
+</head>
+
+<body>
+	<div id="header"><!-- Header div -->
+	<div class="wrapper"><!-- Wrapper div -->
+		<div id="logo" class="left"><a href="/" title="MILAAP - Beyond Just Credit"><img class="ie-png" src="/images/milaap.png"/></a></div>
+		<div class="right">
+			<ul id="primary-nav" class="right">
+    <li><a href="/" class="<% if  session[:tab] == 'home'%>active<% else%><% end %>">Home</a></li>
+	  <% unless user_signed_in? %> 
+				<% unless  cookies[:loan_pledged].blank? %>
+						<li><a href="<%= pledge_url %>" title="Pledge a loan" class="<% if  session[:tab] == 'pledge'%>active<% else%><% end %>">Pledge a loan</a></li>
+				<% else %>
+					<li><a href="<%= pledge_url %>" title="Pledge a loan" class="<% if  session[:tab] == 'pledge'%>active<% else%><% end %>">Pledge a loan</a></li>
+				<% end %>
+		<% else %>
+		   <% if current_user.loan_pledged == true %>
+			  	<li><a href="<%= view_all_projects_url %>" title="Give a loan" class="<% if  session[:tab] == 'pledge'%>active<% else%><% end %>">Give a loan</a></li>
+			<% else %>	
+					 <li><a href="<%= pledge_url %>" title="Give a loan" class="<% if  session[:tab] == 'pledge'%>active<% else%><% end %>">Pledge a loan</a></li>
+			<% end %>			 
+		<% end %>
+	
+  <li><a href="<%= why_milaap_path %>" title="MILAAP - Why Milaap" class="<% if  session[:tab] == 'why_milaap'%>active<% else%><% end %>">Why Milaap</a></li>
+    <li><a href="<%= who_we_are_path %>" title="Who we are" class="<% if  session[:tab] == 'who_we_are'%>active<% else%><% end %>">Who we are</a></li>
+    <li><a href="<%= how_it_work_path %>" title="MILAAP - How it works" class="<% if  session[:tab] == 'how_it_work'%>active<% else%><% end %>">How it works</a></li>
+    <li><a href="<%= get_envolved_path %>" title="Get involved with MILAAP" class="<% if  session[:tab] == 'get_envolved'%>active<% else%><% end %>">Get involved</a></li>
+    
+  </ul>
+			
+			
+			
+			
+			
+			<!-- /Primary nav div -->
+		</div>
+		<div class="clear"></div>
+
+  <% unless current_user.blank? %>
+       <ul id="member-status">
+			<li><span> Welcomeuuuu,
+      <%if !current_user.facebook_name.blank? %>
+      <%#=  current_user.user_type %> <img src="https://graph.facebook.com/<%= current_user.facebook_uid %>/picture" align="left"  width="19px;" height="19px;" style="margin-right:5px;"/> <%= "current_user.facebook_name.capitalize" %>
+      <% elsif !current_user.email.blank?%>
+      <%= current_user.email[0..15] %>
+      <% elsif !current_user.twitter_name.blank?%>
+      <%= current_user.twitter_name.capitalize %>
+      <% else %>
+      Ananymous
+      <% end %></li> |
+		   <li><a href='<% if current_user.user_type == "lender" %><% else %><% end %>'>My account</a></li> |    
+			<li><a href="/users/logout">Logout</a></li>
+		</ul>
+   
+    
+
+  <% else %> 
+
+   <ul id="member-status">
+			<li><a href="/facebook-login" title="Login with Facebook" class="active"><img style="margin-bottom:-5px;" src="/images/fb-login.gif" alt="Facebook Login"/></a></li> | 
+			<li><a id="login"  href="<%= new_user_session_url %>" title="Sign in">Sign in</a></li> | 
+			<li><a href="<% unless 	cookies[:loan_pledged].blank? %><%= new_user_registration_url %><% else %><%= pledge_url %><% end %>" class="clear">New User? Click here</a></li>
+		</ul>
+		
+		<% end %>
+		
+		
+		
+		</div><!-- /Wrapper div -->
+
+	</div><!-- /Header div -->
+
+<%= yield %>
+	<div id="footer"><!-- Footer div -->
+
+		<div class="wrapper">
+		<ul class="left">
+      <li><a href="<%= privacy_path %>" title="Privacy Policy">Privacy Policy</a></li>
+      |
+      <li><a href="<%= terms_path %>" title="Who we are">Terms &amp; Conditions</a></li>
+      |
+      <li><a href="<%= who_we_are_path %>" title="Who we are">Who we are</a></li>
+      |
+      <li><a href="<%= why_milaap_path %>" title="Who we are">Why Milaap</a></li>
+      |
+      <li> 
+      <a href="http://blog.milaap.org/" title="MILAAP - Beyond Just Credit">Blog</a></li> |
+      <li><a href="<%= contact_us_path %>" title="Contact Milaap">Contact Us</a></li>
+
+    </ul>
+			<div class="copyright right">
+			  <p>&copy; 2010. Milaap.org. All rights reserved.</p>
+			</div>
+			<div class="clear"></div>
+		</div><!-- /Wrapper div -->
+	</div><!-- /Footer div -->
+	
+	
+	
+
+
+	<script type="text/javascript">
+$(document).ready(function() {
+
+setTimeout(fade_out, 10000);
+function fade_out() {
+  $("#notification").fadeOut().empty();
+}
+});
+</script>
+
+
+ <script type="text/javascript">
+    	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    	</script>
+    	<script type="text/javascript">
+    	var pageTracker = _gat._getTracker("UA-4054156-1");
+    	pageTracker._setDomainName("none");
+    	pageTracker._setAllowLinker(true);
+    	pageTracker._setAllowHash(false);
+    	pageTracker._initData();
+    	pageTracker._trackPageview();
+    	</script>  
+
+</body>
+</html>

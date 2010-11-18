@@ -1,0 +1,213 @@
+/**************Borrower's details page CSS*************/
+.lenders-details .info-blurb #borrower-image .borrower-image-border {
+border: solid 1px #efefef;
+}
+
+.lenders-details .info-blurb #borrower-image img {
+border:18px solid #fff;
+}
+
+.lenders-details .info-blurb {
+width:650px;
+}
+
+.lenders-details .info-blurb .intro {
+width:445px;
+}
+
+.lenders-details .info-blurb .intro img {
+margin:-10px 0 0 10px;
+}
+
+.lenders-details .info-blurb h3 {
+font-size:19px;
+color:#562e47;
+padding:0 0 5px 0;
+}
+
+.lenders-details .info-blurb h3 a {
+text-decoration:none;
+}
+
+.lenders-details .info-blurb .sub-info {
+color:#666;
+font-weight:bold;
+font-size:14px;
+margin:15px 0 5px;
+}
+
+#location-text {
+width:340px;
+}
+
+.sidebar {
+background:#fff;
+width:270px;
+border:1px solid #efefef;
+}
+
+.shadow0 {
+background:url("../images/borrower-sprite.png") no-repeat scroll 0 -2px transparent;
+height:15px;
+}
+
+.shadow1 {
+background:url("../images/borrower-sprite.png") no-repeat scroll -52px -94px transparent;
+height:16px;
+width:647px;
+}
+
+.shadow2 {
+background:url("../images/borrower-sprite.png") no-repeat scroll -431px -2px transparent;
+height:14px;
+position:absolute;
+right:1px;
+top:374px;
+width:271px;
+}
+
+.shadow3 {
+background:url("../images/borrower-sprite.png") no-repeat scroll -431px -2px transparent;
+height:14px;
+width:271px;
+margin-left:698px;
+margin-top:-50px;
+}
+
+#choose-category {
+background:#ddd5db;
+height:92px;
+}
+
+#choose-category img {
+margin:10px 15px 0 15px;
+}
+
+#choose-category h3 {
+background:#cbbcc6;
+padding:10px 10px;
+color:#fff;
+font-size:12px;
+border-bottom:1px solid #EFEFEF;
+border-top:1px solid #EFEFEF;
+}
+
+
+
+.repayment-blurb {
+padding:0px 0 30px 30px;
+background:url("../images/sidebar-heading-bg.png") repeat-x;
+}
+
+.repayment-blurb h3 {
+color:#562E47;
+font-size:18px;
+font-weight:bold;
+padding:20px 0 10px;
+}
+
+.repayment-blurb p {
+border-bottom:1px solid #EFEFEF;
+color:#6C6668;
+font-size:13px;
+margin-right:25px;
+padding-bottom:6px;
+padding-top:6px;
+}
+
+
+.lender-support h4 {
+background: #fff;
+padding:11px 15px;
+margin: 0;
+border: solid 1px #efefef;
+border-bottom: none;
+cursor: pointer;
+font-size:18px;
+color:#562e47;
+font-weight:bold;
+display:block;
+}
+
+.lenders-image-border img {
+border:5px solid #fff;
+}
+
+#lenders-image {
+border:1px solid #efefef;
+}
+
+
+.lenders-details .info-blurb .intro-supported {
+width:525px;
+}
+
+.lenders-details .info-blurb .intro-supported p {
+font-size:12px;
+font-weight:normal;
+}
+
+.lenders-details .info-blurb .intro-supported h3 {
+font-size:14px;
+color:#b91141;}
+
+.lender-support .borrower-support-info {
+padding:20px 0 10px 20px;
+border:1px solid #EFEFEF;
+}
+
+.lender-support {
+padding-top:20px;
+width:648px;
+}
+
+.info-blurb .intro-first h3 {
+padding:10px 0 20px 20px;
+font-size:14px;
+color:#b91141;
+}
+
+.shadow4 {
+background:url("../images/borrower-sprite.png") no-repeat scroll -431px -2px transparent;
+height:14px;
+position:absolute;
+right:1px;
+top:427px;
+width:271px;
+}
+
+.intro label {
+display:block;
+margin:5px 0;
+}
+
+.intro input {
+display:block;
+padding:2px 5px;
+width:250px;
+}
+
+
+
+.intro textarea {
+display:block;
+padding:2px 5px;
+width:250px;
+}
+
+
+.intro select {
+display:block;
+padding:2px 5px;
+width:250px;
+}
+
+
+.lenders-details  input#submit {
+background:url("../images/home-sprite.png") no-repeat scroll -9px -140px transparent;
+border:0 none;
+cursor:pointer;
+height:60px;
+width:210px;
+margin:10px 0 15px 0;
+}

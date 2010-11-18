@@ -1,0 +1,41 @@
+<% if notice %>
+<div id="notification" style="width:900px;text-align:left">
+  <p><%= notice.gsub("<br>","<br/>") %></p>
+</div>
+<% end %>
+<% if alert %>
+<div id="notification" style="width:900px">
+  <p><%= alert %></p>
+</div>
+<% end %>  
+<div class="thankyou-alpha">
+
+ 
+    <h4>Hello <% if user_signed_in?%><%if !current_user.facebook_name.blank? %>
+         <%= current_user.facebook_name.titleize %>
+      <% elsif !current_user.email.blank?%>
+      <%= current_user.email[0..15] %>
+      <% elsif !current_user.twitter_name.blank?%>
+      <%= current_user.twitter_name.titleize %>
+      <% else %>
+      Ananymous
+      <% end %><%#= current_user.email %>!<% else %>there<% end %>! Welcome to the alpha version of our platform. Here's what you can do next:</h4>
+    <div class="thankyou-alpha-content left">
+      <h3><span class="step">1.</span>Browse through our entrepreneurs' profiles</h3>
+      <p>You could spare some time to check out <a href="/view-all-projects" style="color:#729DFF">loans</a> spanning across various sectors like education, healthcare, energy, water, sanitation, market linkages to name a few, demanding interventions that go beyond just credit and grant a loan.</p>
+      <div class="clear"></div>
+    </div>
+    <div class="thankyou-alpha-content left" style="margin-right:0px;">
+      <h3><span class="step">2.</span>Learn more about Milaap</h3>
+      <p>You could check out what Milaap is all about <a href="<%= how_it_work_path %>"  style="color:#729DFF">here</a>, see who are the <a href="<%= who_we_are_path %>"  style="color:#729DFF">people</a> behind it's inception or browse through various profiles <a href="/view-all-projects">here</a> to grant a loan. </p>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    
+
+
+  </div>

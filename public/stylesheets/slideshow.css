@@ -1,0 +1,117 @@
+/*
+	Featured Content Slider
+	by: Chris Coyier
+*/
+*											{ margin: 0; padding: 0; }
+body 										{ font-family: Arial, Helvetica, sans-serif; font-size: 10px; }
+
+					  				  
+/*
+	UTILITY STYLES
+*/				  				  
+					  				  
+.floatLeft 									{ float: left; margin-right: 10px;}
+.floatRight									{ float: right; }
+.clear 										{ clear: both; }
+a											{ outline: none; }
+
+
+/*
+	PAGE STRUCTURE
+*/
+#page-wrap 									{ width: 500px; margin: 25px auto; position: relative; min-height: 500px;
+											  background: url(images/bg.png) top center; }
+
+
+/*
+	TYPOGRAPHY
+*/
+ul											{ list-style: square inside; }
+/*a, a:visited								{ color: #729dff; text-decoration: none; }
+a:hover, a:active							{ color: white; }*/
+blockquote									{ padding: 0 20px; margin-left: 20px; border-left: 20px solid #ccc; font-size: 14px; 
+									  		  font-family: Georgia, serif; font-style: italic; margin-top: 10px;}
+
+/*
+	SLIDER
+*/
+.slider-wrap								{ clear:both;
+
+width:970px; }			
+.stripViewer .panelContainer 
+.panel ul									{ text-align: left; margin: 0 15px 0 30px; }
+.stripViewer								{ position: relative; overflow: hidden; width:970px; height: 369px; }
+.stripViewer .panelContainer				{ position: relative; left: 0; top: 0; }
+.stripViewer .panelContainer .panel			{ float: left; height: 100%; position: relative; width: 970px; }
+.stripNavL, .stripNavR, .stripNav			{ display: none; }
+.nav-thumb 									{ float:left;
+width:20px; }
+
+
+ #movers-row1 {
+font-weight:bold;
+position:absolute;
+right:50px;
+top:75px;
+z-index:3333;
+}
+
+
+#movers-row1 div								{ float:left;
+ }
+
+#movers-row1  div		a						{ color:#522F45;border:1px solid #cecece;
+color:#522F45;
+margin:0 10px 0 0;
+padding:2px 0;
+text-align:center;
+width:15px;}
+
+#movers-row1  div a.cross-link 				{ float: right; }
+
+
+
+#movers-row									{ font-weight:bold;
+position:absolute;
+right:50px;
+top:25px;
+z-index:3333;}
+#movers-row div								{ float:left;
+ }
+
+#movers-row div		a						{ color:#522F45;border:1px solid #cecece;
+color:#522F45;
+margin:0 10px 0 0;
+padding:2px 0;
+text-align:center;
+width:15px;}
+
+#movers-row div a.cross-link 				{ float: right; }
+.photo-meta-data							{ background: url(images/transpBlack.png); padding: 10px; height: 30px; 
+											  margin-top: -50px; position: relative; z-index: 9999; color: white; }
+.photo-meta-data span 						{ font-size: 13px; }
+.cross-link									{ display: block; width: 62px; margin-top: -14px; 
+											  position: relative; padding-top: 15px; z-index: 9999; }
+.active-thumb 								{ background: transparent url(images/icon-uparrowsmallwhite.png) top center no-repeat; }
+
+
+
+#main-photo-slider p {
+color:#666666;
+float:right;
+font-size:13px;
+line-height:17px;
+padding-right:55px;
+padding-top:167px;
+width:300px;
+}
+
+.slider-btns {
+position:absolute;
+right:70px;
+top:237px;
+z-index:9999;
+}
+
+
+

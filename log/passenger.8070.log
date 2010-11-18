@@ -1,0 +1,72 @@
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+warning: peer certificate won't be verified in this SSL session
+FBGRAPH [GET]: me?access_token=107860165938751%7C80a13368012d45251618951c-100000816800978%7Cl3jwLb0GFmqGdmt9cQDk61CZAhE
+ACCESS TOKEN: 107860165938751|80a13368012d45251618951c-100000816800978|l3jwLb0GFmqGdmt9cQDk61CZAhE
+2010/11/02 18:48:44 [crit] 18489#0: *14 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/1/00/0000000001" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /view-all-projects HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3062954864 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 18:48:44.285 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 18:51:26 [crit] 18489#0: *35 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/2/00/0000000002" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /view-all-projects HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3062553456 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 18:51:26.659 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 18:51:44 [crit] 18489#0: *40 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/3/00/0000000003" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /view-all-projects HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3065162608 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 18:51:44.716 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 18:51:47 [crit] 18489#0: *38 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/4/00/0000000004" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /view-all-projects HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3066768240 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 18:51:47.903 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 18:52:06 [crit] 18489#0: *45 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/5/00/0000000005" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /view-all-projects HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3066567536 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 18:52:06.905 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 18:53:49 [crit] 18489#0: *49 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/6/00/0000000006" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /view-all-projects HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3065764720 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 18:53:49.571 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 18:55:34 [crit] 18489#0: *52 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/7/00/0000000007" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /view-all-projects HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3066166128 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 18:55:34.901 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 18:59:15 [crit] 18489#0: *58 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/8/00/0000000008" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /view-all-projects HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3065363312 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 18:59:15.931 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+2010/11/02 19:02:37 [crit] 18489#0: *71 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/9/00/0000000009" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /borrower-profile/1/nirmala-shah HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3064159088 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 19:02:37.522 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 19:03:21 [crit] 18489#0: *66 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/0/01/0000000010" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /borrower-profile/1/nirmala-shah HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3063757680 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 19:03:21.292 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 19:03:52 [crit] 18489#0: *83 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/1/01/0000000011" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /borrower-profile/1/nirmala-shah HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3063356272 file=ext/nginx/HelperAgent.cpp:578 time=2010-11-02 19:03:52.893 ]: Uncaught exception in PassengerServer client thread:
+   exception: write() failed: Connection reset by peer (104)
+   backtrace:
+     in 'void Client::forwardResponse(Passenger::SessionPtr&, Passenger::FileDescriptor&)' (HelperAgent.cpp:369)
+     in 'void Client::handleRequest(Passenger::FileDescriptor&)' (HelperAgent.cpp:504)
+     in 'void Client::threadMain()' (HelperAgent.cpp:597)
+
+2010/11/02 19:04:15 [crit] 18489#0: *85 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/2/01/0000000012" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /borrower-profile/1/nirmala-shah HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3062954864 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 19:04:15.780 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 19:05:15 [crit] 18489#0: *88 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/3/01/0000000013" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /borrower-profile/1/nirmala-shah HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3062553456 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 19:05:15.26 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 19:06:57 [crit] 18489#0: *92 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/4/01/0000000014" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /borrower-profile/1/nirmala-shah HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:8070", referrer: "http://localhost:8070/"
+[ pid=18454 thr=3066366832 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 19:06:57.624 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1)
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1).sort([[:_id, :desc]])
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1)
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1).sort([[:_id, :desc]])
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1)
+[ pid=18454 thr=3066567536 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 19:09:00.688 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1)
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1).sort([[:_id, :desc]])
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1)
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1)
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1).sort([[:_id, :desc]])
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1)
+[ pid=18454 thr=3066166128 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 19:09:00.787 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1)
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1).sort([[:_id, :desc]])
+  MONGODB milaap_development['loan_repayments'].find({:loan_id=>1}, {}).limit(-1)
+[ pid=18454 thr=3065764720 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 19:09:00.924 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.

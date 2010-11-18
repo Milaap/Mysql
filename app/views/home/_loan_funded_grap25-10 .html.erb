@@ -1,0 +1,134 @@
+<% if @selected_loan_funded_percentage%>
+
+     
+
+
+<div id="amount-blurb-searchlist"><!-- Amount div div -->
+
+<% if (@selected_loan_funded_percentage + @loan_funded_percentage) == 100 %>
+<div class="graph-wrapper">
+<div class="graph">
+<div class="graph-increase" style="width:100%;" title="Fully Funded"></div>
+</div>
+</div>
+<div id="amount-funded">
+<% if $visiting_user_country == "India"%>
+<p>Fully Funded</p>
+<% else %>
+<p>Fully Funded</p>
+<% end %>
+</div>
+<% elsif (@selected_loan_funded_percentage + @loan_funded_percentage) == 0 %>
+
+<div class="graph-wrapper">
+<div class="graph">
+<div class="graph-increase" style="width:0%;" title="Not funded yet"></div>
+</div>
+</div>
+<div id="amount-funded">
+<% if $visiting_user_country == "India"%>
+<p>Rs.0 funded out of Rs.<%= loan.amount.round() %></p>
+<% else %>
+<p>$0 funded out of $<%= loan.loan_amount_in_dollar.round()%></p>
+<% end %>
+</div>
+<% else %>
+<div class="graph-wrapper">
+<div class="graph">
+<div class="graph-increase" style="width:<%= (@selected_loan_funded_percentage + @loan_funded_percentage).round() %>%;" title="<%= (@selected_loan_funded_percentage + @loan_funded_percentage) %>% funded"></div>
+</div>
+</div>
+<div id="amount-funded">
+<% if $visiting_user_country == "India"%>
+<%#= loan.amount %>
+<%#= loan.loan_amount_remaining_in_rupees %>
+<%#= @amount_selected %>
+
+<p>Rs.<%= ((loan.amount - loan.loan_amount_remaining_in_rupees) + @amount_selected).round()%> funded out of Rs.<%= loan.amount.round() %></p>
+<% else %>
+<p>$<%=  (loan.loan_amount_in_dollar -  (loan.loan_amount_remaining_in_rupees+ @selected_loan_funded_percentage )).round() %> funded out of $<%= loan.loan_amount_in_dollar.round()%></p>
+<% end %>
+
+
+</div>
+
+<% end %>
+
+
+</div><!-- /Amount div div -->
+
+
+
+
+
+
+<%# 287758532 %>
+
+
+
+
+
+
+
+<% else %>
+ 
+<% unless @loan_funded_percentage.blank? %>
+<div id="amount-blurb-searchlist"><!-- Amount div div -->
+
+<% if @loan_funded_percentage == 100 %>
+<div class="graph-wrapper">
+<div class="graph left" style="width: 0%;">&nbsp;</div>
+<div class="graph-increase left" style="width: 0%;" id="graph_increase_<%= loan.id %>">&nbsp;</div>
+<div class="clear"></div>
+</div>
+
+
+<div id="amount-funded">
+<% if $visiting_user_country == "India"%>
+<p>Fully Funded</p>
+<% else %>
+<p>Fully Funded</p>
+<% end %>
+</div>
+<% elsif @loan_funded_percentage == 0 %>
+<div class="graph-wrapper">
+<div class="graph left" style="width: 0%;">&nbsp;</div>
+<div class="graph-increase left" style="width: 0%;" id="graph_increase_<%= loan.id %>">&nbsp;</div>
+<div class="clear"></div>
+</div>
+
+
+
+<div id="amount-funded">
+<% if $visiting_user_country == "India"%>
+<p>Rs.0 funded out of Rs.<%= loan.amount.round() %></p>
+<% else %>
+<p>$0 funded out of $<%= loan.loan_amount_in_dollar.round()%></p>
+<% end %>
+</div>
+<% else %>
+
+
+<div class="graph-wrapper">
+<div class="graph left" style="width:<%= @loan_funded_percentage.round() %>%;">&nbsp;</div>
+<div class="graph-increase left" style="width: 0%;" id="graph_increase_<%= loan.id %>">&nbsp;</div>
+<div class="clear"></div>
+</div>
+
+<div id="amount-funded">
+<% if $visiting_user_country == "India"%>
+<p>Rs.<%= (loan.amount - loan.loan_amount_remaining_in_rupees).round()%> funded out of Rs.<%= loan.amount.round() %></p>
+<% else %>
+<p>$<%=  (loan.loan_amount_in_dollar - loan.amount_remaining).round() %> funded out of $<%= loan.loan_amount_in_dollar.round()%></p>
+<% end %>
+
+
+</div>
+
+<% end %>
+
+
+</div><!-- /Amount div div -->
+
+<% end %>
+<% end %>

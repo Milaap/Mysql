@@ -1,0 +1,28 @@
+<div class="thankyou-alpha">
+	<h4>Hello <% if user_signed_in?%><%if !current_user.facebook_name.blank? %>
+         <%= current_user.facebook_name.titleize %>
+      <% elsif !current_user.email.blank?%>
+      <%= current_user.email[0..15] %>
+      <% elsif !current_user.twitter_name.blank?%>
+      <%= current_user.twitter_name.titleize %>
+      <% else %>
+      Ananymous
+      <% end %><%#= current_user.email %>!<% else %>there<% end %></h4>
+	<div class="thankyou-alpha-content" style="width:930px;#width:850px;height:auto;">
+	<p>We are happy that you want to be part of this noble initiative.
+	Currently, we are doing a closed trial with a very initial set of lenders and borrowers. This trial should get over very soon and we should be able to open up the site for you on the <strong>10th of October.</strong> Mark the date!<br/><br/>
+	If you have already received an invitation code, you can visit <a href="<%= alpha_home_url %>"><%= alpha_home_url %></a> and proceed further.<br/><br/>
+
+	If not, feel free to <a href="<%= get_envolved_path %>">learn more</a> or join the community or tell your friends about it!
+
+	Alternatively, if you have any questions for us, feel free to shoot a mail to <a href="mailto:feedback@milaap.org" target="_blank">feedback@milaap.org</a> or ask us on <a href="http://www.facebook.com/Milaap.org" target="_blank">Facebook</a> or <a href="http://twitter.com/milaapdotorg" target="_blank">Twitter</a>.
+	<br/><br/>
+	Happy to have you here!<br/>
+	The Milaap Team.</p>
+	</div>
+
+	<div class="clear"></div><br/><br/><br/><br/>
+
+		
+	</div> 
+

@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Milaap-Borrowers</title>
+<script src="js/jquery-1.2.1.min.js" type="text/javascript"></script>
+<script src="js/menu-collapsed.js" type="text/javascript"></script> 
+	
+	<!--CheckBox Script Start-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript" src="js/customInput.jquery.js"></script>
+
+		
+	<script type="text/javascript">
+	// Run the script on DOM ready:
+	$(function(){
+		$('input').customInput();
+	});
+	</script>	
+	<!--CheckBox Script End-->
+<link rel="stylesheet" type="text/css" href="css/CheckBoxStyle.css" />
+<link rel="stylesheet" type="text/css" href="css/AccodianStyle.css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="toppanel">
+  <div id="logopn"> <img src="images/logo_img.jpg" alt="POWERTRONIKS" width="221" height="104" align="left"/> </div>
+  <ul class="menu">
+    <li class="home"><a href="#"></a></li>
+
+    <li class="about"><a href="#"></a></li>
+    <li class="how"><a href="#"></a></li>
+    <li class="get"><a href="#"></a></li>
+    <li class="blog"><a href="#"></a></li>
+    <li class="contact"><a href="#"></a></li>
+  </ul>
+  <div id="loginpanel">
+    <ul class="loginmenu">
+      <li class="join"><a href="#"></a></li>
+
+      <li class="sign"><a href="#"></a></li>
+    </ul>
+  </div>
+</div>
+<div id="toppanelbotmborder"></div>
+
+
+<div id="Borrowersmainpanel">
+	<div id="Borrowerspanel" style="height:753px;">
+		<div id="paymentcontent">
+			<div id="Borrowerscontent1">
+
+				  <img class="tophead" src="images/borrowers_left_head_img.jpg" />
+				  <p class="criteriaHead">Customise your search using the search criteria given below:</p>
+				  <!--Accordian start -->
+				  <ul id="Borrowersmenu">
+					<li class="loanStatus"><a href="#"></a>
+					  <ul>
+						<li><input type="checkbox" name="genre" id="check-1" value="action" />
+						<label for="check-1">Recently added</label></li>
+
+						
+						<li><input type="checkbox" name="genre" id="check-2" value="comedy" />
+						<label for="check-2">Almost Funded</label></li>
+						
+						<li><input type="checkbox" name="genre" id="check-3" value="epic" />
+						<label for="check-3">Expiring Loans</label></li>
+						
+						<li><input type="checkbox" name="genre" id="check-4" value="science" />
+						<label for="check-4">Fully funded</label></li>
+					  </ul>
+
+					</li>
+					<li class="loanAmount"> <a href="#"></a>
+					  <ul>
+						<li><input type="checkbox" name="genre" id="check-5" value="action" />
+						<label for="check-5">0-$50</label></li>
+						
+						<li><input type="checkbox" name="genre" id="check-6" value="comedy" />
+						<label for="check-6">$50 - $100</label></li>
+
+						
+						<li><input type="checkbox" name="genre" id="check-7" value="epic" />
+						<label for="check-7">$100-$250</label></li>
+						
+						<li><input type="checkbox" name="genre" id="check-8" value="science" />
+						<label for="check-8">$250 or more</label></li>
+					  </ul>
+					</li>
+					<li class="socialImpact"> <a href="#"></a>
+
+					  <ul>
+						<li><input type="checkbox" name="genre" id="check-9" value="action" />
+						<label for="check-9">0-$50</label></li>
+						
+						<li><input type="checkbox" name="genre" id="check-10" value="comedy" />
+						<label for="check-10">$50 - $100</label></li>
+						
+						<li><input type="checkbox" name="genre" id="check-11" value="epic" />
+						<label for="check-11">$100-$250</label></li>
+
+						
+						<li><input type="checkbox" name="genre" id="check-12" value="science" />
+						<label for="check-12">$250 or more</label></li>
+					  </ul>
+					</li>
+					<li class="PovertyLevel"> <a href="#"></a>
+					  <ul>
+						<li><input type="checkbox" name="genre" id="check-13" value="action" />
+						<label for="check-13">Ultra Poor</label></li>
+
+						
+						<li><input type="checkbox" name="genre" id="check-14" value="comedy" />
+						<label for="check-14">Very Poor</label></li>
+						
+						<li><input type="checkbox" name="genre" id="check-15" value="epic" />
+						<label for="check-15">Poor</label></li>
+					  </ul>
+					</li>
+					 <li class="FiltersTags"> <a href="#"></a>
+
+					  <ul>
+						<li><img src="images/allProject_btn.jpg" />
+							<img src="images/villages_btn.jpg" />
+							<img src="images/Education_btn.jpg" />
+							<img src="images/Farming_btn.jpg"/>
+							<img src="images/water_btn.jpg"/>
+							<img src="images/Electricity_btn.jpg"/>
+							<img src="images/Community_btn.jpg"/>			</li>
+
+					  </ul>
+					</li>
+				  </ul>  
+				  <!-- End -->
+				  <img class="botom" src="images/borrowers_left_panelBotombg.jpg" />			</div>
+			<div id="paymentRight">
+			  <div id="notification"><!-- Notification div starts here -->
+				<p>Your payment has been successful</p>
+
+			  </div><!-- /Notification div starts here -->
+		  		<div id="paymenttopHead">
+					<img src="images/My_loans.jpg" width="204" height="38"/>
+                    <ul class="paymenttopHeadmenu">
+                        <li class="myloans"><span class="linknum">1</span><span class="linkShow">My loans</span></li>
+                        <li class="review"><span class="linknum">2</span><span class="linkHide">Review & Confirm</span></li>
+
+                        <li class="payoption"><span class="linknum">3</span><span class="linkHide">Payment Options</span></li>
+                    </ul>
+			  </div>
+              <div id="paymentResultBox">
+              		<div id="paymentResultBox1">
+                    	<img class="mylonsimg" src="images/payment_Resultimg1.jpg" />  
+                        <div id="ResultInnerhead">
+                        	<span class="headstyle">1. Open a school in Nasik </span>
+
+                             <img src="images/remove_btn.jpg" />
+                        </div>
+                        <div id="ResultInnerB_Main">
+                       	  <div id="ResultInnerB1">
+                            	<span class="textstyle">Loan Amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            	        <span class="textstyle2">-</span>
+                                        <span class="textstyle1"><strong>Rs. 10,000</strong></span>
+
+                          	        
+                       	  </div>
+                            <div id="ResultInnerB2">
+                            	<span class="textstyle">Your Milaap Credits&nbsp;<br />
+                                	<input name="mychkbx" style=" display:block; left:0px; top:5px; margin:0; padding:0; float:left;" type="checkbox" value="" />
+                                    <span style="float:left; padding-left:1.6em;font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#7c180c; font-style:italic; margin-top:0px;">Don

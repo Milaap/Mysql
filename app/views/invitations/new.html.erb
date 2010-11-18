@@ -1,0 +1,75 @@
+<div id="toppanelbotmborder"></div>
+<div id="newsignupmiddlepanel">
+<div id="newsignupmiddlecontent">
+ 
+<%= content_tag(:title, "Send Invitation") %>
+  <% if @invitation.errors.any? %>  
+
+   <div id="notification" style="width:585px;text-align:left;padding:10px;">
+      <% @invitation.errors.full_messages.each do |msg| %>  
+       <p><%= msg %></p>  
+     <% end %>
+
+
+     </div>
+
+
+  
+   <% end %>  
+
+<% if notice %>
+<div id="notification" style="width:900px;text-align:left">
+    <p><%= notice.gsub("<br>","<br/>") %></p>
+     </div>
+<% end %>
+<% if alert %>
+
+<div id="notification" style="width:900px">
+    <p><%= alert %></p>
+
+     </div>
+<% end %>
+
+<div id="newsignupleftpanel" style="height : 400px;">
+<%= form_for @invitation,  :html => {:method => :post, :id =>"user_new", :class => "user_new"} do |f| %>
+<%#= f.error_messages %>
+<div class="sub_header" >Send Invitation</div>
+<ul class="formobj">
+    <li>
+	  <p>
+	    <%= f.label :first_name %><br />
+	    <%= f.text_field :first_name %>
+	  </p>
+    </li>
+    <li></li>
+    <li> 
+	  <p>
+	    <%= f.label :last_name %><br />
+	    <%= f.text_field :last_name %>
+	  </p>
+   </li>
+   <li></li>
+    <li>
+	  <p>
+	    <%= f.label :recipient_email %><br />
+	    <%= f.text_field :recipient_email%>
+	  </p>
+  </li>
+</ul>
+<div class="other-info">
+       <p class="btnbox" style="top:340px;">
+          <%#= link_to "Get Auothorized", authorize_invitations_path%>
+       </p>
+       <div class="clear"></div>
+     </div>
+<p class="btnbox other-info" style="top:280px;"><input name="" type="submit" class="button" value="" align="absmiddle"/>
+<!--<p class="btnbox"><%#= f.submit "send invitation"%></p>-->
+
+<% end %>
+</div>
+<div id="newsignuprightpanel">
+ 
+   <img src="/images/vergin_add_img.jpg" />
+  </div>
+</div>
+</div>

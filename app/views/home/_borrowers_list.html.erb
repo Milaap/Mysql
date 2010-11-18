@@ -1,0 +1,184 @@
+<div id="BorrowersRightpanel">
+<!-- /Notification div starts here -->
+<% unless @loans.blank? %>
+<% @loans.each do |loan|  %>
+
+<% if loan.amount_remaining > 0 %>
+ <% @loan_funded_percentage = (100 * (loan.loan_amount_in_dollar - loan.amount_remaining))/loan.loan_amount_in_dollar %>
+ <%  @loan_drop_down_values = Loan.find_loan_drop_down_values(loan,$visiting_user_country) %>
+
+
+
+<% else %>
+ <% @loan_funded_percentage = 100 %>
+<% end %>
+
+
+<% @borrower = Borrower.find_loan_borrower(loan.id)%>
+<% @category =  Category.find(loan.category_id)%>
+<div id="borrowersResultpanel">
+<div id="borrowersResultBox">
+<div id="imgresult">
+<a href="<%= borrower_profile_path(:id=>@borrower.id,:name=>escape_url("#{@borrower.name}")) %>" title="<% if loan.category_id == 3 %><%= @borrower.name_of_student.titleize %><% else %><%= @borrower.name.titleize %><% end %>"> <img src="/images/borrower/<%= @borrower.search_image %>" alt="<%= @borrower.name %>" title="<% if loan.category_id == 3 %><%= @borrower.name_of_student.titleize %><% else %><%= @borrower.name.titleize %><% end %>"/></a>
+<% if $visiting_user_country == "India"%>
+<% if loan.loan_amount_remaining_in_rupees > 0 %>
+<p>
+<form action="<%= lend_money_to_borrower_path %>"  method="post" >
+<select name="amount_1" id="amount_paying_option_id"/>
+
+<% unless @loan_drop_down_values.blank? %>
+<% @loan_drop_down_values.each_with_index do |loan_amt,i| %>
+<% if @loan_drop_down_values.last == loan_amt %>
+<% if @loan_drop_down_values.last < loan.loan_amount_remaining_in_rupees %>
+<option value="<%= loan_amt %>">Rs. <%= loan_amt %></option>
+<option value="<%= loan.loan_amount_remaining_in_rupees.round() %>">Complete the Loan</option>
+<% elsif @loan_drop_down_values.last == loan.loan_amount_remaining_in_rupees %>
+<option value="<%= loan.loan_amount_remaining_in_rupees.round() %>">Complete the Loan</option>
+<% end %>
+<% else %>
+ <%  selected_drop_down_index  =  @loan_drop_down_values.length/2  %> 
+<option <% if @loan_drop_down_values[ selected_drop_down_index] == loan_amt %>selected="selected"<% end %> value="<%= loan_amt %>">Rs. <%= loan_amt %></option>
+<% end %>
+<% end %>
+<% end %>
+</select>
+<input type="hidden" name="borrower_id" value="<%= @borrower.id %>">
+<input type="hidden" name="id" value="<%= loan.id %>">
+
+
+<% if user_signed_in? %>
+<input name="" type="submit" class="botton" value="" title="Lend now" />
+<% else %>
+<a href="/users/login" title="Please Login/signup to lend money to borower">
+<input name="" type="button" class="botton" value="" title="Lend now" />
+</a>
+<% end %>
+</form>
+</p>
+<p class="Enterresult">Enter in multiples of <span>Rs. 500</span></p>
+ 
+
+
+<% end %>
+
+<% else %>
+<% if loan.amount_remaining > 0 %>
+<p>
+<form action="<%= lend_money_to_borrower_path %>"  method="post" >
+<select name="amount_1" id="amount_paying_option_id"/>
+
+<% unless @loan_drop_down_values.blank? %>
+<% @loan_drop_down_values.each_with_index do |loan_amt,i| %>
+<% if @loan_drop_down_values.last == loan_amt %>
+<% if @loan_drop_down_values.last < loan.amount_remaining %>
+<option value="<%= loan_amt %>">$<%= loan_amt %></option>
+<option value="<%= loan.amount_remaining.round() %>">Complete the Loan</option>
+<% elsif @loan_drop_down_values.last == loan.amount_remaining %>
+<option value="<%= loan.amount_remaining.round() %>">Complete the Loan</option>
+<% end %>
+<% else %>
+ <%  selected_drop_down_index  =  @loan_drop_down_values.length/2  %> 
+<option <% if @loan_drop_down_values[ selected_drop_down_index] == loan_amt %>selected="selected"<% end %> value="<%= loan_amt %>">$<%= loan_amt %></option>
+<% end %>
+<% end %>
+<% end %>
+</select>
+<input type="hidden" name="borrower_id" value="<%= @borrower.id %>">
+<input type="hidden" name="id" value="<%= loan.id %>">
+
+
+<% if user_signed_in? %>
+<input name="" type="submit" class="botton" value="" title="Lend now" />
+<% else %>
+<a href="/users/login" title="Please Login/signup to lend money to borower">
+<input name="" type="button" class="botton" value="" title="Lend now" />
+</a>
+<% end %>
+</form>
+</p>
+<p class="Enterresult">Enter in multiples of <span>$50</span></p>
+<% end %>
+<% end %>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="borrowersResultcontent">
+  <h2><a href="<%= borrower_profile_path(:id=>@borrower.id,:name=>escape_url("#{@borrower.name}")) %>" title="<% if loan.category_id == 3 %><%= @borrower.name_of_student.titleize %><% else %><%= @borrower.name.titleize %><% end %>" style="color:#031820;text-decoration:none"><% if loan.category_id == 3 %><%= @borrower.name_of_student.titleize %><% else %><%= @borrower.name.titleize %><% end %></a> | <%= @category.name.titleize %> | <%= @borrower.village+"," unless @borrower.village.blank? %> India</h2>
+  <p> <%= @borrower.borrower_story[0..240] unless @borrower.borrower_story.blank? %> <a href="<%= borrower_profile_path(:id=>@borrower.id,:name=>escape_url("#{@borrower.name}")) %>" title="Read More">read more</a> </p>
+  <div id="loanfundedcontent1">
+    <h2>Loan funded</h2>
+    <div class="graph">
+      <!-- Graph -->
+      <% unless @loan_funded_percentage.blank? %>
+      <% if @loan_funded_percentage == 100 %>
+      <div class="filled-up" style="width:90%;" title="Fully Funded"></div>
+      <% else %>
+      <% if @loan_funded_percentage > 90 %>
+      <div class="filled-up" style="width:90%;" title="<%= @loan_funded_percentage.round() %>% Funded"></div>
+      <% else %>
+      <% p "**** I am here ================" %>
+      <div class="filled-up" style="width:<%= @loan_funded_percentage.round() %>%;" title="<%= @loan_funded_percentage.round() %>% Funded"></div>
+      <% end %>
+      <% end %>
+      <% else %>
+      <div class="filled-up" style="width:0%;" title="Not funded yet"></div>
+      <% end %>
+      <!-- Dynamic graph value will come in this inline style, 30%, 40% erc -->
+    </div>
+    <!-- /Graph -->
+    <% if @loan_funded_percentage == 100  %>
+    <p class="Enterresult">Fully Funded</p>
+    <% else %>
+    <p class="Enterresult"><span><%= @loan_funded_percentage.round() %>% </span>funded</p>
+    <% end %>
+  </div>
+  <div id="loanfundedcontent1">
+    <h2>Poverty Level</h2>
+    <div class="graph">
+      <!-- Graph -->
+      <div class="filled-up" style="width:<% unless @borrower.poverty_level.blank? %><%= @borrower.poverty_level * 100 %>%;<% else %>0%<% end %>" title="Poverty level : <% unless @borrower.poverty_level.blank? %><%= @borrower.poverty_level * 100 %>%<% else %>0%<% end%>"></div>
+      <!-- Dynamic graph value will come in this inline style, 30%, 40% erc -->
+    </div>
+    <!-- /Graph -->
+    <p class="Enterresult">
+      <%if @borrower.poverty_level == "very poor"%>
+      Poor
+      <% else %>
+      Poor
+      <%end%>
+      &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Ultra Poor</p>
+  </div>
+  <div id="loanfundedcontent1">
+    <h2>Social Impact</h2>
+    <div class="graph">
+      <!-- Graph -->
+      <div class="filled-up" style="<%if loan.social_impact=="VERY HIGH"%>width:90%;<% elsif loan.social_impact=="HIGH"%>width:70%;<% else %>width:35%;<% end %>" title="<%= loan.social_impact %>"></div>
+      <!-- Dynamic graph value will come in this inline style, 30%, 40% erc -->
+    </div>
+    <!-- /Graph -->
+    <p class="Enterresult" title="<%= loan.social_impact %>">Low &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Very High</p>
+  </div>
+</div>
+</div>
+</div>
+<% end %>
+<div class="pages" style="padding-top:20px;float:right"><%= will_paginate @loans %></div>
+</div>
+<% end %>

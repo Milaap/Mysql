@@ -1,0 +1,77 @@
+/*	CSS for customRadioized radio buttons and check boxes */
+
+/* page styles */
+
+fieldset { 
+	padding: 0 15px 3em;
+	border: 0;
+}
+
+legend {
+	font-size: 1.4em;
+	font-weight: bold;
+	padding: .2em 5px;
+}
+
+	
+/*	wrapper divs */
+.customRadio-checkbox, .customRadio-radio {}
+	
+/* input, label positioning */
+.customRadio-checkbox input, 
+.customRadio-radio input {
+	position: absolute;
+	left: 12px;
+	top: 14px;
+	margin:0;
+	z-index: 0;
+}
+
+.customRadio-checkbox label, 
+.customRadio-radio label {
+	display: block;
+	position: relative;
+	z-index: 1;
+	font-family:"Arial", Helvetica, sans-serif;
+	font-size:14px;
+	color:#6c6969;
+	padding-right: 2px;
+	padding: 6px 0 .5em 30px;
+	margin-left:10px;
+	margin-top:5px;
+	cursor: pointer;
+	width:209px;
+	height:20px;
+}
+
+	
+/* states */
+.customRadio-checkbox label { background: url(../images/checkbox.jpg) no-repeat; }
+
+.customRadio-radio label { background: url(../images/radiobutton.jpg) no-repeat; }
+
+.customRadio-checkbox label, .customRadio-radio label {
+	background-position: -10px -14px;
+}
+
+.customRadio-checkbox label.hover,
+.customRadio-checkbox label.focus,
+.customRadio-radio label.hover,
+.customRadio-radio label.focus {
+	background-position: -10px -114px;
+}
+
+.customRadio-checkbox label.checked, 
+.customRadio-radio label.checked {
+	background-position: -10px -214px;
+}
+
+.customRadio-checkbox label.checkedHover, 
+.customRadio-checkbox label.checkedFocus {
+	background-position: -10px -314px;
+}
+
+.customRadio-checkbox label.focus, 
+.customRadio-radio label.focus {
+	outline: 1px dotted #ccc;
+}

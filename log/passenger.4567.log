@@ -1,0 +1,64 @@
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>8}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+[ pid=394 thr=3064654704 file=ext/nginx/HelperAgent.cpp:568 time=2010-10-26 12:47:58.350 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>8}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+warning: peer certificate won't be verified in this SSL session
+FBGRAPH [GET]: me?access_token=107860165938751%7C80a13368012d45251618951c-100000816800978%7Cl3jwLb0GFmqGdmt9cQDk61CZAhE
+ACCESS TOKEN: 107860165938751|80a13368012d45251618951c-100000816800978|l3jwLb0GFmqGdmt9cQDk61CZAhE
+  MONGODB milaap_development['users'].find({:facebook_uid=>"100000816800978"}, {}).limit(-1)
+  MONGODB milaap_development['users'].update({"_id"=>BSON::ObjectID('4cbef2d798b3c92434000003')}, {"$set"=>{"last_name"=>"venkatraman", "first_name"=>"prasath"}})
+  MONGODB milaap_development['$cmd'].find({"count"=>"users", "query"=>{:_id=>{"$ne"=>BSON::ObjectID('4cbef2d798b3c92434000003')}, :email=>"ask4prasath@gmail.com"}, "fields"=>nil}, {}).limit(-1)
+  MONGODB milaap_development['users'].update({"_id"=>BSON::ObjectID('4cbef2d798b3c92434000003')}, {"$set"=>{"sign_in_count"=>2, "current_sign_in_at"=>Tue Oct 26 07:18:21 UTC 2010}})
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4cbef2d798b3c92434000003')}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4cbef2d798b3c92434000003')}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>8}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4cbef2d798b3c92434000003')}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>8}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4cbef2d798b3c92434000003')}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>8}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0

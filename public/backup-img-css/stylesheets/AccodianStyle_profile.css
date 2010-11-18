@@ -1,0 +1,58 @@
+ul#Borrowersmenu, ul#Borrowersmenu ul {
+  list-style-type:none;
+  margin-left:4px;
+  padding: 0;
+  width: 209px;
+}
+
+ul#Borrowersmenu a {
+  display: block;
+  text-decoration: none;	
+}
+
+ul#Borrowersmenu li {
+ margin:0;
+}
+
+ul#Borrowersmenu li a {
+
+/*  background: #faf7f4;
+  border-color:#eae9e7;
+  border-style:solid;
+  border-width:1px;*/
+  width:209px;
+  height:32px;
+}
+ul#Borrowersmenu li.loanStatus{ background-image:url(../images/loanStatus_btn.jpg);background-repeat:no-repeat;}
+ul#Borrowersmenu li.loanAmount{ background-image:url(../images/loanAmount_btn.jpg);background-repeat:no-repeat;}
+ul#Borrowersmenu li.socialImpact{ background-image:url(../images/social_Impact.jpg);background-repeat:no-repeat;}
+ul#Borrowersmenu li.PovertyLevel{ background-image:url(../images/PovertyLevel_btn.jpg);background-repeat:no-repeat;}
+ul#Borrowersmenu li.FiltersTags{ background-image:url(../images/Filters_tgs.jpg);background-repeat:no-repeat;}
+
+ul#Borrowersmenu li a:hover {
+  
+}
+
+ul#Borrowersmenu li ul li a {
+  background: #ccc;
+  color: #000;
+  padding-left: 20px;
+}
+
+ul#Borrowersmenu li ul li a:hover {
+  background: #aaa;
+  border-left: 5px #000 solid;
+  padding-left: 15px;
+}
+
+ul#Borrowersmenu li ul li img {
+	border:none;
+	padding-top:15px;
+	padding-left: 7px;
+}
+
+.code { border: 1px solid #ccc; list-style-type: decimal-leading-zero; padding: 5px; margin: 0; }
+.code code { display: block; padding: 3px; margin-bottom: 0; }
+.code li { background: #ddd; border: 1px solid #ccc; margin: 0 0 2px 2.2em; }
+.indent1 { padding-left: 1em; }
+.indent2 { padding-left: 0em; }

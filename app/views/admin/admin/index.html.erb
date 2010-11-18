@@ -1,0 +1,68 @@
+<div id="dt-boxguide1">
+<table cellspacing="0" border="0" style="font-size: 12px;" class="admin-table admin1-table shopping-cart1" id="shopping-cart-table">
+          <col width="12%">
+          <col width="15%">
+          <col width="40%">
+          <col width="18%">
+          <col width="18%">
+          <thead>
+            <tr class="first last">
+              <th style="text-align: left;"> <a class="bold_text" href="/manage-users?c=created_at&amp;d=up"><b style="color: rgb(51, 51, 51); font-size: 12px;">Date</b></a>
+                
+              </th>
+              <th style="text-align: left;"> <a class="bold_text" href="/manage-users?c=nick_name&amp;d=up"><b style="color: rgb(51, 51, 51); font-size: 12px;">User</b></a>
+                </th>
+              <th class="a-left" rowspan="1"><a class="bold_text" href="/manage-users?c=email&amp;d=up"><b style="color: rgb(51, 51, 51); font-size: 12px;">Email</b></a>
+                </th>
+              <th style="text-align: left;">Action </th>
+              <th class="last">Suspend Note </th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr class="first last odd">
+              <td>May 28, 10</td>
+              <td><a href="/smargesh7">smargesh7</a></td>
+              <td class="a-left"><a href="mailto:margeshtest@gmail.com">margeshtest@gmail.com</a></td>
+              <td style="text-align: left;">
+                <a title="Suspend this user." onclick="if (confirm('Are you sure do you want to suspend this user?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;" href="/action-on-user/suspend/smargesh7">Suspend</a>
+                </td>
+              <td class="last"><div>
+                  
+                  <a style="cursor: pointer;" onclick="Javascript:Effect.toggle('suspend_note105','blind');">Add Note</a>
+                  
+                </div>
+                <div style="text-align: left; display: none; padding-bottom: 10px; position: absolute; z-index: 10000; padding-left: 10px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: thick groove rgb(223, 223, 223); width: 350px;" id="suspend_note105"> <form onsubmit="return checkSuspendNote(this);" method="post" action="/admin/add_user_suspend_note">
+  
+  <input type="hidden" value="105" name="user_id">
+  <input type="hidden" value="1" name="page">
+  Suspend Note for 'smargesh7' <textarea class="popup-text-area" name="suspend_note"></textarea>
+  <div style="padding-top: 10px;">
+    <input align="absmiddle" type="image" src="/images/submit-butt.png?1270812210" onload="fixPNG(this);">
+    &nbsp;<a onclick="Javascript:Effect.toggle('suspend_note105','blind')" style="cursor: pointer;" class="ls-bluesmall">Cancel</a>
+  </div>
+  
+</form> </div></td>
+            </tr>
+           
+            
+          </tbody>
+        </table>
+
+<div id="rhs_admin">
+  <h3>Admin Dashboard</h3>
+  <ul>
+    <li>
+      
+      <a href="/manage-users"><b>Manage Users</b></a>
+      
+    </li>
+  </ul>
+
+  
+</div>
+
+</div>
+
+
+

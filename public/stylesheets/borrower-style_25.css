@@ -1,0 +1,434 @@
+/**************Borrower's details page CSS*************/
+.accordion {
+width: 650px;
+border-bottom: solid 1px #efefef;
+margin:25px 0 0 0;
+}
+.accordion h4 {
+background: #fff url(../images/borrower-sprite.png) no-repeat 610px -80px;
+padding:11px 15px;
+margin: 0;
+border: solid 1px #efefef;
+border-bottom: none;
+cursor: pointer;
+font-size:18px;
+color:#562e47;
+font-weight:bold;
+display:block;
+}
+.accordion h4:hover {
+background-color: #fbfbfb;
+}
+.accordion h4.active {
+background-position: right 5px;
+background: #fbfbfb url("../images/borrower-sprite.png") no-repeat scroll 610px -33px;
+}
+
+.accordion p {
+background: #fbfbfb;
+margin: 0;
+padding: 10px 15px 20px;
+border-left: solid 1px #efefef;
+border-right: solid 1px #efefef;
+display: none;
+font-size:13px;
+}
+
+.borrowers-details .info-blurb #borrower-image .borrower-image-border {
+border: solid 1px #efefef;
+}
+
+.borrowers-details .info-blurb #borrower-image img {
+border:18px solid #fff;
+}
+
+.borrowers-details .info-blurb {
+width:650px;
+}
+
+.borrowers-details .info-blurb .intro {
+width:400px;
+}
+
+.borrowers-details .info-blurb .intro img {
+margin:-10px 0 0 10px;
+}
+
+.borrowers-details .info-blurb h3 {
+font-size:19px;
+color:#562e47;
+padding:0 0 5px 0;
+}
+
+.borrowers-details .info-blurb h3 a {
+text-decoration:none;
+}
+
+.borrowers-details .info-blurb .sub-info {
+color:#666;
+padding:0 0 5px 0;
+font-weight:bold;
+font-size:14px;
+}
+
+#location-text {
+width:340px;
+}
+
+.sidebar {
+background:#fff;
+width:270px;
+border:1px solid #efefef;
+}
+
+.shadow0 {
+background:url("../images/borrower-sprite.png") no-repeat scroll 0 -2px transparent;
+height:15px;
+width:227px;
+}
+
+.shadow1 {
+background:url("../images/borrower-sprite.png") no-repeat scroll -52px -94px transparent;
+height:16px;
+width:647px;
+}
+
+.shadow2 {
+background:url("../images/borrower-sprite.png") no-repeat scroll -431px -2px transparent;
+height:14px;
+position:absolute;
+right:1px;
+top:687px;
+width:271px;
+}
+
+.shadow3 {
+background:url("../images/borrower-sprite.png") no-repeat scroll -431px -2px transparent;
+height:14px;
+width:271px;
+margin-left:698px;
+margin-top:-50px;
+}
+
+#choose-category {
+background:#ddd5db;
+height:92px;
+}
+
+#choose-category img {
+margin:10px 15px 0 15px;
+}
+
+#choose-category h3 {
+background:#cbbcc6;
+padding:10px 10px;
+color:#fff;
+font-size:12px;
+border-bottom:1px solid #EFEFEF;
+border-top:1px solid #EFEFEF;
+}
+
+#choose-amount {
+padding:35px 0 23px 30px;
+background:url("../images/sidebar-heading-bg.png") repeat-x;
+
+}
+
+#choose-amount select {
+border:1px solid #cecece;
+color:#999999;
+height:30px;
+margin-bottom:5px;
+padding:5px 3px;
+width:208px;
+cursor:pointer;
+}
+
+#choose-amount select option {
+color:#562E47;
+font-weight:bold;
+margin-bottom:5px;
+padding:3px;
+}
+
+
+#choose-amount select option:hover {
+background-color: pink;
+color: white;
+}
+
+#complete-loan {
+padding:10px 0 25px;
+}
+
+
+#complete-loan span {
+color:#562E47;
+font-size:14px;
+font-weight:bold;
+margin:-1px 0 0 6px;
+#margin:3px 0 0 6px;
+}
+
+#choose-amount input {
+background:url("../images/borrower-sprite.png") no-repeat scroll -52px -30px transparent;
+border:0 none;
+cursor:pointer;
+height:60px;
+width:210px;
+}
+
+#choose-amount #complete-loan input {
+width:auto;
+height:auto;
+background:none;
+}
+
+.amount-blurb {
+background:url("../images/sidebar-heading-bg.png") repeat-x scroll 0 0 transparent;
+height:135px;
+padding:10px 0 0 35px;
+}
+
+
+.amount-blurb #amount-funded{
+padding:20px 0 0px 0;
+}
+
+#amount-funded p {
+color:#562e47;
+font-size:13px;
+font-weight:bold;
+}
+
+#amount-funded p.amount {
+background:url("../images/borrower-sprite.png") no-repeat scroll -490px -30px transparent;
+color:#562E47;
+font-size:32px;
+font-weight:bold;
+padding-bottom:12px;
+padding-left:22px;
+padding-top:5px;
+width:10px;
+}
+
+.graph-wrapper {
+border:1px solid #999;
+background:#fff;
+padding:2px;
+width:200px;
+margin-top:10px;
+}
+
+.graph {
+background:none repeat scroll 0 0 #562E47;
+height:20px;
+width:60%;
+}
+
+.graph-increase {
+background:none repeat scroll 0 0 #B91141;
+height:20px;
+width:0%;
+}
+
+.repayment-blurb {
+padding:0px 0 30px 30px;
+background:url("../images/sidebar-heading-bg.png") repeat-x;
+}
+
+.repayment-blurb h3 {
+color:#562E47;
+font-size:18px;
+font-weight:bold;
+padding:30px 0 10px;
+}
+
+.repayment-blurb p {
+border-bottom:1px solid #EFEFEF;
+color:#6C6668;
+font-size:13px;
+margin-right:25px;
+padding-bottom:6px;
+padding-top:6px;
+}
+
+.expanded {
+background:url("../images/borrower-sprite.png") no-repeat scroll -565px -38px transparent;
+color:#532D44;
+font-weight:bold;
+margin-right:12px;
+padding:0 18px 0 0;
+}
+
+.collapsed {
+background:url("../images/borrower-sprite.png") no-repeat scroll -515px -38px transparent;
+color:#532D44;
+font-weight:bold;
+margin-right:12px;
+padding:0 18px 0 0;
+}
+
+/**************Borrower's search-list page CSS*************/
+
+#amount-blurb-searchlist {
+background:url("../images/sidebar-heading-bg.png") repeat-x scroll 0 0 transparent;
+border:1px solid #EFEFEF;
+height:66px;
+padding:10px 20px;
+margin-top:10px;
+}
+
+#amount-blurb-searchlist #amount-funded p {
+color:#562E47;
+font-size:13px;
+font-weight:bold;
+padding:6px 0 0;
+}
+
+.divider {
+border-bottom:2px solid #EFEFEF;
+margin:35px 0;
+}
+
+.pagination {
+margin:10px 0 0;
+}
+
+.pagination span {
+padding:0 5px;
+}
+
+.pagination a:visited {
+background:none repeat scroll 0 50% #FFFFFF;
+border:1px solid #DDDDDD;
+padding:2px 6px;
+text-decoration:none;
+}
+.pagination a, .pageList .this-page {
+background:none repeat scroll 0 50% #FFFFFF;
+border:1px solid #DDDDDD;
+padding:2px 6px;
+text-decoration:none;
+}
+
+.pagination a:visited {
+color:#444;
+text-decoration:none;
+}
+
+.pagination a:hover {
+background:#B91141;
+color:#fff;
+}
+
+
+#choose-category-searchlist {
+background:#ddd5db;
+}
+
+#choose-category-searchlist img {
+margin:8px 15px 0;
+}
+
+.top-divider {
+border-bottom:1px solid #CECECE;
+margin-bottom:35px;
+}
+
+.btm-divider {
+border-bottom:1px solid #CECECE;
+margin-top:35px;
+}
+
+#choose-category-searchlist p {
+background:none repeat scroll 0 0 #9D7C93;
+color:#FFFFFF;
+font-weight:bold;
+padding:16px 10px 15px 12px;
+}
+
+/**************Pre-payment CSS*************/
+.loan-details table {
+width:100%;
+background:#fff;
+border:1px solid #efefef;
+margin-top:10px;
+}
+
+.loan-details table td {
+color:#562E47;
+padding:7px 10px;
+text-align:left;
+width:0;
+font-size:13px;
+}
+
+.loan-details table td.total {
+font-weight:bold;
+font-size:19px;
+padding:13px 10px;
+border-top:1px solid #efefef;
+}
+
+#continue {
+padding:0 0 23px 30px;
+}
+
+#continue input {
+background:url("../images/borrower-sprite.png") no-repeat scroll -52px -114px transparent;
+border:0 none;
+cursor:pointer;
+height:60px;
+width:210px;
+}
+
+/************** Tooltip *************/
+
+#tooltip {
+position:absolute;
+z-index:9999;
+color:#562E47;
+font-size:12px;
+width:180px;
+cursor:pointer;
+}
+
+#tooltip .tipHeader {
+height:8px;
+}
+
+/* IE hack */
+*html #tooltip .tipHeader {margin-bottom:-6px;}
+
+#tooltip .tipBody {
+background-color:#FAF9FA;
+border:1px solid #efefef;
+padding:10px;
+}
+
+#tooltip .tipFooter {
+height:8px;
+}
+
+.tooltip-text {
+color:#B91141;
+font-size:14px; 
+font-weight:bold;
+}
+
+#continue input.btnhover {
+background:url("../images/borrower-sprite.png") no-repeat scroll -270px -114px transparent
+}
+
+#choose-amount input.btnhover {
+background:url("../images/borrower-sprite.png") no-repeat scroll -268px -30px transparent;
+border:0 none;
+cursor:pointer;
+height:60px;
+width:210px;
+}
+
+ul.bullet  {
+list-style:disc inside url("../images/new_bullet.png");
+}

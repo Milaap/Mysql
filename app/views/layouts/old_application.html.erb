@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>MILAAP - Beyond Just Credit</title>
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+<%= stylesheet_link_tag "style.css" %>
+<%= stylesheet_link_tag "slide.css" %>
+<%#= javascript_include_tag :defaults %>
+<%= javascript_include_tag "jquery-1.3.2.min.js" %>
+<%= javascript_include_tag "jquery.cycle.all.min.js" %>
+<%= javascript_include_tag "slide.js" %>
+<%= csrf_meta_tag %>
+
+</head>
+
+<body>
+<div id="toppanel">
+  <div id="logopn"> <a href="/" title="MILAAP - Beyond Just Credit"><img src="/images/logo_img.jpg" alt="POWERTRONIKS" width="221" height="104" align="left"/></a> </div>
+  <ul class="menu">
+    <li class="home"><a href="/" title="MILAAP - Beyond Just Credit"></a></li>
+    <li class="about"><a href="<%= about_path %>" title="About MILAAP"></a></li>
+    <li class="how"><a href="<%= how_it_work_path %>" title="MILAAP - How it works"></a></li>
+    <li class="get"><a href="<%= get_envolved_path %>" title="Get involved with MILAAP"></a></li>
+    <li class="blog"><a href="http://blog.milaap.org/" title="MILAAP - Beyond Just Credit"></a></li>
+    <li class="contact"><a href="<%= contact_us_path %>" title="Contact MILAAP"></a></li>
+  </ul>
+ <% unless current_user.blank? %> 
+  <div>
+      Welcome, <%= current_user.username %> | <a href="/users/logout">Logout</a>
+  </div>
+
+<% else %>
+ <div id="loginpanel">
+    <ul class="loginmenu">
+      <li class="join"><a href="#" id="signup_id"></a></li>
+      <li class="sign"><a href="#" id="login_id"></a></li>
+    </ul>
+  </div>
+<% end %>
+
+
+</div>
+
+<div id="bannerpanel">
+  <div id="bannermiidlepanel">
+    <div id="bannerleftpanel">
+      <h2>Open a school in Nasik</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+      <p class="more"><a href="#">more</a></p>
+    </div>
+    <div id="bannerrightpanel">
+      <div id="demo">
+        <div id="slideshow" class="pics"> <img src="images/banner_right_inner.jpg" /> <img src="images/banner_right_inner.jpg" /> <img src="images/banner_right_inner.jpg" /> <img src="images/banner_right_inner.jpg" /> </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%= yield%>
+
+
+
+
+<div id="footermainpanel">
+	<div id="footerinnerpanel">
+		<div id="footercontent1">
+			<img src="/images/why_choose_img.jpg" />
+			<ul class="whyChoose">
+				<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p></li>
+				<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p></li>
+				<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p></li>
+			</ul>
+	  </div>
+	  <div id="footercontent2">
+			<img src="/images/about_milap_img.jpg" />
+			<ul class="aboutMilap">
+				<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p></li>
+				<li class="advBoard"><a class="Advisory" href="<%= advisory_board_path %>" title="Advisory Board">Advisory Board</a> <span>|</span> <a class="Advisory" href="<%= team_path %>" title="Team">Team</a> <span>|</span> <a class="Advisory"  href="<%= volunteer_path %>" title="Volunteer">Volunteer </a></li>
+				<li class="advBoard"><a class="Advisory" href="<%= terms_path %>" title="Terms">Terms</a> <span>|</span> <a class="Advisory" href="<%= privacy_path %>" title="Privacy">Privacy</a> <span>|</span> <a class="Advisory" href="<%= jobs_path %>" title="Jobs">Jobs</a> <span>|</span> <a class="Advisory" href="<%= contact_us_path %>" title="Contact">Contact </a></li>
+			</ul>
+	  </div>
+	  <div id="footercontent3">
+			<img src="/images/our_partners_img.jpg" />
+			<img class="partners" src="/images/our_partners_product_img.jpg" />
+	  </div>
+	</div>
+</div>
+<div id="reserveid">	
+	<div id="reserveinner">
+	<p>&copy; 2010 Milaap.org All Rights Reserved.</p>
+	</div>
+</div>
+
+
+<div class="fade1" style="display:none" id="login_fade_id">&nbsp;</div>
+
+<div class="popup1_big" id="pop_up_box_login_id" style="display:none;">
+        <div style="height:12px"><img src="/images/light_box_top.png"/></div>
+        <div class="popup1_block_big"><img src="/images/icon_close.png"  class="cntrl" border="none" onclick="" style="cursor:pointer" title="Close" id="close_pop_up_id"/>
+          <div style="overflow:hidden;" class="">
+            <div style="overflow:hidden; width:350px;padding:10px; padding-left:20px">
+              <h3 style="font-family:Arial,Verdana;font-size:14pt;font-weight:bold;letter-spacing:-1px;margin:0 0 0;padding:0;">Log into Milaap</h3>
+              <br/>
+              <div id="update_login_id">
+        <form method="post" id="user_new" class="user_new" action="/users/login" accept-charset="UTF-8" data-remote="true"><div style="margin: 0pt; padding: 0pt; display: inline;"><input type="hidden" value="☃" name="_snowman"><input type="hidden" value="s0rOQTEvumSKKqR8cLC/M01N84KrPJzXHPYOaVrCtLg=" name="authenticity_token"></div>
+  <p class="conntent_new"><label for="user_email">Email</label> : <input type="text" value=""   id="user_email" name="user[email]" class="login_textbox"></p>
+
+  <p class="conntent_new"><label for="user_password">Password</label> : <input type="password"  id="user_password" name="user[password]" class="login_textbox"></p>
+
+    <!--p><input type="hidden" value="0" name="user[remember_me]"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me"> <label for="user_remember_me">Remember me</label></p-->
+
+  <p><input type="submit" value="Sign in" name="commit" id="user_submit"></p>
+</form>
+              
+             
+      
+
+
+          
+
+            </div>
+            </div>
+          </div>
+        </div>
+        <div><img src="/images/light_box_bot.png"/></div>
+      </div>
+
+<div class="fade1" style="display:none" id="sign_up_fade_id">&nbsp;</div>
+
+
+<div class="popup1_big" id="pop_up_box_sign_up_id" style="display:none;">
+        <div style="height:12px"><img src="/images/light_box_top.png"/></div>
+        <div class="popup1_block_big"><img src="/images/icon_close.png"  class="cntrl" border="none" id="close_signup_pop_up_id" style="cursor:pointer" title="Close"/>
+          <div style="overflow:hidden;" class="">
+            <div style="overflow:hidden; width:350px;padding:10px; padding-left:20px">
+              <h3 style="font-family:Arial,Verdana;font-size:14pt;font-weight:bold;letter-spacing:-1px;margin:0 0 0;padding:0;">Join Milaap</h3>
+              <br/>
+              <div id="update_signup_id">
+               <form method="post" id="user_new" class="user_new" action="/users/register" accept-charset="UTF-8"><div style="margin: 0pt; padding: 0pt; display: inline;"><input type="hidden" value="☃" name="_snowman"><input type="hidden" value="7W415AM9Jwrge/c5Ml5WqJn/2R8pvlXrjZuKnomBDNM=" name="authenticity_token"></div>
+   
+
+<p class="conntent_new"><label for="user_email">Email</label> : <input type="text" name="user[email]"   id="user_email" class="login_textbox"></p>
+
+   <p class="conntent_new"><label for="user_password"></label> Password: <input type="password" name="user[password]"   id="user_password" class="login_textbox">
+   </p>
+
+
+   <p class="conntent_new"><label for="user_password_confirmation">Confirm Password</label> : <input type="text" name="user[password_confirmation]"   id="user[password_confirmation]" class="login_textbox">
+   </p>
+
+
+   <p class="conntent_new"><label for="user_first_name">First Name</label> : <input type="text" name="user[first_name]"   id="user_first_name" class="login_textbox">
+   </p>
+
+    <p class="conntent_new"><label for="user_last_name">Last Name</label> : <input type="text" name="user[last_name]"   id="user_last_name" class="login_textbox">
+   </p>
+
+   <p class="conntent_new"><label for="user_username">Username</label> : <input type="text" name="user[username]"   id="user_username" class="login_textbox">
+   </p>
+
+
+
+
+
+
+  <p><input type="submit" value="Sign up" name="commit" id="user_submit"></p>
+</form>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div><img src="/images/light_box_bot.png"/></div>
+      </div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(function() {
+        
+    $('#slideshow').after('<div id="nav" class="nav">').cycle({
+        fx:     'fade',
+        speed:  'fast',
+        timeout: 0,
+        pager:  '#nav',
+        before: onBefore
+    });
+    
+        function onBefore() {
+        $('#title').html(this.alt);
+    }
+});
+$('#login_id').click(function() {
+$('#login_fade_id').show();
+$('#pop_up_box_login_id').show();
+});
+
+
+$('#close_pop_up_id').click(function() {
+$('#login_fade_id').hide();
+$('#pop_up_box_login_id').hide();
+});
+
+
+$('#signup_id').click(function() {
+$('#sign_up_fade_id').show();
+$('#pop_up_box_sign_up_id').show();
+});
+
+
+$('#close_signup_pop_up_id').click(function() {
+$('#sign_up_fade_id').hide();
+$('#pop_up_box_sign_up_id').hide();
+});
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

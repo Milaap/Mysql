@@ -1,0 +1,45 @@
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>1}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>2}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>3}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>1}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>2}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>3}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>3}, {}).limit(-1)
+2010/11/02 16:09:58 [crit] 4015#0: *20 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/1/00/0000000001" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET /borrower-profile/3/shanta-shalmal-shinde HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:9001", referrer: "http://localhost:9001/"
+[ pid=3980 thr=3063303024 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 16:09:58.83 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+  MONGODB milaap_development['loans'].find({:loan_id=>1}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>2}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>3}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+2010/11/02 17:51:18 [crit] 13760#0: *4 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/1/00/0000000001" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:9001"
+[ pid=13725 thr=3066047344 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 17:51:18.83 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 17:56:15 [crit] 13760#0: *11 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/2/00/0000000002" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:9001"
+[ pid=13725 thr=3065645936 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 17:56:15.896 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+2010/11/02 18:00:39 [crit] 13760#0: *17 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/3/00/0000000003" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:9001"
+[ pid=13725 thr=3065244528 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 18:00:39.427 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+warning: peer certificate won't be verified in this SSL session
+FBGRAPH [GET]: me?access_token=107860165938751%7C80a13368012d45251618951c-100000816800978%7Cl3jwLb0GFmqGdmt9cQDk61CZAhE
+ACCESS TOKEN: 107860165938751|80a13368012d45251618951c-100000816800978|l3jwLb0GFmqGdmt9cQDk61CZAhE
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+2010/11/02 18:39:14 [crit] 17794#0: *4 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/1/00/0000000001" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:9001"
+[ pid=17759 thr=3067284336 file=ext/nginx/HelperAgent.cpp:578 time=2010-11-02 18:39:14.644 ]: Uncaught exception in PassengerServer client thread:
+   exception: write() failed: Connection reset by peer (104)
+   backtrace:
+     in 'void Client::forwardResponse(Passenger::SessionPtr&, Passenger::FileDescriptor&)' (HelperAgent.cpp:369)
+     in 'void Client::handleRequest(Passenger::FileDescriptor&)' (HelperAgent.cpp:504)
+     in 'void Client::threadMain()' (HelperAgent.cpp:597)
+

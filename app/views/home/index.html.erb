@@ -1,0 +1,279 @@
+<%= stylesheet_link_tag "style.css" %>
+<%= stylesheet_link_tag "slider.css" %>
+<%= javascript_include_tag "jquery.nivo.slider.pack.js" %>
+<%#= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "jquery.rails.js" %>
+
+
+<div class="content">
+<div style="background:url(/images/home-bg.jpg) repeat-x 0 -50px;">
+	<div class="wrapper"><!-- Wrapper div -->
+<% if notice %>
+		<div id="notification" style="text-align:left;">
+			<p><%= notice.gsub("<br>","<br/>") %></p>
+		</div>
+	<% end %>
+	<% if alert %>
+		<div id="notification" style="text-align:left;">
+			<p><%= alert %></p>
+		</div>
+	<% end %>
+
+				<div id="home" class="clear"><!-- Home-slider div -->
+					<div id="slider">
+						<img src="/images/home-carousel-1.jpg" alt="Unmet Needs"/>
+						<img src="/images/home-carousel-2.jpg" alt="Opportunity, not Charity"/>
+						<img src="/images/home-carousel-3.jpg" alt="Ready to make a difference"/>
+					</div>
+				</div><!-- /Home-slider div -->
+				<div class="slider-button">
+				  <% unless user_signed_in? %>
+					  <% unless  cookies[:loan_pledged].blank? %>
+					  	<a href="<%= pledge_url %>"><div id="pledge-btn" title="Pledge a loan"><input value="" type="button"></div></a>
+            <% else %>
+						   <a href="<%= pledge_url %>"><div id="pledge-btn"  title="Pledge a loan"><input value="" type="button"></div></a>
+						<% end %>
+      <% else %>
+            <% if current_user.loan_pledged == true %>
+						    <a href="<%= view_all_projects_url  %>"><div id="give-loan-btn"  title="Give a loan"><input value="" type="button"></div></a>
+            <%else %>
+						   <a href="<%= pledge_url %>"><div id="pledge-btn"  title="Pledge a loan"><input value="" type="button"></div></a>
+						<% end %>
+					<% end %>
+
+
+				</div>
+				<div class="home-slider-shadow"></div>
+								<h2 class="home-heading">Support featured projects or  <% unless user_signed_in? %>
+					  <% unless  cookies[:loan_pledged].blank? %><a href="<%= pledge_url %>">discover more</a><% else %><a href="<%= pledge_url %>">discover more</a><% end %><% else %> <% if current_user.loan_pledged == true %><a href="<%= view_all_projects_url %>">discover more</a><% else %><a href="<%= pledge_url %>">discover more</a><% end %><% end %></h2>
+				<div id="projects">
+
+			<% unless @borrowers.blank? %>
+      <%  @borrowers.each_with_index do |borrower,i| %>
+			<%# p borrower.loan_id %>
+
+			<% @loan = Loan.find(borrower.loan_id)%>
+			<%#= @loan %>
+					<div class="project-details" <% if i ==2 %>style="margin-right: 0pt;"<% end %>>
+					 <% unless user_signed_in? %>
+			      	<% unless  cookies[:loan_pledged].blank? %>
+							   <a href="<%= pledge_url %>" title="pledge a loan">
+					   		     <img src="/images/borrower/<%= borrower.home_image %>"  alt="<% if @loan.category_id == 3 %><%= borrower.name_of_student.titleize %><% else %><%= borrower.name.titleize %><% end %>" />
+						      </a>
+
+              <% else %>
+							    <a href="<%= pledge_url %>" title="pledge a loan">
+					   		     <img src="/images/borrower/<%= borrower.home_image %>"  alt="<% if @loan.category_id == 3 %><%= borrower.name_of_student.titleize %><% else %><%= borrower.name.titleize %><% end %>" />
+						      </a>
+
+							<% end %>
+						<% else %>
+						    <% if current_user.loan_pledged == true %>
+							     <a href="<%= borrower_profile_path(:borrower_id=>borrower.borrower_id,:name=>escape_url("#{borrower.name}")) %>" title="Give a loan">
+					   		     <img src="/images/borrower/<%= borrower.home_image %>"  alt="<% if @loan.category_id == 3 %><%= borrower.name_of_student.titleize %><% else %><%= borrower.name.titleize %><% end %>" />
+						      </a>
+                <% else %>
+                    <a href="<%= pledge_url %>" title="pledge a loan">
+					   		     <img src="/images/borrower/<%= borrower.home_image %>"  alt="<% if @loan.category_id == 3 %><%= borrower.name_of_student.titleize %><% else %><%= borrower.name.titleize %><% end %>"/>
+						      </a>
+							   <% end %>
+					  	<% end %>
+							 <% unless user_signed_in? %>
+			      	   <% unless  cookies[:loan_pledged].blank? %>
+							     <a href="<%= pledge_url %>" title="<%= @loan.title %>"><h3><%= @loan.title unless @loan.blank? %></h3></a>
+								  <% else %>
+                    <a href="<%= pledge_url %>" title="<%= @loan.title %>"><h3><%= @loan.title unless @loan.blank? %></h3></a>
+						      <% end %>
+								<% else %>
+									  <% if current_user.loan_pledged == true %>
+									      <a href="<%= borrower_profile_path(:borrower_id=>borrower.borrower_id,:name=>escape_url("#{borrower.name}")) %>" title="<%= @loan.title %>"><h3><%= @loan.title unless @loan.blank? %></h3></a>
+										<% else %>
+										   <a href="<%= pledge_url %>" title="<%= @loan.title %>"><h3><%= @loan.title unless @loan.blank? %></h3></a>
+									  <% end %>
+						    <% end %>
+						<p id="short_story_<%= borrower.loan_id %>">
+						<%= borrower.borrower_story[0..209] unless @loan.blank? %> <% if borrower.borrower_story.length > 209  %><a  class="collapsed slide" id="more_<%=borrower.loan_id %>">more+</a><% end %>
+						</p>
+
+
+						<p style="display:none"  id="full_story_<%= borrower.loan_id %>">
+								<span class="view"><%= borrower.borrower_story %>
+								<a class="slide expanded" id="expanded_more_story_<%= borrower.loan_id %>" title="less">less-</a>
+								</span>
+						</p>
+
+						 <% unless user_signed_in? %>
+					  <% unless  cookies[:loan_pledged].blank? %>
+					  	<a href="<%= pledge_url %>"><div class="pledge-btn" title="Pledge a loan"><input value="" type="button"></div></a>
+            <% else %>
+						   <a href="<%= pledge_url %>"><div class="pledge-btn"  title="Pledge a loan"><input value="" type="button"></div></a>
+						<% end %>
+      <% else %>
+	         <% if current_user.loan_pledged == true %>
+				   		<a href="<%= borrower_profile_path(:borrower_id=>borrower.borrower_id,:name=>escape_url("#{borrower.name}")) %>"><div class="give-loan-btn"  title="Give a loan"><input value="" type="button"></div></a>
+			      <% else %>
+						    <a href="<%= pledge_url %>"><div class="pledge-btn"  title="Pledge a loan"><input value="" type="button"></div></a>
+             <% end %>
+<% end %>
+
+
+					</div>
+         <% end %>
+				 <% end %>
+
+
+					<div class="clear"></div>
+				</div>
+				<h2 class="home-heading">More about Milaap</h2>
+				<div id="video-blurb" class="left">
+					<object width="590" height="332"><param name="movie" value="http://www.youtube.com/v/qabhKUmE3qM?hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/qabhKUmE3qM?hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="590" height="332"></embed></object>
+				</div>
+
+				<div class="left" id="other-blurbs">
+
+
+					<div id="email-updates">
+					<% form_tag save_email_info_url, :method => :post do %>
+						<%= render :partial=>"/home/email_updates"%>
+					<% end %>
+					</div>
+
+      <div id="facebook">
+						<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fmilaap.org&amp;layout=standard&amp;show_faces=true&amp;width=250&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:80px;" allowTransparency="true"></iframe>
+					</div>
+					<div id="twitter">
+						<div class="social-content twitter-blurb">
+							<ul id="twitter_update_list">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="clear">
+			</div><!-- /Wrapper div -->
+
+		</div>
+	</div>
+
+	<script type="text/javascript">
+$(document).ready(function() {
+
+<% unless @borrowers.blank? %>
+<% @borrowers.each do |borrower|  %>
+
+$('#more_<%= borrower.loan_id %>').click(function() {
+$('#more_<%= borrower.loan_id %>').hide();
+$('#short_story_<%= borrower.loan_id %>').hide();
+$('#full_story_<%= borrower.loan_id %>').show();
+
+
+});
+$('#expanded_more_story_<%= borrower.loan_id %>').click(function() {
+$('#more_<%= borrower.loan_id %>').show();
+$('#short_story_<%= borrower.loan_id %>').show();
+$('#full_story_<%= borrower.loan_id %>').hide();
+});
+
+
+
+<% end %>
+<% end %>
+});
+</script>
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/milaapdotorg.json?callback=twitterCallback2&count=1"></script>
+
+
+
+
+<script type="text/javascript">
+$(".pledge-btn input").hover(
+  function () {
+    $(this).addClass("btnhover");
+  },
+  function () {
+    $(this).removeClass("btnhover");
+  }
+);
+
+$(".give-loan-btn input").hover(
+  function () {
+    $(this).addClass("btnhover");
+  },
+  function () {
+    $(this).removeClass("btnhover");
+  }
+);
+
+$("#pledge-btn input").hover(
+  function () {
+    $(this).addClass("btnhover");
+  },
+  function () {
+    $(this).removeClass("btnhover");
+  }
+);
+
+$("#give-loan-btn input").hover(
+  function () {
+    $(this).addClass("btnhover");
+  },
+  function () {
+    $(this).removeClass("btnhover");
+  }
+);
+
+
+
+
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+$('#email_update_id').click(function() {
+ if ($('#email_address_id').val() == "Enter email address")
+  {
+	  alert("Enter email address.");
+       return false;
+  }
+ else if($("#email_address_id").val().match(/^\s+$/))
+		  {
+         alert("Enter email address.");
+				 return false;
+			 }
+ else
+  {
+	  var email = $("#email_address_id").val();
+		if(isValidEmailAddress(email))
+			{
+				return true;
+			}
+		else
+			{
+			  alert("Enter a valid email address.");
+				return false;
+			}
+	}
+ });
+
+ $('#email_address_id').focus(function() {
+    if ($("#email_address_id").val() == "Enter email address") {$("#email_address_id").val("");}
+  });
+
+	$('#email_address_id').blur(function() {
+    if ($("#email_address_id").val() == "") {$("#email_address_id").val("Enter email address");}
+  });
+
+
+
+
+
+});
+</script>
+<script type="text/javascript">
+ function isValidEmailAddress(emailAddress) {
+	var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+	return pattern.test(emailAddress);
+	}
+	</script>
+
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/milaapdotorg.json?callback=twitterCallback2&count=1"></script>

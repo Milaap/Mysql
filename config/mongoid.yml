@@ -1,0 +1,14 @@
+defaults: &defaults
+  host: localhost
+
+development:
+  <<: *defaults
+  database: milaap_development
+
+staging:
+  <<: *defaults
+  database: milaap_staging
+
+production:
+  <<: *defaults
+  database: milaap_production

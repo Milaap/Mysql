@@ -1,0 +1,93 @@
+Rails Error: Unable to access log file. Please ensure that /home/milaap/code/bet_after_work/milaap/log/development.log exists and is chmod 0666. The log level has been raised to WARN and the output directed to STDERR until the problem is fixed.
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__625043078_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__626225858_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rails Error: Unable to access log file. Please ensure that /home/milaap/code/bet_after_work/milaap/log/pr0duction.log exists and is chmod 0666. The log level has been raised to WARN and the output directed to STDERR until the problem is fixed.
+You did not specify how you would like Rails to report deprecation notices for your pr0duction environment, please set config.active_support.deprecation to :log, :notify or :stderr at config/environments/pr0duction.rb
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+[ pid=21498 thr=-609668898 file=utils.rb:176 time=2010-11-11 17:16:34.988 ]: *** Exception PhusionPassenger::UnknownError in PhusionPassenger::Rack::ApplicationSpawner (pr0duction database is not configured (ActiveRecord::AdapterNotSpecified)) (process 21498, thread #<Thread:0xb75261bc>):
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activerecord-3.0.0.rc/lib/active_record/connection_adapters/abstract/connection_specification.rb:62:in `establish_connection'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activerecord-3.0.0.rc/lib/active_record/connection_adapters/abstract/connection_specification.rb:55:in `establish_connection'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activerecord-3.0.0.rc/lib/active_record/railtie.rb:55
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/lazy_load_hooks.rb:17:in `instance_eval'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/lazy_load_hooks.rb:17:in `execute_hook'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/lazy_load_hooks.rb:24:in `run_load_hooks'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/lazy_load_hooks.rb:23:in `each'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/lazy_load_hooks.rb:23:in `run_load_hooks'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activerecord-3.0.0.rc/lib/active_record/base.rb:1803
+	from /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/lib/authlogic/authenticates_many/base.rb:53
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:219:in `require'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:219:in `require'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:205:in `load_dependency'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:570:in `new_constants_in'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:205:in `load_dependency'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:219:in `require'
+	from /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/lib/authlogic.rb:59
+	from /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/lib/authlogic.rb:6:in `each'
+	from /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/lib/authlogic.rb:6
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:219:in `require'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:219:in `require'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:205:in `load_dependency'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:570:in `new_constants_in'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:205:in `load_dependency'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/activesupport-3.0.0.rc/lib/active_support/dependencies.rb:219:in `require'
+	from /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb:1
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:81
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:25:in `instance_exec'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:25:in `run'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:50:in `run_initializers'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:49:in `each'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:49:in `run_initializers'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/application.rb:134:in `initialize!'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/application.rb:77:in `send'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/application.rb:77:in `method_missing'
+	from /home/milaap/code/bet_after_work/milaap/config/environment.rb:6
+	from config.ru:3:in `require'
+	from config.ru:3
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `instance_eval'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1
+Rails Error: Unable to access log file. Please ensure that /home/milaap/code/bet_after_work/milaap/log/development.log exists and is chmod 0666. The log level has been raised to WARN and the output directed to STDERR until the problem is fixed.
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__624394048_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rails Error: Unable to access log file. Please ensure that /home/milaap/code/bet_after_work/milaap/log/development.log exists and is chmod 0666. The log level has been raised to WARN and the output directed to STDERR until the problem is fixed.
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+
+AbstractController::ActionNotFound (The action 'campaign' could not be found for HomeController):
+  
+

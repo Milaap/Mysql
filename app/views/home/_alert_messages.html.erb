@@ -1,0 +1,16 @@
+<% if session[:msg]%>
+  <div id="notification" style="width:900px;text-align:left">
+  <p><%= session[:msg] %></p>
+ </div>
+
+<% end %>
+<% if notice %>
+ <div id="notification" style="width:900px;text-align:left">
+  <p><%= notice.gsub("<br>","<br/>") %></p>
+ </div>
+<% end %>
+<% if alert %>
+ <div id="notification" style="width:900px">
+  <p><%= alert %></p>
+</div>
+<% end %>

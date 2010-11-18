@@ -1,0 +1,18 @@
+<div class="content">
+		<div class="wrapper">
+			<div class="thanks-page-details"><!-- Borrowers' div -->
+				<div class="thanks-page">
+				<h3>Welcome <%= current_user.first_name.capitalize unless current_user.facebook_name.nil?  %>! You can now view a list of entrepreneurs and start making loans or read more about Milaap.</h3>
+				<div id="welcome"><a href="/how-it-works" class="welcome left"/>Learn More</a><a href="/view-all-projects" class="ready-for-loan left">Give a loan</a>
+				</div>
+				<div style="display:none;" id="pledge-window"><a href="" class="pledge left">Pledge a loan</a><a href="" class="no-thanks left">No, thanks!</a>
+				</div>
+				<div  style="display:none;"  id="payment-sucessful"><a href="" class="view-more left">View more</a><a href="" class="no-thanks left">No thanks!</a>
+				</div>
+				</div>
+				<div class="clear"></div>
+
+			</div><!-- /Borrowers' div -->
+			<div class="shadow-signup"></div>
+		</div>
+	</div>

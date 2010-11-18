@@ -1,0 +1,195 @@
+<%= stylesheet_link_tag "borrower-style.css" %>
+<%= javascript_include_tag "jquery.js" %>
+
+<div class="content">
+<div class="wrapper">
+			<div id="page-heading">
+				<h2 class="left">View borrowers</h2>
+				<div class="breadcrumbs right">
+					<ul>
+						<li><a href="<%= root_path %>" title="Home">Home</a><span> ›</span></li><li><span style="color:#DDD4D9;"> View Borrowers</span></li>
+						<li class="clear"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="borrowers-details"><!-- Borrowers' div -->
+				<div class="info-blurb left"><!-- Borrower Info div -->
+					<div class="left" id="borrower-image">
+						<div class="borrower-image-border">
+							<img alt="<%= @borrower.name %>" src="/images/borrower/<%=@borrower.search_image%>">
+						</div>
+						<div class="shadow0"></div>
+					</div>
+					<div class="right intro">
+						<h3 class="left"><a href="<%= borrower_profile_path(:id=>@borrower.id,:name=>escape_url("#{@borrower.name}")) %>" title="<%= @loan.title.gsub("of their son","").gsub("of their daugther","") unless @loan.blank?%>"><%= @loan.title.gsub("of their son","").gsub("of their daugther","") unless @loan.blank?%></a></h3>
+						<a href='<%= view_all_projects_path(:category=>"#{@category.name}") %>' class="left"><img src="/images/<%= @category.category_logo unless @category.category_logo.blank?%>" alt="<%= @category.name %>" title="<%= @category.name %>"/></a>
+						<div class="clear"></div>
+						<p class="sub-info">Borrower: <% if @loan.category_id == 3 %><%= @borrower.name_of_student.titleize %><% else %><%= @borrower.name.titleize %><% end %></p>
+						<p class="sub-info">Location: <%= @borrower.village+"," unless @borrower.village.blank? %> <%= @borrower.state.titleize unless @borrower.state.blank? %> (IN)</p>
+						<div class="loan-details">
+						<table cellspacing="0" cellpadding="0" border="0">
+							<tbody><tr>
+								<td colspan="2">Loan Amount</td>
+								<td><% if $visiting_user_country == 'India'%> Rs. <%= @indian_amt %> ($<%= @amount.to_f.round() %>)<% else %>$<%= @amount.to_f.round() %><% end %></td>
+							</tr>
+							<tr>
+								<td colspan="2">Transaction charges <a title="Transaction charges" rel="tooltip" class="tooltip-text">(?)</a></td>
+								<td><% if $visiting_user_country == 'India'%> Rs. <%= @transaction_fee_in_indian_rupees.round() %> ($<%= ((@amount.to_f * 4)/100).round(2) %>)<% else %>$<%= ((@amount.to_f * 4)/100).round(2) %><% end %></td>
+							</tr>
+							<tr>
+								<td colspan="2"><input type="checkbox" checked disabled> Add to loan <a title="Add to loan" rel="tooltip" class="tooltip-text">(?)</a></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="total" colspan="2">Total amount payable</td>
+								<td class="total"><% if $visiting_user_country == 'India'%>Rs. <%= (@indian_amt.to_f + @transaction_fee_in_indian_rupees.to_f).round() %> ($<%= (@amount.to_f + ((@amount.to_f * 4)/100)).round(2) %>)<% else %>$<%= (@amount.to_f + ((@amount.to_f * 4)/100)).round(2) %><% end %></td>
+							</tr>
+						</tbody></table>
+
+					</div>
+					</div>						
+
+					
+					<div class="clear"></div>
+				</div><!-- /Borrower Info div -->
+				<div class="right sidebar"><!-- Right Sidebar div -->
+						
+				<div class="amount-blurb"><!-- Amount div div -->
+				
+				<% unless @loan_funded_percentage.blank? %>
+					<% if @loan_funded_percentage == 100 %>
+       <div id="amount-funded">
+				    <p>Fully Funded</p>
+			   	</div>    
+     <% elsif @loan_funded_percentage == 0 %> 
+					<div id="amount-funded">
+						<% if $visiting_user_country == "India"%>
+						  <p class="amount"><%= @actual_funded_amt unless @actual_funded_amt.blank? %></p>
+						  <p>funded out of <%= @loan.amount.round() %></p>
+						<% else %>
+						  <p style="color:#562E47;font-size:32px;font-weight:bold;padding-bottom:12px;padding-left:0px;padding-top:5px;width:10px;"><%= @actual_funded_amt unless @actual_funded_amt.blank? %></p>
+						  <p>funded out of $<%= @loan.loan_amount_in_dollar.round()%></p>
+						<% end %>	
+					</div>
+				<% else %>	
+					<div id="amount-funded">
+					<% if $visiting_user_country == "India"%>
+						  <p class="amount"><%= (@loan.amount - @loan.loan_amount_remaining_in_rupees + @actual_funded_amt.to_f ).round()%></p>
+						  <p>funded out of <%= @loan.amount.round() %></p>
+						<% else %>
+						  <p style="color:#562E47;font-size:32px;font-weight:bold;padding-bottom:12px;padding-left:0px;padding-top:5px;width:10px;"><%=  (@loan.loan_amount_in_dollar - @loan.amount_remaining + @actual_funded_amt.to_f).round() %></p>
+						  <p>funded out of $<%= @loan.loan_amount_in_dollar.round()%></p>
+						<% end %>	
+					</div>
+     <% end %>	 
+				<% end %>	
+					
+      <% unless @loan_funded_percentage.blank? %>		
+       <% if @loan_funded_percentage == 100 %>			
+					  	<div class="graph-wrapper">
+							   <div class="graph left" style="width:100%">&nbsp;</div>
+							   <div class="graph-increase left">&nbsp;</div>
+							   <div class="clear"></div>
+						   </div>
+							<% elsif @loan_funded_percentage == 0 %>			
+					  	<div class="graph-wrapper">
+							   <div class="graph left" style="width:0%">&nbsp;</div>
+							   <div class="graph-increase left" style="width:<%=  @actual_new_loan_funded_percentage.round() unless @actual_new_loan_funded_percentage.blank?%>%">&nbsp;</div>
+							   <div class="clear"></div>
+						   </div>
+						   <img src="/images/your-impact.gif" alt="Your impact" style="margin-left:<%=(((@actual_new_loan_funded_percentage.round()+ @loan_funded_percentage.round())/10)*5)%>%;"/> 
+							<% else %>			
+					  	<div class="graph-wrapper">
+							   <div class="graph left" style="width:<%=  @loan_funded_percentage.round() %>%">&nbsp;</div>
+							   <div class="graph-increase left" style="width:<%=  @actual_new_loan_funded_percentage.round() %>%">&nbsp;</div>
+							   <div class="clear"></div>
+						   </div>
+						   <img src="/images/your-impact.gif" alt="Your impact" style="margin-left:<%=(((@actual_new_loan_funded_percentage.round()+ @loan_funded_percentage.round())/10)*5)%>%;"/>  
+							 
+							 
+							 
+					<% end %>	 
+					<% end %>	
+						
+						
+						
+						
+						
+						
+						
+						
+					</div><!-- /Amount div div -->
+				
+				
+		   	
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+					<!-- /Amount div div -->
+					<div id="continue">
+				<form action="<%= PAYPAL_PATH %>"  method="post"  name="paypal_form">
+				<input type="hidden" name="notify_url" value="<%= HOST_PATH%>/paypal-ipn">
+				<input type="hidden" name="business" value="<%= PAYPAL_BUSINESS %>">
+				<input name="cmd" type="hidden" value="_cart" >
+				<input name="upload" type="hidden" value="1" >
+				<input name="currency_code" type="hidden" value="USD">
+				<input type="hidden" name="custom" value="<%= @borrower.id %>">
+				<input type="hidden" name="return" value="<%= HOST_PATH%>/paypal-ipn">
+				<input type="hidden" name="cancel_return" value="<%= HOST_PATH%>">
+				<input type="hidden" name="item_name_1" value="Add credit for <%= @loan.title %>">
+				<input type="hidden" name="item_number" value="1">
+				<input type="hidden" name="NOSHIPPING" value="1">
+				<input type="hidden" name="amount_1" value="<%=  (@amount.to_f + ((@amount.to_f * 4)/100)).round(2)  %>">
+				<input type="hidden" name="METHOD" value="SetExpressCheckout">
+				<input type="hidden" name="USER" value="<%= PAYPAL_USER %>">
+				<input type="hidden" name="PWD" value="<%= PAYPAL_PWD %>">  
+						<input type="submit" value="">
+						</form>
+						
+					</div>
+				</div><!-- /Right Sidebar div -->
+				<div class="clear"></div>
+				
+			</div><!-- /Borrowers' div -->
+		</div></div>
+		
+		
+		<script type="text/javascript">
+$(document).ready(function() {
+	$('a[rel=tooltip]').mouseover(function(e) {
+		var tip = $(this).attr('title');	
+		$(this).attr('title','');
+		$(this).append('<div id="tooltip"><div class="tipHeader"></div><div class="tipBody">' + tip + '</div><div class="tipFooter"></div></div>');				
+		$('#tooltip').fadeIn('500');
+		$('#tooltip').fadeTo('10',1);
+		
+	}).mousemove(function(e) {
+		$('#tooltip').css('top', e.pageY - 150 );
+		$('#tooltip').css('left', e.pageX - 120 );
+		
+	}).mouseout(function() {
+		$(this).attr('title',$('.tipBody').html());
+		$(this).children('div#tooltip').remove();
+		
+	});
+
+});
+
+$("#continue input").hover(
+  function () {
+    $(this).addClass("btnhover");
+  },
+  function () {
+    $(this).removeClass("btnhover");
+  }
+);
+</script>

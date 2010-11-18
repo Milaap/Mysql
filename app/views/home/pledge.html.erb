@@ -1,0 +1,222 @@
+<%= stylesheet_link_tag "pledge-style.css" %>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+<%= javascript_include_tag "slide.js" %>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery("#portfolio-list").delegate("li", "click", function(e) {
+		if (e.type == 'click') {
+		jQuery("#portfolio-list li").not(this).dequeue().animate({opacity: "0.3"}, 300);
+		     	} else {
+		jQuery("#portfolio-list li").not(this).dequeue().animate({opacity: "1"}, 300);
+   		}
+	});
+	
+	
+	
+	
+	
+	
+	
+	$("#contribute_amount_id").keydown(function(event) {
+        if ( event.keyCode == 46 || event.keyCode == 8 ) {
+					
+        }
+        else {
+                if (event.keyCode < 48 || event.keyCode > 57 ) {
+                        event.preventDefault(); 
+                }       
+        }
+    });
+	
+
+ 	$('#water').click(function() {
+    $("#category_choosen_id").val("Water");
+		jQuery("#portfolio-list li").not("#li_category_water_id").dequeue().animate({opacity: "0.3"}, 300); 
+		$("#unselected_category_id").hide();
+		$("#selected_category_id").html('You have chosen "Water"');
+		$("#selected_category_id").show();
+	});
+ 
+  $('#health').click(function() {
+    $("#category_choosen_id").val("HEALTH");
+		jQuery("#portfolio-list li").not("#li_category_health_id").dequeue().animate({opacity: "0.3"}, 300); 
+		$("#unselected_category_id").hide();
+		$("#selected_category_id").html('You have chosen "Health"');
+		$("#selected_category_id").show();
+		
+		
+	});
+
+  $('#energy').click(function() {
+    $("#category_choosen_id").val("Energy");
+		jQuery("#portfolio-list li").not("#li_category_energy_id").dequeue().animate({opacity: "0.3"}, 300); 
+		$("#unselected_category_id").hide();
+		$("#selected_category_id").html('You have chosen "Energy"');
+		$("#selected_category_id").show();
+		
+	});
+	
+	
+	 $('#education').click(function() {
+    $("#category_choosen_id").val("Education");
+		jQuery("#portfolio-list li").not("#li_category_education_id").dequeue().animate({opacity: "0.3"}, 300); 
+		$("#unselected_category_id").hide();
+		$("#selected_category_id").html('You have chosen "Education"');
+		$("#selected_category_id").show();
+	});
+	
+	
+	
+	$('#category_education_id').click(function() {
+    $("#category_choosen_id").val("Education");
+		$("#li_category_education_id").css("opacity","1"); 
+		$("#unselected_category_id").hide();
+		$("#selected_category_id").html('You have chosen "Education"');
+		$("#selected_category_id").show();
+	});
+	
+	
+	
+	$('#category_water_id').click(function() {
+    $("#category_choosen_id").val("Water");
+    $("#li_category_water_id").css("opacity","1"); 
+    $("#unselected_category_id").hide();
+		$("#selected_category_id").html('You have chosen "Water"');
+		$("#selected_category_id").show();
+	});
+	
+	
+	
+	$('#category_health_id').click(function() {
+    $("#category_choosen_id").val("HEALTH");
+		$("#li_category_health_id").css("opacity","1"); 
+		$("#unselected_category_id").hide();
+		$("#selected_category_id").html('You have chosen "Health"');
+		$("#selected_category_id").show();
+		
+		
+	});
+
+  $('#category_energy_id').click(function() {
+    $("#category_choosen_id").val("Energy");
+		$("#li_category_energy_id").css("opacity","1"); 
+		$("#unselected_category_id").hide();
+		$("#selected_category_id").html('You have chosen "Energy"');
+		$("#selected_category_id").show();
+		
+	});
+	
+	$('#pleged_loan_id').click(function() {
+	
+	
+	if($("#contribute_amount_id").val().match(/^\s+$/)) 
+		  {
+         alert("Amount can not be blank."); 
+				 return false; 
+			 }
+			
+  else if($("#contribute_amount_id").val()=="") 
+      {
+        alert("Amount can not be blank."); 
+				return false; 
+      }
+  else 
+		 {
+		   return true;
+		  }
+		
+	});
+	
+	
+	
+	
+	
+});
+</script>
+<div class="content" style="padding:0;">
+
+<% if notice %>
+		<div id="notification" style="text-align:center;width:40%;margin-left:290px;">
+			<p><%= notice.gsub("<br>","<br/>") %></p> 
+			<% flash[:notice] = nil %> 
+		</div>
+	<% end %>
+	<% if alert %>
+		<div id="notification" style="text-align:center;width:40%;margin-left:290px;">
+			<p><%= alert %></p>		
+		</div>
+	<% end %>
+
+<% form_tag pledge_url, :method => :post do %>
+
+<div class="pledge-bg">
+			<div class="wrapper">
+				<h2>It is time to stop feeling guilty &amp; be part of the solution....</h2>
+				<h3>So which one is it going to be for you?</h3>
+				<img alt="Energy Loan" src="/images/pledge-water.jpg">
+				<img alt="Energy Loan" src="/images/pledge-health.jpg">
+				<img alt="Energy Loan" src="/images/pledge-energy.jpg">
+				<img alt="Energy Loan" src="/images/pledge-education.jpg">
+				<div id="toggle" class="pledge-loans">
+					<a id="water" href="#">I want to support "Water"</a>
+					<a id="health" href="#">I want to support "Health"</a>
+					<a id="energy" href="#">I want to support "Energy"</a>
+					<a id="education" href="#">I want to support "Education"</a>
+				</div>
+			<div class="open-blurb">
+				
+			<div class="right" id="member-details"><!--Member Login div-->
+				<div id="toppanel">
+					<div id="panel">
+						<h3>how far are you willing to go?</h3>
+						<p class="left">I'm willing to contribute</p> <input type="text" class="left" name="amount" id="contribute_amount_id" title="Enter digits only">
+						<select class="left" name="amount_currency">
+							<option selected="selected">INR</option>
+							<option>USD</option>
+						</select>
+
+						<select class="left" name="amount_period_type">
+							<option selected="selected">per month</option>
+							<option>per year</option>
+						</select>
+						<p class="left">for</p> 
+						<div class="clear"></div>
+						
+						<div class="choose-options" id="unselected_category_id">(Click on the image to choose a cause)</div>
+						<div style="display: none;" class="choose-options"  id="selected_category_id">You have chosen "Education"</div>
+						
+						
+						<ul class="clear-new" id="portfolio-list">
+							<li id="li_category_education_id"><a title="Education" href="#" name="Education"><img alt="Koopon Website" src="/images/education-happy.jpg"  id="category_education_id"></a></li>
+							<li id="li_category_water_id"><a title="Water" href="#"  name="Water"><img alt="Patriot Pride Corp Logo" src="/images/water-happy.jpg"  id="category_water_id"></a></li>
+							<li id="li_category_health_id"><a title="Health" href="#"  name="Health"><img alt="Mazaif Packaging" src="/images/health-happy.jpg" id="category_health_id"></a></li>
+							<li id="li_category_energy_id"><a title="Energy" href="#"  name="Energy" ><img alt="energy" src="/images/energy-happy.jpg" id="category_energy_id"></a></li>
+							<li style="display: none;" class="clear"></li>
+						</ul>
+						<div class="clear"></div>
+									<input type="hidden" name="category_choosen" value="" id="category_choosen_id">		
+
+						<div id="pledge-a-loan"><input type="submit" value="" title="Pledge now" id="pleged_loan_id"></div>
+					</div>
+				</div>
+			</div><!--Member Login div-->
+			</div>
+
+			</div>
+
+		</div>
+		<% end %>
+		
+		
+		</div>
+		
+		<script type="text/javascript">
+$("#pledge-a-loan input").hover(
+  function () {
+    $(this).addClass("btnhover");
+  },
+  function () {
+    $(this).removeClass("btnhover");
+  }
+);
+</script>

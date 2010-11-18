@@ -1,0 +1,100 @@
+<%= stylesheet_link_tag "lender-style.css"%>
+<div class="content">
+		<div class="wrapper">
+		<% if notice %>
+		<div id="notification" style="text-align:left;">
+			<p><%= notice.gsub("<br>","<br/>") %></p> 
+		</div>
+	<% end %>
+	<% if alert %>
+		<div id="notification" style="text-align:left;">
+			<p><%= alert %></p>		
+		</div>
+	<% end %>
+		
+			<div id="page-heading">
+				<h2 class="left">Edit Profile</h2>
+				<div class="breadcrumbs right">
+					<ul>
+						<li><a href="">Home</a><span> &rsaquo;</span></li><li><a href=""> View Entrepreneurs</a><span> &rsaquo;</span></li><li><a href="" class="active"> Entrepreneur's Profile</a><span></span></li>
+						<li class="clear"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="lenders-details" class="clear"><!-- Lenders' div -->
+			
+			<form method="post" id="user_new" class="user_new" action="<%= edit_user_account_url %>" accept-charset="UTF-8">
+				<div class="info-blurb left"  style="width:680px;"><!-- Lender Info div -->
+				
+				<div class="left" style="width:200px;">
+					<div id="borrower-image" class="left">
+						<div class="borrower-image-border">
+							<img src="images/lenders/dummy-pic.jpg" alt="Smitabai"/>
+						</div>
+						<div class="shadow0"></div>
+						
+					</div>
+					<input type="file" name="user[image_url]"/>
+					</div>
+					<div class="right intro">
+						<label class="sub-info">Your First Name</label>
+						<input type="text" name="user[first_name]"   id="user_first_name"  value="<%= current_user.first_name unless  current_user.first_name.blank?%>">
+						<label class="sub-info">Your Last Name</label>
+						<input type="text" name="user[last_name]"   id="user_last_name"  value="<%= current_user.last_name unless  current_user.last_name.blank?%>">
+						
+						<label class="sub-info">City</label>
+					  <input type="text" name="user[city]"   id="user_city"  value="<%= current_user.city unless  current_user.city.blank?%>">	
+						<label class="sub-info">Country</label>
+						 
+
+					 <%= localized_country_select(:user, :country, [], :include_blank => 'Please choose...') %>
+						<label class="sub-info">Brief introduction</label>
+						<textarea name="user[intro]"><%= current_user.intro unless  current_user.intro.blank?%></textarea>
+
+						<div class="clear"></div>
+						
+						<input type="submit" id="submit" value=""/>
+					</div>
+					<div class="clear"></div>
+
+					<div class="lender-support">
+						<h4>Entrepreneurs' supported</h4>
+						<div class="borrower-support-info">
+							<div class="intro-first">
+								<h3 class="left">You haven't supported any entrepreneur as yet</h3>								
+								
+							</div>
+							<div class="clear"></div>
+						</div>
+
+
+
+						<div class="shadow2"></div>
+
+					</div>
+					<div class="shadow1"></div>
+				</div><!-- /Lender Info div -->
+				</form>
+				
+				<div class="right sidebar"><!-- Right Sidebar div -->
+					<div id="choose-category">
+						<h3>Start giving a loan now (choose a category) :</h3>
+						<a href=""><img src="images/logo-organic.gif" alt="Organic farming" title="Organic farming" class="left"/></a>
+						<a href=""><img src="images/logo-electricity.gif" alt="Electricity" title="Electricity" class="left"/></a>
+						<a href=""><img src="images/logo-water.gif" alt="Water" title="Water" class="left"/></a>
+						<a href=""><img src="images/logo-trade.gif" alt="Fair trade" title="Fair trade" class="left"/></a>
+					</div>
+					<div class="repayment-blurb"><!-- Repayment div div -->
+						<h3>Loan Details</h3>
+						<p>Total amount loaned : Rs. 0</p>
+						<p>Total amount repaid : Rs. 0</p>
+						<p>Total amount cashed out : Rs. 0</p>
+						<p>Milaap credits : 0</p>
+					</div><!-- /Repayment div div -->
+
+				</div><!-- /Right Sidebar div -->
+				<div class="clear"></div>
+				
+			</div><!-- /Lenders' div -->
+		</div>
+	</div>

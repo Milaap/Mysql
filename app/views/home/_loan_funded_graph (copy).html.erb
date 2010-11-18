@@ -1,0 +1,50 @@
+<% if @selected_loan_funded_percentage%>
+
+<%= @loan_funded_percentage + @selected_loan_funded_percentage %>
+
+
+
+
+
+<% else %>
+<div class="">
+<% unless @loan_funded_percentage.blank? %>
+<% if @loan_funded_percentage == 100 %>
+<div class="graph-increase" style="width:100%;" title="Fully Funded"></div>
+<% else %>
+<% if @loan_funded_percentage > 90 %>
+<div class="graph-increase" style="width:90%;" title="<%= @loan_funded_percentage.round() %>% Funded"></div>
+<% else %>
+<% p "**** I am here ================" %>
+<div class="graph-increase" style="width:<%= @loan_funded_percentage.round() %>%;" title="<%= @loan_funded_percentage.round() %>% Funded"></div>
+<% end %>
+<% end %>
+<% else %>
+<div class="graph-increase" style="width:0%;" title="Not funded yet"></div>
+<% end %>
+<!-- Dynamic graph value will come in this inline style, 30%, 40% erc -->              
+</div>
+</div>
+<% if @loan_funded_percentage == 100 %>
+<div id="amount-funded">
+<p>Fully Funded</p>
+</div>
+<% elsif @loan_funded_percentage == 0 %>
+<div id="amount-funded">
+<p>Not funded yet</p>
+</div>
+<% else %>
+<div id="amount-funded">
+<% if $visiting_user_country == "India"%>
+<p>Rs.<%= (loan.amount - loan.loan_amount_remaining_in_rupees).round()%> funded out of Rs.<%= loan.amount.round() %></p>
+<% else %>
+<p>$<%=  (loan.loan_amount_in_dollar - loan.amount_remaining).round() %> funded out of $<%= loan.loan_amount_in_dollar.round()%></p>
+<% end %>
+
+</div>
+
+<% end %>
+</div>
+
+
+<% end %>

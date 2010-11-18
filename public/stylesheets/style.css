@@ -1,0 +1,226 @@
+/**************Borrower's details page CSS*************/
+#home {
+}
+#slider {
+position:relative;
+//See the "style-pack" below for image
+background:url(images/loading.gif) no-repeat 50% 50%; 
+}
+#slider img {
+position:absolute;
+top:0px;
+left:0px;
+display:none;
+-moz-border-radius:5px 5px 5px 5px;
+-webkit-border-radius:5px 5px 5px 5px;
+-o-border-radius:5px 5px 5px 5px;
+border-radius:5px 5px 5px 5px;
+
+
+}
+
+#slider .nivo-controlNav {
+position:absolute;
+bottom:-70px; /* Put the nav below the slider */
+}
+#slider .nivo-controlNav img {
+display:inline; /* Unhide the thumbnails */
+position:relative;
+margin-right:10px;
+}
+
+.home-slider-shadow {
+background:url(../images/bk_shadow_slider.png) no-repeat 0 0; 
+height:50px;
+width:970px;
+}
+
+
+#projects .pledge-btn input  {
+background:url("../images/home-sprite.png") no-repeat scroll -445px -30px transparent;
+border:0 none;
+cursor:pointer;
+height:60px;
+width:210px;
+margin-top:20px;
+margin-left:20px;
+}
+
+
+#projects .give-loan-btn input {
+background:url("../images/home-sprite.png") no-repeat scroll -445px -95px transparent;
+border:0 none;
+cursor:pointer;
+height:60px;
+width:210px;
+margin-top:20px;
+margin-left:20px;
+}
+
+#projects .project-details {
+width:250px;
+padding:20px;
+float:left;
+margin-right:42px;
+border:1px solid #efefef;
+}
+
+
+#projects .project-details h3 {
+color:#562f46;
+font-size:17px;
+font-weight:bold;
+padding:15px 0 10px 0;
+height:40px;
+}
+
+
+#projects .project-details img {
+height:189px;
+width:250px;
+}
+
+
+#projects .pledge-btn input.btnhover {
+background:url("../images/home-sprite.png") no-repeat scroll -663px -30px transparent;
+}
+
+
+#projects .give-loan-btn input.btnhover {
+background:url("../images/home-sprite.png") no-repeat scroll -663px -95px transparent;
+}
+
+#video-blurb {
+border:1px solid #efefef;
+padding:19px 15px;
+background:#fff;
+width:594px;
+}
+
+#other-blurbs {
+background:url("../images/other-blurb.png") no-repeat scroll left top transparent;
+width:296px;
+height:364px;
+margin:0 0 0 40px;
+}
+
+#facebook {
+margin:88px 0 0 35px;
+}
+
+#email-updates {
+margin:43px 0 0 24px;
+}
+
+#email-updates input.text {
+padding:5px 3px 4px 3px;
+width:190px;
+color:#777;
+font-size:11px;
+}
+
+#email-updates input.submit {
+background:#a41845;
+-moz-border-radius-bottomright:5px;
+-moz-border-radius-topright:5px;
+-o-border-radius-bottomright:5px;
+-o-border-radius-topright:5px;
+-webkit-border-radius-bottomright:5px;
+-webkit-border-radius-topright:5px;
+border-radius-bottomright:5px;
+border-radius-topright:5px;
+border:0px;
+padding:4px 5px;
+color:#fff;
+font-weight:bold;
+cursor:pointer;
+}
+
+#twitter {
+color:#777;
+font-size:11px;
+margin:39px 0 0 35px;
+width:230px;
+height:60px;
+overflow:hidden;
+}
+
+.home-heading {
+font-size:22px;
+color:#b91141;
+font-weight:bold;
+border:3px double #efefef;
+border-left:0;
+border-right:0;
+padding:7px 0;
+margin:10px 0 15px 0;
+}
+
+.slider-button #pledge-btn input {
+background:url("../images/home-sprite.png") no-repeat scroll -660px -25px transparent;
+height:60px;
+position:absolute;
+right:40px;
+top:290px;
+width:220px;
+z-index:9999;
+border:0px;
+}
+
+.slider-button #give-loan-btn input {
+background:url("../images/home-sprite.png") no-repeat scroll -661px -90px transparent;
+height:60px;
+position:absolute;
+right:40px;
+top:290px;
+width:220px;
+border:0px;
+
+z-index:9999;
+}
+
+
+.slider-button #give-loan-btn input.btnhover {
+background:url("../images/home-sprite.png") no-repeat scroll -442px -91px transparent;
+height:60px;
+position:absolute;
+right:40px;
+top:290px;
+width:220px;
+z-index:9999;
+cursor:pointer;
+
+}
+
+
+.slider-button #pledge-btn input.btnhover {
+background:url("../images/home-sprite.png") no-repeat scroll -442px -25px transparent;
+height:60px;
+position:absolute;
+right:40px;
+top:290px;
+width:220px;
+z-index:9999;
+cursor:pointer;
+}
+
+
+#slider .nivo-controlNav {
+display:none;
+}
+
+#slider {
+	position:relative;
+	//See the "style-pack" below for image
+	background:url(images/loading.gif) no-repeat 50% 50%; 
+}
+#slider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+
+#slider a{
+	display:block;
+}

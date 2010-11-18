@@ -1,0 +1,264 @@
+/**************Pledge page CSS*************/
+
+.pledge-bg {
+background:#502940 url(../images/pledge-bg.jpg) repeat center top fixed;
+overflow:auto;
+text-align:center;
+padding:40px 0;
+}
+
+.pledge-bg img {
+margin:25px 0 25px 0px;
+}
+
+.pledge-loans a {
+background:none repeat scroll 0 0 #B91141;
+color:#FFFFFF;
+display:block;
+font-size:18px;
+font-weight:bold;
+padding:8px 12px;
+position:absolute;
+text-decoration:none;
+text-shadow:2px 1px 4px #222222
+}
+
+.pledge-loans a:visited {
+color:#ffffff;
+}
+
+.pledge-loans a#water {
+left:193px;
+top:170px;
+-moz-border-radius-topleft:10px;
+-webkit-border-radius-topleft:10px;
+-o-border-radius-topleft:10px;
+border-radius-topleft:10px;
+}
+
+.pledge-loans a#energy {
+left:181px;
+top:729px;
+-moz-border-radius-topleft:10px;
+-webkit-border-radius-topleft:10px;
+-o-border-radius-topleft:10px;
+border-radius-topleft:10px;
+}
+
+.pledge-loans a#health {
+right:189px;
+top:454px;
+-moz-border-radius-topright:10px;
+-webkit-border-radius-topright:10px;
+-o-border-radius-topright:10px;
+border-radius-topright:10px;
+}
+
+.pledge-loans a#education {
+right:158px;
+top:1013px;
+-moz-border-radius-topright:10px;
+-webkit-border-radius-topright:10px;
+-o-border-radius-topright:10px;
+border-radius-topright:10px;
+}
+
+.pledge-bg h2 {
+color:#e4e4e4;
+font-weight:bold;
+font-size:22px;
+}
+
+.pledge-bg h3 {
+color:#fff;
+font-weight:bold;
+font-size:28px;
+text-transform:uppercase;
+padding:10px 0 15px 0;
+text-shadow:2px 1px 4px #222
+}
+
+
+
+
+
+/*
+Name: Sliding Login Panel with jQuery 1.3.2
+Author: Jeremie Tisseau
+Author URI: http://web-kreation.com/
+Script URI: http://web-kreation.com/index.php/tutorials/nice-clean-sliding-login-panel-built-with-jquery/
+Date: March 26, 2009
+Version: 1.0
+
+The CSS, XHTML and design is released under Creative Common License 3.0:
+http://creativecommons.org/licenses/by-sa/3.0/
+
+*/ 
+
+/***** clearfix *****/
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+.clearfix {height: 1%;}
+.clearfix {display: block;}
+
+
+/* sliding panel */
+#toppanel {
+left:0;
+position:absolute;
+top:0px;
+width:220px;
+z-index:999;
+
+}
+
+#panel {
+background:none repeat scroll 0 0 #502940;
+border:1px solid #C9C8C8;
+display:none;
+overflow:hidden;
+padding:20px;
+position:relative;
+width:930px;
+z-index:3;
+margin-top:8px;
+height:1150px;
+}
+
+#panel h2 {
+font-size: 1.4em;
+padding: 5px 0 10px;
+margin: 0;
+color: #D3B758;
+}
+
+#panel p {
+color:#fff;
+font-size:24px;
+font-weight:bold;
+margin:5px 0;
+padding:10px 10px 40px 30px;
+}
+
+#panel a {
+text-decoration: none;
+color: #15ADFF;
+}
+
+#panel a:hover {
+color: white;
+}
+
+#panel a-lost-pwd {
+display: block;
+float: left;
+}
+
+#panel .content {
+width: 960px;
+margin: 0 auto;
+padding-top: 15px;
+text-align: left;
+font-size: 0.85em;
+}
+
+#panel .content .left {
+width: 280px;
+float: left;
+padding: 0 15px;
+border-left: 1px solid #333;
+}
+
+#panel .content .right {
+border-right: 1px solid #333;
+}
+
+#panel .content form {
+margin: 0 0 10px 0;
+}
+
+#panel label {
+padding-top: 8px;
+width: 280px;
+display: block;
+font-size:1.2em;
+}
+
+#panel input {
+display:block;
+font-size:20px;
+padding:10px;
+width:270px;
+}
+
+#panel select {
+display:block;
+font-size:20px;
+padding:10px;
+} 
+
+#panel .content input.field {
+border: 1px #1A1A1A solid;
+background: #414141;
+margin-right: 5px;
+margin-top: 4px;
+width: 200px;
+color: white;
+height: 16px;
+}
+
+#panel .content input:focus.field {
+background: #545454;
+}
+
+#pledge-a-loan input {
+background:url(../images/pledge-btn.png) no-repeat;
+width:218px;
+height:54px;
+margin-bottom:30px;
+margin-left:370px;
+#margin-left:20px;
+cursor:pointer;
+margin-top:30px;
+border:0;
+}
+
+
+#pledge-a-loan input.btnhover{
+background:url(../images/pledge-btn.png) no-repeat -218px 0;
+width:218px;
+height:54px;
+margin-bottom:30px;
+margin-left:370px;
+#margin-left:20px;
+cursor:pointer;
+margin-top:30px;
+}
+
+.block {
+display:block;
+border:10px solid #efefef;
+float:left;
+margin-right:10px;
+}
+
+.clear-new { display: inline-block; }
+.clear-new:after { display: block; visibility: hidden; clear-new: both; height: 0; content: "."; }
+#portfolio-list li { float: left; margin: 0 5px;}
+#portfolio-list li a, #portfolio-list li a:visited { display: block; border: 10px solid #a17c92;}
+#portfolio-list li a:hover, #portfolio-list li a:active { border-color: #efefef; }
+
+
+.pledge-bg #portfolio-list img {
+margin:0;
+}
+
+.choose-options {
+font-size:14px;
+color:#999;
+padding-bottom:10px;
+}

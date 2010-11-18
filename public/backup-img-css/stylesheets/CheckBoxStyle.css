@@ -1,0 +1,150 @@
+/*	CSS for customized radio buttons and check boxes */
+
+/* page styles */
+
+fieldset { 
+	padding: 0 15px 3em;
+	border: 0;
+}
+
+legend {
+	font-size: 1.4em;
+	font-weight: bold;
+	padding: .2em 5px;
+}
+
+	
+/*	wrapper divs */
+.custom-checkbox, .custom-radio { position: relative; }
+	
+/* input, label positioning */
+.custom-checkbox input, 
+.custom-radio input {
+	position: absolute;
+	left: 12px;
+	top: 14px;
+	margin:0;
+	z-index: 0;
+}
+
+.custom-checkbox input.BPInput, 
+.custom-radio input.BPInput {
+	left: 12px;
+	top: 14px;
+	margin:0;
+	z-index: 0;
+}
+
+.custom-checkbox label, 
+.custom-radio label {
+	display: block;
+	position: relative;
+	z-index: 1;
+	font-family:"Arial", Helvetica, sans-serif;
+	font-size:14px;
+	color:#6c6969;
+	padding-right: 2px;
+	padding: 6px 0 .5em 30px;
+	margin-left:10px;
+	margin-top:5px;
+	cursor: pointer;
+	width:209px;
+	height:20px;
+}
+
+.custom-checkbox label.Bplabel, 
+.custom-radio label.Bplabel {
+	display: block;
+	position: relative;
+	z-index: 1;
+	font-family:"Georgia", Times New Roman, Times, serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#3e3b38;
+	padding-right: 2px;
+	padding: 4px 0 .5em 30px;
+	margin-left:10px;
+	margin-top:5px;
+	width:209px;
+	height:20px;
+}
+
+.custom-checkbox label.Bplabel input, 
+.custom-radio label.Bplabel input{margin-left:20px; margin-top:-15px; z-index:5;
+	width:175px; height:20px; padding:5px 0 0 7px; border-color:#dbd9d8; border-style:solid; border-width:1px; font-family:"Arial", Helvetica, sans-serif; font-size:13px; color:#6c6969;	
+}
+
+
+
+.custom-radio label.Yplabel {
+color:#3E3B38;
+display:block;
+float:left;
+font-family:"Georgia",Times New Roman,Times,serif;
+font-size:14px;
+font-weight:bold;
+height:20px;
+margin-left:10px;
+margin-top:5px;
+overflow:hidden;
+padding:4px 0 0.5em 30px;
+position:relative;
+width:0;
+z-index:1;
+}
+
+
+
+
+	
+/* states */
+.custom-checkbox label { background: url(../images/checkbox.jpg) no-repeat; }
+
+.custom-radio label { background: url(../images/radiobutton.jpg) no-repeat; }
+
+.custom-checkbox label, .custom-radio label {
+	background-position: -10px -14px;
+}
+
+.custom-checkbox label.hover,
+.custom-checkbox label.focus,
+.custom-radio label.hover,
+.custom-radio label.focus {
+	background-position: -10px -114px;
+}
+
+.custom-checkbox label.Bplabel.hover,
+.custom-checkbox label.Bplabel.focus,
+.custom-radio label.Bplabel.hover,
+.custom-radio label.Bplabel.focus {
+	background-position: -10px -114px;
+}
+
+.custom-checkbox label.checked, 
+.custom-radio label.checked {
+	background-position: -10px -214px;
+}
+
+.custom-checkbox label.Bplabel.checked, 
+.custom-radio label.Bplabel.checked {
+	background-position: -10px -214px;
+}
+
+.custom-checkbox label.checkedHover, 
+.custom-checkbox label.checkedFocus {
+	background-position: -10px -314px;
+}
+.custom-checkbox label.Bplabel.checkedHover, 
+.custom-checkbox label.Bplabel.checkedFocus {
+	background-position: -10px -314px;
+}
+
+.custom-checkbox label.focus, 
+.custom-radio label.focus {
+	outline: 1px dotted #ccc;
+}
+
+.custom-checkbox label.Bplabel.focus, 
+.custom-radio label.Bplabel.focus {
+	outline: 1px dotted #ccc;
+}

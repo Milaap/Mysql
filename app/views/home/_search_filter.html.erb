@@ -1,0 +1,117 @@
+<div id="Borrowerscontent1"> 
+<img class="tophead" src="/images/borrowers_left_head_img.jpg" />
+  <p class="criteriaHead">Customise your search using the search criteria given below:</p>
+  <!--Accordian start -->
+  <ul id="Borrowersmenu">
+    <!--li class="loanStatus"><a href="#"></a>
+      <ul>
+        <li>
+          <input type="checkbox" name="check_loan_status[]" id="check-1" value="Recently added" class="check_class"/>
+          <label for="check-1">Recently added</label>
+        </li>
+        <li>
+          <input type="checkbox" name="check_loan_status[]" id="check-2" value="Almost Funded" class="check_class"/>
+          <label for="check-2">Almost Funded</label>
+        </li>
+        <li>
+          <input type="checkbox" name="check_loan_status[]" id="check-3" value="Expiring Loans" class="check_class"/>
+          <label for="check-3">Expiring Loans</label>
+        </li>
+        <li>
+          <input type="checkbox" name="check_loan_status[]" id="check-4" value="Fully funded" class="check_class"/>
+          <label for="check-4">Fully funded</label>
+        </li>
+      </ul>
+    </li-->
+    <li class="loanAmount"> <a href="#"></a>
+      <ul>
+        <li>
+          <input type="checkbox" name="check_loan_amount[]" id="check-5" value="0-50" class="check_class"/>
+          <label for="check-5">0-$50</label>
+        </li>
+        <li>
+          <input type="checkbox" name="check_loan_amount[]" id="check-6" value="50-100" class="check_class"/>
+          <label for="check-6">$50 - $100</label>
+        </li>
+        <li>
+          <input type="checkbox" name="check_loan_amount[]" id="check-7" value="100-250" class="check_class"/>
+          <label for="check-7">$100-$250</label>
+        </li>
+        <li>
+          <input type="checkbox" name="check_loan_amount[]" id="check-8" value="greater than 250" class="check_class"/>
+          <label for="check-8">$250 or more</label>
+        </li>
+      </ul>
+    </li>
+    <li class="socialImpact"> <a href="#"></a>
+      <ul>
+        <li>
+          <input type="checkbox" name="check_loan_social_impact[]" id="check-9" value="LOW" class="check_class"/>
+          <label for="check-9">Low</label>
+        </li>
+        <li>
+          <input type="checkbox" name="check_loan_social_impact[]" id="check-10" value="HIGH" class="check_class"/>
+          <label for="check-10">High</label>
+        </li>
+        <li>
+          <input type="checkbox" name="check_loan_social_impact[]" id="check-11" value="VERY HIGH" class="check_class"/>
+          <label for="check-11">Very High</label>
+        </li>
+      
+      </ul>
+    </li>
+    <!--li class="PovertyLevel"> <a href="#"></a>
+      <ul>
+        <li>
+          <input type="checkbox" name="check_loan_poverty_level[]" id="check-13" value="Ultra Poor" class="check_class"/>
+          <label for="check-13">Ultra Poor</label>
+        </li>
+        <li>
+          <input type="checkbox" name="check_loan_poverty_level[]" id="check-14" value="Very Poor" class="check_class"/>
+          <label for="check-14">Very Poor</label>
+        </li>
+        <li>
+          <input type="checkbox" name="check_loan_poverty_level[]" id="check-15" value="Poor" class="check_class"/>
+          <label for="check-15">Poor</label>
+        </li>
+      </ul>
+    </li-->
+
+
+<li class="FiltersTags"> <a href="#"></a>
+      <ul>
+       <%unless @categories.blank? %> 
+       <% i = 15 %>   
+       <% @categories.each do |category| %>
+        <% i = i +1 %>
+       <li>
+          <input type="button" name="check_loan_category" value="<%= category.permalink %>" class="filter-tags"> 
+
+
+          <!--input type="checkbox" name="check_loan_category[]" id="check-<%#= i+1 %>" value="<%#= category.permalink %>" class="check_class"/>
+           <label for="check-<%#= i+1 %>"><%#= category.name %></labe--l>
+        </li>
+       <% end %>
+       <% end %>
+      </ul>
+    </li>
+
+
+
+
+    <!--li class="FiltersTags"> <a href="#"></a>
+      <ul>
+        <li>
+<img src="/images/allProject_btn.jpg" /> <img src="/images/villages_btn.jpg" /> <img src="/images/Education_btn.jpg" /> <img src="/images/Farming_btn.jpg"/> <img src="/images/water_btn.jpg"/> <img src="/images/Electricity_btn.jpg"/> <img src="/images/Community_btn.jpg"/> </li>
+      </ul>
+    </li-->
+
+
+
+  </ul>
+  <!-- End -->
+  <img class="botom" src="/images/borrowers_left_panelBotombg.jpg" /> </div>
+
+
+
+

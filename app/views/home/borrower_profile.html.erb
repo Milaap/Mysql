@@ -1,0 +1,470 @@
+<%= javascript_include_tag "ym4r-gm.js" %>
+<%= javascript_include_tag "wms-gs.js" %>
+<%= javascript_include_tag "geoRssOverlay.js" %>
+<%= javascript_include_tag "markerGroup.js" %>
+<%= javascript_include_tag "clusterer.js" %>
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "jquery.rails.js"%>
+<%= stylesheet_link_tag "borrower-style.css" %>
+<div class="content">
+<div class="wrapper">
+			<div id="page-heading">
+				<h2 class="left">Borrower's profile</h2>
+				<div class="breadcrumbs right">
+					<ul>
+						<li><a href="<%= root_path %>" title="Home">Home</a><span> ›</span></li><li><a href="<%= view_all_projects_path %>" title="View Entrepreneurs"> View Borrowers</a><span> ›</span></li><li><span style="color:#DDD4D9;"> Entrepreneur's Profile</span><span></span></li>
+						<li class="clear"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="borrowers-details">
+			<!-- Notification div starts here -->
+				<% if flash[:notice_green] %>
+				<div id="notification">
+					<p>Your payment has been successful</p>
+				</div>
+				<% elsif flash[:notice_red]%>
+				<div id="notification">
+					<p>Oops! Looks like there was some issue with your payment.</p>
+				</div>
+				<% end %>	
+			<!-- Borrowers' div -->
+				<div class="info-blurb left"><!-- Borrower Info div -->
+					<div class="left" id="borrower-image">
+						<div class="borrower-image-border">
+						  <img src="/images/borrower/<%= @borrower.search_image %>"  alt="<% if @loan.category_id == 3 %><%= @borrower.name_of_student.titleize %><% else %><%= @borrower.name.titleize %><% end %>" title="<% if @loan.category_id == 3 %><%= @borrower.name_of_student.titleize %><% else %><%= @borrower.name.titleize %><% end %>"/>
+						</div>
+						<div class="shadow0"></div>
+					</div>
+					<div class="right intro">
+						<h3 class="left"><%= @loan.title.gsub("of their son","").gsub("of their daugther","") unless @loan.blank? %></h3>
+						<a href='<%= view_all_projects_path(:category=>"#{@category.name}") %>' class="left"><img src="/images/<%= @category.category_logo unless @category.category_logo.blank?%>" alt="<%= @category.name %>" title="<%= @category.name %>"/>
+            </a>
+						<div class="clear"></div>
+						<p class="sub-info">Borrower: <% if @loan.category_id == 3 %><%= @borrower.name_of_student.titleize %><% else %><%= @borrower.name.titleize %><% end %></p>
+						<p class="sub-info">Location:  <%= @borrower.village+"," unless @borrower.village.blank? %> <%= @borrower.state.titleize unless @borrower.state.blank? %> (IN)</p>
+							<% unless @borrower.borrower_story.blank? %> 
+								<p id="short_story_<%= @borrower.id %>"><%= @borrower.borrower_story[0..420] %>
+								<% if @borrower.borrower_story.length > 420  %>
+									<a class="collapsed slide" id="more_<%= @borrower.id %>" title="more">more</a>
+								</p>
+								<p style="display:none"  id="full_story_<%= @borrower.id %>">
+								<span class="view"><%= @borrower.borrower_story %>
+								<a class="slide expanded" id="expanded_more_story_<%= @borrower.id %>" title="less">more</a>
+								</span>
+							</p>
+						<% end %>
+					<% end %>
+				</div>
+					
+					
+					
+					<div class="clear"></div>
+					<div class="accordion">
+					   <% @field_partner = FieldPartner.find_borrower_field_partner(@borrower.field_partner_id) %>
+						 <% unless @field_partner.blank? %>
+								<h4>Partner Details</h4>
+								<p><%= @field_partner.information%></p>
+						<% end %>
+						<% @community = Community.find(@borrower.community_id)%>
+						<h4>Know more about <%= @borrower.village+"," unless @borrower.village.blank? %> <%= @borrower.state.titleize unless @borrower.state.blank? %></h4>
+						<p style="overflow: auto;"><span id="location-text" class="left"><%= raw(@community.info) unless @community.blank? %></span>
+						<span class="right">
+							<div id="BploanGoogleMap">
+												<%= raw(GMap.header :sensor => true) %>
+															<%= raw(@map.to_html) %> 
+									<%= raw(@map.div(:width => 260, :height => 310)) %>
+									
+								</div>
+
+
+						<br>
+						</span>
+						<span class="clear"></span></p>
+						
+		        	<% unless @loan.social_impact_story.blank? %>			
+							  <h4 class="active">How can you create an impact?</h4>
+    					  <p style="display: block;"><%= @loan.social_impact_story %><br/><br/>
+															
+									<% unless @borrower.impact_story_image.blank? %>  
+								<img src="/images/impactstory/<%=  @borrower.impact_story_image %>"  alt="Your impact story" title="Your impact story" width="470" height="200"/>
+										
+									<% end %>  
+								
+								
+								
+								
+								</p>
+              <% else %> 	
+                  <h4 class="active">How can you create an impact?</h4>							
+								 <% unless @borrower.impact_story_image.blank? %>  
+								   <p style="display: block;"><img src="/images/impactstory/<%=  @borrower.impact_story_image %>"  alt="Your impact story" title="Your impact story" width="470" height="200"/></p>
+								
+								<% end %>
+					    <% end %> 
+							
+							
+					  
+					 
+					</div>
+					<div class="shadow1"></div>
+				</div><!-- /Borrower Info div -->
+				<div class="right sidebar"><!-- Right Sidebar div -->
+					<% unless @loan_funded_percentage.blank? %>
+						
+							<div class="amount-blurb"><!-- Amount div div -->
+							 <% if @loan_funded_percentage == 100 %>
+							    <div id="amount-funded">
+							    		<p>Fully Funded</p>
+										</div>
+							  <% elsif  @loan_funded_percentage == 0 %>
+								    <div id="amount-funded">
+										  <% if $visiting_user_country == "India"%>							    		
+													<p class="amount"><span id="amount_funded_<%= @loan.id %>">0</span></p>
+										      <p>funded out of <%= @loan.amount.round() %></p>
+											<% else %>
+               <p style="color:#562E47;font-size:32px;font-weight:bold;padding-bottom:12px;padding-left:0px;padding-top:5px;width:10px;"><span id="amount_funded_<%= @loan.id %>">$0</span></p>
+										      <p>funded out of $<%= @loan.loan_amount_in_dollar.round()%></p>   
+                   
+            <% end %>    
+										</div>
+								 <% else %>
+								<% if $visiting_user_country == "India"%>
+									<div id="amount-funded">
+										<p class="amount"><span id="amount_funded_<%= @loan.id %>"><%= (@loan.amount - @loan.loan_amount_remaining_in_rupees).round()%></span></p>
+										<p>funded out of Rs.<%= @loan.amount.round() %></p>
+										</div>
+									<% else %>
+           <div id="amount-funded"> 									
+										<p style="color:#562E47;font-size:32px;font-weight:bold;padding-bottom:12px;padding-left:0px;padding-top:5px;width:10px;">$<span id="amount_funded_<%= @loan.id %>"><%=  (@loan.loan_amount_in_dollar - @loan.amount_remaining).round() %></span></p>
+										<p>funded out of $<%= @loan.loan_amount_in_dollar.round()%></p>
+									</div>	
+										
+								<% end %>
+					    <% end %>
+							
+							
+							
+					  <% end %> 
+					 
+					
+					
+						 <% unless @loan_funded_percentage.blank? %>
+						    <% if @loan_funded_percentage == 100 %>
+								<div class="graph-wrapper" title="Fully funded">
+								<div class="graph left" style="width: 100%;">&nbsp;</div>
+								<div class="graph-increase left" style="width: 0%;" id="graph_increase_<%= @loan.id %>">&nbsp;</div>
+								<div class="clear"></div>
+								</div>
+						
+								
+								
+						
+								<% elsif  @loan_funded_percentage == 0 %>
+								<div class="graph-wrapper" title="Fully funded">
+								<div class="graph left" style="width: 0%;">&nbsp;</div>
+								<div class="graph-increase left" style="width: 0%;" id="graph_increase_<%= @loan.id %>">&nbsp;</div>
+								<div class="clear"></div>
+								</div>
+								
+								   
+								 <% else %>
+								 <div class="graph-wrapper">
+								<div class="graph left" style="width:<%= @loan_funded_percentage.round() %>%;">&nbsp;</div>
+								<div class="graph-increase left" style="width: 0%;" id="graph_increase_<%= @loan.id %>">&nbsp;</div>
+								<div class="clear"></div>
+								</div> 
+								 
+								 			 
+								 
+								<% end %> 
+							
+						<% end %>	
+						  	
+							
+						
+						
+						
+					</div>
+					
+					<% if @loan_funded_percentage  != 100 %>
+					<!-- /Amount div div -->
+					<div id="choose-amount">
+					  <% if $visiting_user_country == "India"%>
+              <% if @loan.loan_amount_remaining_in_rupees > 0 %>
+								<form action="<%= lend_money_to_borrower_path %>"  method="post" >
+									<select name="amount_1" id="amount_paying_option_<%= @loan.id %>"/>
+										<% unless @loan_drop_down_values.blank? %>
+											<option>Choose your amount</option>	
+											<% @loan_drop_down_values.each_with_index do |loan_amt,i| %>
+												<% if @loan_drop_down_values.last == loan_amt %>
+														<% if @loan_drop_down_values.last < @loan.loan_amount_remaining_in_rupees %>
+															<option value="<%= loan_amt %>">Rs... <%= loan_amt %></option>
+															<option value="<%= @loan.loan_amount_remaining_in_rupees.round() %>">Complete the Loan</option>
+														<% elsif @loan_drop_down_values.last == @loan.loan_amount_remaining_in_rupees %>
+																<option value="<%= @loan.loan_amount_remaining_in_rupees.round() %>">Complete the Loan</option>
+														<% end %>
+												<% else %>
+													<%  selected_drop_down_index  =  @loan_drop_down_values.length/2  %> 
+													<option class="hover_change_<%= @loan.id %>" <% if @loan_drop_down_values[ selected_drop_down_index] == loan_amt %>selected="selected"<% end %> value="<%= loan_amt %>">Rs. <%= loan_amt %></option>
+												<% end %>
+											<% end %>
+										<% end %>
+									</select>
+									<input type="hidden" name="borrower_id" value="<%= @borrower.id %>">
+									<input type="hidden" name="id" value="<%= @loan.id %>">
+									<div id="complete-loan">
+										<input type="checkbox" class="left" id="complete_check_box_<%= @loan.id %>"><span class="left">I want to complete the loan</span>
+									</div>
+								<% if user_signed_in? %>
+								<input name="" type="submit" class="botton" value="" title="Lend now"  id="submit_amount_<%= @loan.id %>"/>
+								<% else %>
+								<a href="/users/login" title="Please Login/signup to lend money to borower">
+								<input name="" type="button" class="botton" value="" title="Lend now" />
+								</a>
+								<% end %>
+									</form>		
+								<% end %>
+							<% else %> 
+							  <% if @loan.amount_remaining > 0 %>
+								    <form action="<%= lend_money_to_borrower_path %>"  method="post" >
+  <select name="amount_1" id="amount_paying_option_<%= @loan.id %>"/>
+
+<% unless @loan_drop_down_values.blank? %>
+<option>Choose your amount</option>	
+<% @loan_drop_down_values.each_with_index do |loan_amt,i| %>
+<% if @loan_drop_down_values.last == loan_amt %>
+<% if @loan_drop_down_values.last < @loan.amount_remaining %>
+<option value="<%= loan_amt %>">$<%= loan_amt %></option>
+<option value="<%= @loan.amount_remaining.round() %>">Complete the Loan</option>
+<% elsif @loan_drop_down_values.last == @loan.amount_remaining %>
+<option value="<%= @loan.amount_remaining.round() %>">Complete the Loan</option>
+<% end %>
+<% else %>
+ <%  selected_drop_down_index  =  @loan_drop_down_values.length/2  %> 
+<option <% if @loan_drop_down_values[ selected_drop_down_index] == loan_amt %>selected="selected"<% end %> value="<%= loan_amt %>">$<%= loan_amt %></option>
+<% end %>
+<% end %>
+<% end %>
+</select>
+<input type="hidden" name="borrower_id" value="<%= @borrower.id %>">
+<input type="hidden" name="id" value="<%= @loan.id %>">
+
+ 
+	 
+	 
+  <div id="complete-loan">
+    <input type="checkbox" class="left" id="complete_check_box_<%= @loan.id %>"/>
+    <span class="left">I want to complete the loan</span>
+ 	</div>
+  	
+<% if user_signed_in? %>
+<input name="" type="submit" class="botton" value="" title="Lend now"  id="submit_amount_<%= @loan.id %>"/>
+<% else %>
+<a href="/users/login" title="Please Login/signup to lend money to borower">
+<input name="" type="button" class="botton" value="" title="Lend now" />
+</a>
+<% end %>
+</form>
+								
+								
+								
+							
+								
+									
+									
+								
+								<% end %>   
+						       <% end %>
+						
+					</div><% end %>
+					<div class="repayment-blurb"><!-- Repayment div div -->
+						<h3>Repayment Details</h3>
+						<p>Tenure : <%=   pluralize(@loan.terms, 'month')  unless @loan.terms.blank?  %></p>
+						<% unless @loan_repayments.blank? %>
+						 <p>Period : <%= @loan_repayments.first.repayment_date.strftime("%b '%y") %> - <%= @loan_repayments.last.repayment_date.strftime("%b '%y") %></p>
+						<% end %>
+						<p>Monthly installments : Rs. <%= @loan_repayments.first.amount.round() %></p>
+					</div><!-- /Repayment div div -->
+					<div id="choose-category">
+						<h3>Switch to a different loan :</h3>
+						<a href="<%= view_all_projects_path(:category=>"HEALTH") %>"><img class="left" title="Health" alt="Organic farming" src="/images/logo-health.gif"></a>
+						<a href="<%= view_all_projects_path(:category=>"Sanitation") %>"><img class="left" title="Sanitation" alt="Sanitation" src="/images/logo-sanitation.gif"></a>
+						<a href="<%= view_all_projects_path(:category=>"Education") %>"><img class="left" title="Education" alt="Education" src="/images/logo-education.gif"></a>
+						<a href="<%= view_all_projects_path(:category=>"Microfranchisee") %>"><img class="left" title="Microfranchisee" alt="Microfranchisee" src="/images/logo-trade.gif"></a>
+					</div>
+				</div><!-- /Right Sidebar div -->
+				<div class="clear"></div>
+				<div class="shadow2"></div>
+			</div><!-- /Borrowers' div -->
+		</div>
+		
+		</div>
+		
+		
+		<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".accordion h4").eq(2).addClass("active");
+	$(".accordion p").eq(2).show();
+	$(".accordion h4").click(function(){
+	$(this).next("p").toggle("slow")
+	$(this).toggleClass("active");
+		/*.siblings("p:visible").slideUp("slow");
+		$(this).toggleClass("active");
+		$("h4").removeClass("active");*/
+
+	});
+
+});
+
+// toggle for extra content
+
+
+
+$("#choose-amount input").hover(
+  function () {
+    $(this).addClass("btnhover");
+  },
+  function () {
+    $(this).removeClass("btnhover");
+  }
+);
+
+
+
+$(document).ready(function() {
+
+    $('.hover_change_<%= @loan.id %>').hover(function() {
+       if ($('#amount_paying_option_<%= @loan.id %> option:selected').text() == "Choose your amount")
+{
+$('#graph_increase_<%= @loan.id %>').css({width: '0%'} )
+<% if $visiting_user_country == "India"%>
+var amt_funded  =  Math.round(<%= (@loan.amount - @loan.loan_amount_remaining_in_rupees).round()%>)  ;
+$('#amount_funded_<%= @loan.id %>').text(amt_funded);
+<% else %>
+var amt_funded  =  Math.round(<%=  (@loan.loan_amount_in_dollar - @loan.amount_remaining).round() %>)  ;
+$('#amount_funded_<%= @loan.id %>').text(amt_funded);
+<% end %>
+}
+else
+{
+<% if $visiting_user_country == "India"%>
+var drop_down_amt = $('#amount_paying_option_<%= @loan.id %> option:selected').val()/45 ;
+<% else %>
+var drop_down_amt = $('#amount_paying_option_<%= @loan.id %> option:selected').val();
+<% end %>
+  var loan_amt =  <%= @loan.amount %> ;
+	 var loan_amount_remaining_in_rupees =  <%= @loan.loan_amount_remaining_in_rupees %> ;
+	 var selected_amt = $('#amount_paying_option_<%= @loan.id %> option:selected').val();
+
+	 var loan_amount_in_dollar = <%= @loan.loan_amount_in_dollar %>;
+  var amount_remaining  = <%= @loan.amount_remaining %>;
+	 var new_loan_funded_percentage = Math.round((100 * (loan_amount_in_dollar - drop_down_amt))/loan_amount_in_dollar);
+	 var actual_new_loan_funded_percentage = 100  - new_loan_funded_percentage ;
+
+	 $('#graph_increase_<%= @loan.id %>').css({width: actual_new_loan_funded_percentage + '%'} );
+
+<% if $visiting_user_country == "India"%>
+var amt_funded  =  Math.round(loan_amt-loan_amount_remaining_in_rupees+ parseInt($('#amount_paying_option_<%= @loan.id %> option:selected').val()))  ;
+$('#amount_funded_<%= @loan.id %>').text(amt_funded);
+<% else %>
+var amt_funded  =  Math.round(loan_amount_in_dollar-amount_remaining +  parseInt($('#amount_paying_option_<%= @loan.id %> option:selected').val()))  ;
+$('#amount_funded_<%= @loan.id %>').text(amt_funded);
+<% end %>
+}
+    });
+
+
+
+$('#more_<%= @loan.id %>').click(function() {
+$('#more_<%= @loan.id %>').hide();
+$('#short_story_<%= @loan.id %>').hide();
+$('#full_story_<%= @loan.id %>').show();
+});
+$('#expanded_more_story_<%= @loan.id %>').click(function() {
+$('#more_<%= @loan.id %>').show();
+$('#short_story_<%= @loan.id %>').show();
+$('#full_story_<%= @loan.id %>').hide();
+});
+
+
+$('#complete_check_box_<%= @loan.id %>').click(function() {
+if ($('#complete_check_box_<%= @loan.id %>').is(':checked') == true )
+{
+  $('#amount_paying_option_<%= @loan.id %>').hide();
+	 $('#amount_paying_option_<%= @loan.id %> option:last-child').attr("selected","selected");
+}
+else
+{
+ $('#amount_paying_option_<%= @loan.id %>').show();
+ $('#amount_paying_option_<%= @loan.id %> option:first-child').attr("selected","selected");
+}
+});
+
+
+$('#submit_amount_<%= @loan.id %>').click(function() {
+ if ($('#amount_paying_option_<%= @loan.id %> option:selected').text() == "Choose your amount")
+  {
+	  alert("Choose your amount first");
+		 return false;
+		} 
+ else
+  {
+	  return true;
+  } 	
+ });
+ 
+ 
+ $('#amount_paying_option_<%= @loan.id %>').change(function() {
+//alert($('#amount_paying_option_<%= @loan.id %> option:selected').val());
+if ($('#amount_paying_option_<%= @loan.id %> option:selected').text() == "Choose your amount")
+{
+$('#graph_increase_<%= @loan.id %>').css({width: '0%'} )
+<% if $visiting_user_country == "India"%>
+var amt_funded  =  Math.round(<%= (@loan.amount - @loan.loan_amount_remaining_in_rupees).round()%>)  ;
+$('#amount_funded_<%= @loan.id %>').text(amt_funded);
+<% else %>
+var amt_funded  =  Math.round(<%=  (@loan.loan_amount_in_dollar - @loan.amount_remaining).round() %>)  ;
+$('#amount_funded_<%= @loan.id %>').text(amt_funded);
+<% end %>
+}
+else
+{
+<% if $visiting_user_country == "India"%>
+var drop_down_amt = $('#amount_paying_option_<%= @loan.id %> option:selected').val()/45 ;
+<% else %>
+var drop_down_amt = $('#amount_paying_option_<%= @loan.id %> option:selected').val();
+<% end %>
+  var loan_amt =  <%= @loan.amount %> ;
+	 var loan_amount_remaining_in_rupees =  <%= @loan.loan_amount_remaining_in_rupees %> ;
+	 var selected_amt = $('#amount_paying_option_<%= @loan.id %> option:selected').val();
+	 
+	 var loan_amount_in_dollar = <%= @loan.loan_amount_in_dollar %>;
+  var amount_remaining  = <%= @loan.amount_remaining %>;
+	 var new_loan_funded_percentage = Math.round((100 * (loan_amount_in_dollar - drop_down_amt))/loan_amount_in_dollar);
+	 var actual_new_loan_funded_percentage = 100  - new_loan_funded_percentage ;
+
+	 $('#graph_increase_<%= @loan.id %>').css({width: actual_new_loan_funded_percentage + '%'} );
+
+<% if $visiting_user_country == "India"%>
+var amt_funded  =  Math.round(loan_amt-loan_amount_remaining_in_rupees+ parseInt($('#amount_paying_option_<%= @loan.id %> option:selected').val()))  ;
+$('#amount_funded_<%= @loan.id %>').text(amt_funded);
+<% else %>
+var amt_funded  =  Math.round(loan_amount_in_dollar-amount_remaining +  parseInt($('#amount_paying_option_<%= @loan.id %> option:selected').val()))  ;
+$('#amount_funded_<%= @loan.id %>').text(amt_funded); 
+<% end %>
+}
+});
+
+
+
+
+
+
+
+
+
+
+});
+
+</script>

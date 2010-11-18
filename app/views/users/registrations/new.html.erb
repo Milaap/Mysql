@@ -1,0 +1,47 @@
+<%= stylesheet_link_tag "borrower-style.css" %>
+<div class="content">
+  <div class="wrapper">
+		<% if notice %>
+			<div id="notification" style="text-align:center;">
+				<p><%= notice.gsub("<br>","<br/>") %></p> 
+			</div>
+		<% end %>
+  <% if @user.errors.any? %>  
+  	<div id="notification" style="text-align:left;width:585px;margin-left:75px;">
+    	  <% @user.errors.full_messages.each do |msg| %>  
+    	<p><%= msg %></p>  
+	   <% end %>
+   </div>
+	<% end %>  
+	<div class="signup-details">
+   
+	
+		<!-- Borrowers' div -->
+		<div class="left email-login">
+			<h4>Signup with your email</h4>
+				<form method="post" id="user_new" class="user_new" action="/users/register" accept-charset="UTF-8">
+					<label>First Name</label>
+					<input type="text" name="user[first_name]"   id="user_first_name"  value="<%= params[:user][:first_name] unless params[:user].blank?%>">
+					<label>Last Name</label>
+					<input type="text" name="user[last_name]"   id="user_last_name"  value="<%= params[:user][:last_name] unless params[:user].blank?%>">
+					<label>Email</label>
+					<input type="text" name="user[email]"   id="user_email"  value="<%= params[:user][:email] unless params[:user].blank?%>">
+					<label>Password</label>
+					<input type="password" name="user[password]"   id="user_password" value="<%= params[:user][:password] unless params[:user].blank?%>">
+ 				<label>Password again</label>
+					<input type="password" name="user[password_confirmation]"   id="user[password_confirmation]" value="<%= params[:user][:password_confirmation] unless params[:user].blank?%>">
+
+					<input type="submit" value="" id="submit" class="">
+				</form>
+			</div>
+			<div id="fblogin" class="right">
+				<h4>Signup with your other accounts</h4>
+				<a href="/facebook-login" title="Login with Facebook"> <img alt="FB Login" src="/images/fb-connect_new.gif"></a>
+				<br>
+				<a href="/google-login" title="Login with Gmail"><img alt="Gmail Login" src="/images/gmail-connect.gif"></a>
+			</div>
+		<div class="clear"></div>			
+	</div><!-- /Borrowers' div -->
+	<div class="shadow-signup"></div>
+	</div>
+</div>

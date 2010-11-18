@@ -1,0 +1,206 @@
+	<%= stylesheet_link_tag "slideshow.css" %>
+	<%= javascript_include_tag "coda-slider.1.1.1.pack.js" %>
+	<% if notice %>
+		<div id="notification" style="text-align:left;">
+			<p><%= notice.gsub("<br>","<br/>") %></p> 
+		</div>
+	<% end %>
+	<% if alert %>
+		<div id="notification" style="text-align:left;">
+			<p><%= alert %></p>		
+		</div>
+	<% end %>
+	<div class="slider-wrap">
+		<div id="main-photo-slider" class="csw">
+			<div class="panelContainer">
+				<div class="panel" title="Panel 1">
+					<div style="background:url(images/step-1.jpg) no-repeat; width:970px;height:369px;">
+						<p>Borrower profiles along with their needs such as education & water are posted on the website for you to browse and make a loan.</p>
+					</div>
+					<div class="slider-btns">
+						<% unless user_signed_in? %>
+							<div class="left"> <a href="#inline2" title="Signup for beta now" class="signup" ><img src="/images/slideshw-signup-btn.png"></a> </div>
+						<% end %>
+						<div class="left"><a href="/how-it-works"><img src="/images/slideshw-learnmore-btn.png"></a></div>
+					</div>
+				</div>
+		<div class="panel" title="Panel 2">
+			<div style="background:url(images/step-2.jpg) no-repeat; width:970px;height:369px;">
+				<p>Once you make a loan on Milaap, the money is disbured to the chosen borrower via our field partners who also collect  the repayments. </p>
+			</div>
+			<div class="slider-btns">
+				<% unless user_signed_in? %>
+					<div class="left">
+						<a href="#inline3" title="Signup for beta now" class="signup" ><img src="/images/slideshw-signup-btn.png"></a>
+					</div>	 
+				<% end %>
+				<div class="left"><a href="/how-it-works"><img src="/images/slideshw-learnmore-btn.png"></a></div>
+			</div>
+		</div>
+		<div class="panel" title="Panel 3">
+			<div style="background:url(images/step-3.jpg) no-repeat; width:970px;height:369px;">
+				<p>Micro loans given by you & many others give them access to better infrastructure & services thus creating a long term social impact.</p>
+			</div>
+			<div class="slider-btns">
+				<% unless user_signed_in? %>	
+					<div class="left">
+						<a href="#inline4" title="Signup for beta now" class="signup" ><img src="/images/slideshw-signup-btn.png"></a>
+					</div>	 
+				<% end %>
+				<div class="left"><a href="/how-it-works"><img src="/images/slideshw-learnmore-btn.png"></a></div>
+			</div>
+		</div>
+</div>
+</div>
+<div id="<% if notice %>movers-row1<% elsif alert %>movers-row1<% else%>movers-row<% end %>">
+<div><a href="#1" class="cross-link">1</a></div>
+<div><a href="#2" class="cross-link">2</a></div>
+<div><a href="#3" class="cross-link">3</a></div>
+</div>
+<div class="clear"></div>
+<div id="projects-blurb">
+<h2>Support the featured projects or <% if user_signed_in? %><% if current_user.loan_pledged == true %><a href="<%= view_all_projects_url %>">discover more</a><% else %> <a href="<%= pledge_url %>">discover more</a> <% end %><% else %><a href="<%= new_user_session_url%>">discover more</a><% end %></h2>
+<div class="projects-blurb-wrapper">
+<% unless @borrowers.blank? %>
+<%  @borrowers.each_with_index do |borrower,i| %>
+<% @loan = Loan.find_specific_loan(borrower.loan_id)%>
+<%  @loan_drop_down_values = Loan.find_loan_drop_down_values(@loan,$visiting_user_country) %>
+<div class="project left" <%if i == 2 %>style="margin-right: 0px;"<% end %>>
+<h3><a title="<%= @loan.title unless @loan.blank? %>" href="<% if user_signed_in? %><%= borrower_profile_path(:id=>borrower.id,:name=>escape_url("#{borrower.name}")) %><% else %><%= new_user_session_url %><% end %>" style="color:#000;text-decoration:none"><%= @loan.title unless @loan.blank? %></a></h3>
+<% if $visiting_user_country == "India"%>
+<% if @loan.loan_amount_remaining_in_rupees > 0 %>
+<h4>Funds required - Rs. <%= @loan.loan_amount_remaining_in_rupees.round() %></h4>
+<% else %> 
+<h4>Fully Funded</h4>
+<% end %>
+<% else %>
+<% if @loan.amount_remaining > 0 %>
+<h4>Funds required - $<%= @loan.amount_remaining.round() %></h4>
+<% else %>
+<h4>Fully Funded</h4>
+<% end %>
+<% end %>
+<div class="project-content">
+<a href="<%# if session[:correct_invitation_token] ==  true %><% if user_signed_in? %><%= borrower_profile_path(:id=>borrower.id,:name=>escape_url("#{borrower.name}")) %><% else %><%= new_user_session_url %><%#= thank_you_url %><%#= verify_invitation_code_path %><% end %>" title="<% if @loan.category_id == 3 %><%= borrower.name_of_student.titleize %><% else %><%= borrower.name.titleize %><% end %>"> <img src="/images/borrower/<%= borrower.home_image %>"  alt="<% if @loan.category_id == 3 %><%= borrower.name_of_student.titleize %><% else %><%= borrower.name.titleize %><% end %>" class="left"/></a>
+<p class="right">
+<% if @loan.amount_remaining > 0 %>
+<%= borrower.borrower_story[0..100]+"  ..." unless @loan.blank? %>
+<% else %>
+<%= borrower.borrower_story[0..100]+"  ..." unless @loan.blank? %>
+<% end %>
+<a href="<% if user_signed_in? %><%= borrower_profile_path(:id=>borrower.id,:name=>escape_url("#{borrower.name}")) %><% else %><%= new_user_session_url %><%#= verify_invitation_code_path %><% end %>" title="<% if @loan.category_id == 3 %><%= borrower.name_of_student.titleize %><% else %><%= borrower.name.titleize %><% end %>" title="more">more</a>
+</p>
+<div class="clear"></div>
+<br>
+<% if $visiting_user_country == "India"%>
+<% if @loan.loan_amount_remaining_in_rupees > 0 %>
+<form action="<%= lend_money_to_borrower_path %>"  method="post">
+<select name="amount_1" id="amount_1"/>
+<% unless @loan_drop_down_values.blank? %>
+<% @loan_drop_down_values.each_with_index do |loan_amt,i| %>
+<% if @loan_drop_down_values.last == loan_amt %>
+<% if @loan_drop_down_values.last < @loan.loan_amount_remaining_in_rupees %>
+<option value="<%= loan_amt %>">Rs. <%= loan_amt %></option>
+<option value="<%= @loan.loan_amount_remaining_in_rupees.round() %>">Complete the Loan</option>
+<% elsif @loan_drop_down_values.last == @loan.loan_amount_remaining_in_rupees %>
+<option value="<%= @loan.loan_amount_remaining_in_rupees.round() %>">Complete the Loan</option>
+<% end %>
+<% else %>
+<%  selected_drop_down_index  =  @loan_drop_down_values.length/2  %>
+<option <% if @loan_drop_down_values[selected_drop_down_index] == loan_amt %>selected="selected"<% end %> value="<%= loan_amt %>">Rs.<%= loan_amt %></option>
+<% end %>
+<% end %>
+<% end %>
+</select>
+<input type="hidden" name="id" value="<%= borrower.id %>">
+<input type="hidden" name="loan_id" value="<%= @loan.loan_id %>">
+<% if user_signed_in? %>
+<input type="submit" class="btn2" value="Lend Now">
+<% else %> 
+<a href="<%=  new_user_session_url %>"> <input type="submit" class="btn2" value="Lend Now"></a>   
+<% end %>
+</form>
+<% end %>
+
+
+
+
+
+
+<% else %>
+<% if @loan.amount_remaining > 0 %>
+<form action="<%= lend_money_to_borrower_path %>"  method="post">
+<select name="amount_1" id="amount_1"/>
+<% unless @loan_drop_down_values.blank? %>
+<% @loan_drop_down_values.each_with_index do |loan_amt,i| %>
+<% if @loan_drop_down_values.last == loan_amt %>
+<% if @loan_drop_down_values.last < @loan.amount_remaining %>
+<option value="<%= loan_amt %>">$<%= loan_amt %></option>
+<option value="<%= @loan.amount_remaining.round() %>">Complete the Loan</option>
+<% elsif @loan_drop_down_values.last == @loan.amount_remaining %>
+<option value="<%= @loan.amount_remaining.round() %>">Complete the Loan</option>
+<% end %>
+<% else %>
+<%  selected_drop_down_index  =  @loan_drop_down_values.length/2  %>
+<option <% if @loan_drop_down_values[selected_drop_down_index] == loan_amt %>selected="selected"<% end %> value="<%= loan_amt %>">$<%= loan_amt %></option>
+<% end %>
+<% end %>
+<% end %>
+</select>
+<input type="hidden" name="id" value="<%= borrower.id %>">
+<input type="hidden" name="loan_id" value="<%= @loan.loan_id %>">
+<% if user_signed_in? %>
+<input type="submit" class="btn2" value="Lend Now">
+<% else %> 
+<a href="<%=  new_user_session_url %>"> <input type="submit" class="btn2" value="Lend Now"></a>   
+<% end %>
+
+</form>
+<% end %>
+
+<% end %>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+<% end %>
+<% end %>
+
+
+<div class="clear"></div>
+</div>
+</div>
+<div class="home-shadow"><img src="/images/projects-border.png"/></div>
+<div class="social-media-blurb">
+<div class="social-content twitter-blurb">
+<ul id="twitter_update_list">
+</ul>
+</div>
+<div class="fb-blurb social-content">
+<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fmilaap.org&amp;width=238&amp;connections=4&amp;stream=false&amp;header=false&amp;height=185" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:238px; height:185px;" allowTransparency="true"></iframe>
+</div>
+<div class="milaap-blurb social-content">
+<ul>
+<li>Make a loan for life-enhancing products and services</li>
+<li>Get a chance to create a long term sustainable impact</li>
+<li>Re-invest your money to help multiple people year after year</li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="home-shadow1 left"><img src="/images/projects-border2.png"/></div>
+<div class="home-shadow2 left"><img src="/images/projects-border2.png"/></div>
+<div class="left"><img src="/images/projects-border2.png"/></div>
+<div class="clear"></div>
+</div>
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/milaapdotorg.json?callback=twitterCallback2&count=2"></script>
+

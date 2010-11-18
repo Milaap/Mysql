@@ -1,0 +1,255 @@
+/*************Team Profile ***********/
+
+.team {
+
+width:970px; 
+height:auto; 
+
+}
+
+.team .team-content {
+background-color:#ffffff;
+border:1px solid #F0EEE8;
+margin:3px 0 0 -10px;
+padding:15px 18px;
+width:650px;
+}
+
+.team .team-content h3 {
+font-size:22px;
+font-weight:bold;
+color:#522F45;
+padding:0 0 10px 0;
+}
+
+.team .team-content h4 {
+font-size:16px;
+padding:0 0 10px 0;
+}
+
+.team .team-content p {
+font-size:13px;
+line-height:19px;
+color:#666;
+padding-bottom:9px;
+}
+
+.team .social-links {
+padding:6px 10px;
+background:#fff;
+}
+
+.team .social-links img {
+margin:0 4px;
+border:1px solid #f7f7f7;
+}
+
+#who-we-are li {
+display:inline;
+}
+
+#who-we-are li a {
+text-decoration:none;
+font-size:18px;
+}
+
+
+.widget {
+padding-top:20px;
+}
+
+.widget a {
+color: #222;
+text-decoration: none;
+}
+
+.widget a:hover {
+color: #009;
+text-decoration: underline;
+}
+
+.tabnav li {
+display: inline;
+list-style: none;
+padding-right:15px;
+}
+
+.tabnav li a {
+text-decoration: none;
+color: #970A37;
+font-weight: bold;
+padding:10px;
+outline: none;
+}
+
+.tabnav li a:hover, .tabnav li a:active, .tabnav li.ui-tabs-selected a {
+background:#efefef;
+color: #522F45;
+text-decoration: none;
+}
+
+.tabdiv {
+border:1px solid #EFEFEF;
+margin-top:9px;
+padding:20px 15px;
+}
+
+.tabdiv li {
+list-style-image: url("star.png");
+margin-left: 20px;
+}
+
+.ui-tabs-hide {
+display: none;
+}
+
+#featuredvid {
+text-align: center;
+}
+
+.fvid {
+margin-bottom: 5px;
+}
+
+.vidselector li {
+text-align: left;
+list-style: none;
+padding: 5px;
+background: #ffffff;
+border: 1px solid #dedbd1;
+text-transform: uppercase;
+margin-bottom: 5px;
+}
+
+.get-involved li {
+background:url(../images/arrow.gif) no-repeat scroll 50px 16px transparent;
+font-size:13px;
+padding:7px 20px 7px 70px;
+}
+
+.get-involved p {
+font-size:13px;
+padding:7px 20px 7px 54px;
+}
+
+.get-involved-content {
+background-color:#ffffff;
+border:1px solid #F0EEE8;
+margin:3px 0 0 -10px;
+padding:15px 18px;
+width:930px;
+}
+
+.get-involved-content h3 {
+color:#522F45;
+font-size:22px;
+font-weight:bold;
+padding:0 0 5px 10px;
+text-shadow:0 2px 0 #FFFFFF;
+}
+
+.thankyou-alpha-content {
+background-color:#ffffff;
+border:1px solid #F0EEE8;
+float:left;
+line-height:18px;
+margin:3px 30px 0 0;
+padding:15px 18px;
+width:420px;
+height:75px;
+font-size:13px;
+}
+
+.thankyou-alpha-content h3 {
+font-size:14px;
+font-weight:bold;
+color:#522F45;
+padding-bottom:10px;
+}
+
+.thankyou-alpha h4 {
+color:#522F45;
+font-size:18px;
+font-weight:bold;
+padding:10px 0;
+}
+
+span.step {
+background:none repeat scroll 0 0 #FFFFFF;
+font-size:18px;
+height:55px;
+margin-right:8px;
+padding:0 5px;
+width:25px;
+}
+
+#slideshow img {
+position:relative;
+}
+
+#demo #nav {
+color:#FFFFFF;
+font-size:13px;
+position:absolute;
+right:60px;
+top:40px;
+z-index:9999;
+}
+
+#main-photo-slider a {
+color:#522F45;
+}
+
+
+
+/*************Why-Milaap***************/
+#why-milaap {
+background:url(../images/why-milaap.gif) no-repeat;
+height:1391px;
+width:970px;
+}
+
+#why-milaap ul li {
+color:#542E45;
+font-size:13px;
+width:450px;
+padding:5px 15px;
+}
+
+#why-milaap .step-1 ul {
+padding:75px 20px 20px;
+}
+
+#why-milaap .step-2 ul {
+padding:118px 20px 20px 320px;
+}
+
+#why-milaap .step-3 ul {
+padding:122px 20px 20px 320px;
+}
+
+#why-milaap .step-3 ul li {
+width:590px;
+}
+
+#why-milaap .step-4 ul {
+padding:125px 20px 20px;
+}
+
+#why-milaap .step-5 ul {
+padding:143px 20px 20px 467px;
+}
+
+#why-milaap ul li {
+background:url(../images/arrow.gif) no-repeat scroll 20px 12px transparent;
+padding-left:38px;
+}
+
+
+
+#privacy-policy ul li {
+background:url(../images/arrow.gif) no-repeat scroll 20px 12px transparent;
+font-size:13px;
+padding:7px 20px 7px 38px;
+}
+

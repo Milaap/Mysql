@@ -1,0 +1,311 @@
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "jquery.rails.js"%>
+<%#= javascript_include_tag :defaults, :all, :recursive => true %>
+<%= stylesheet_link_tag "borrower-style.css" %>
+<div class="content">
+<div class="wrapper">
+	<div id="page-heading">
+		<h2 class="left">View Entrepreneurs</h2>
+		<div class="breadcrumbs right">
+			<ul>
+				<li><a href="<%= root_path %>" title="Home">Home</a><span> &rsaquo;</span></li>
+				<li><a href="<%= view_all_projects_path %>" class="active" title="View Entrepreneurs"> View Entrepreneurs</a></li>
+				<li class="clear"></li>
+			</ul>
+		</div>
+	</div>
+	
+	<% if notice %>
+		<div id="notification" style="text-align:left;">
+			<p><%= notice.gsub("<br>","<br/>") %></p> 
+			<% flash[:notice] = nil %> 
+		</div>
+	<% end %>
+	<% if alert %>
+		<div id="notification" style="text-align:left;">
+			<p><%= alert %></p>		
+		</div>
+	<% end %>
+	
+	
+	<div class="pagination left"> <%= will_paginate @loans %></div>
+	<div id="choose-category-searchlist" class="right">
+		<p class="left">Switch to a different loan : </p>
+					<a href="<%= view_all_projects_path(:category=>"HEALTH") %>"><img class="left" title="Health" alt="Organic farming" src="/images/logo-health.gif"></a>
+						<a href="<%= view_all_projects_path(:category=>"Sanitation") %>"><img class="left" title="Sanitation" alt="Sanitation" src="/images/logo-sanitation.gif"></a>
+						<a href="<%= view_all_projects_path(:category=>"Education") %>"><img class="left" title="Education" alt="Education" src="/images/logo-education.gif"></a>
+						<a href="<%= view_all_projects_path(:category=>"Microfranchisee") %>"><img class="left" title="Microfranchisee" alt="Microfranchisee" src="/images/logo-trade.gif"></a>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>	
+	<div class="top-divider"></div>
+	<% unless @loans.blank? %>
+		<% @loans.each do |loan|  %>
+			<% @borrower = Borrower.find_loan_borrower(loan.id)%>
+			<% @category =  Category.find(loan.category_id)%>
+			<% if loan.amount_remaining > 0 %>
+				<% @loan_funded_percentage = (100 * (loan.loan_amount_in_dollar - loan.amount_remaining))/loan.loan_amount_in_dollar %>
+				<%  @loan_drop_down_values = Loan.find_loan_drop_down_values(loan,$visiting_user_country) %>
+			<% else %>
+				<% @loan_funded_percentage = 100 %>
+			<% end %>
+			<div class="borrowers-details clear">
+				<!-- Borrowers' div -->
+				<div class="info-blurb left">
+				<!-- Borrower Info div -->
+					<div id="borrower-image" class="left">
+						<div class="borrower-image-border">
+							<a href="<% if user_signed_in? %><%= borrower_profile_path(:id=>@borrower.id,:name=>escape_url("#{@borrower.name}")) %><% else %><%= new_user_session_url %> <% end %>" title="<% if loan.category_id == 3 %><%= @borrower.name_of_student.titleize %><% else %><%= @borrower.name.titleize %><% end %>"> <img src="/images/borrower/<%= @borrower.search_image %>" alt="<%= @borrower.name %>" title="<% if loan.category_id == 3 %><%= @borrower.name_of_student.titleize %><% else %><%= @borrower.name.titleize %><% end %>"/></a>
+						</div>
+						<div class="shadow0"></div>
+					</div>
+					<div class="right intro">
+						<h3 class="left"><a href="<% if user_signed_in? %><%= borrower_profile_path(:id=>@borrower.id,:name=>escape_url("#{@borrower.name}")) %><% else %><%= new_user_session_url %> <% end %>" title="<%= loan.title.gsub("of their son","").gsub("of their daugther","") unless loan.blank? %>"><%= loan.title.gsub("of their son","").gsub("of their daugther","") unless loan.blank? %></a></h3>
+						<a class="left" href='<%= view_all_projects_path(:category=>"#{@category.name}") %>'><img src="/images/<%= @category.category_logo unless @category.category_logo.blank?%>" alt="<%= @category.name %>" title="<%= @category.name %>" class="left"/></a>
+						<div class="clear"></div>
+						<p class="sub-info">Borrower: <% if loan.category_id == 3 %><%= @borrower.name_of_student.titleize %><% else %><%= @borrower.name.titleize %><% end %></p>
+						<p class="sub-info">Location: <%= @borrower.village+"," unless @borrower.village.blank? %> <%= @borrower.state.titleize unless @borrower.state.blank? %> (IN)</p>
+							<% unless @borrower.borrower_story.blank? %> 
+								<p id="short_story_<%= @borrower.loan_id %>"><%= @borrower.borrower_story[0..170] %> 
+								<% if @borrower.borrower_story.length > 170  %>
+									<a class="collapsed slide" id="more_<%= @borrower.loan_id %>" title="more">more</a>
+								</p>
+								<p style="display:none"  id="full_story_<%= @borrower.loan_id %>">
+								<span class="view"><%= @borrower.borrower_story %>
+								<a class="slide expanded" id="expanded_more_story_<%= @borrower.loan_id %>" title="less">more</a>
+								</span>
+							</p>
+						<% end %>
+					<% end %>
+					
+					
+					
+	<div id="amount-blurb-searchlist">
+<!-- Amount div div -->
+<%#= @loan_funded_percentage %>
+
+<div class="graph-wrapper" id="loan_funded_graph_<%= loan.id %>">
+<%= render :partial=>"/home/loan_funded_graph",:locals=>{:loan=>loan}%>
+</div>
+
+<!-- /Amount div div -->
+
+<div class="clear"></div>
+</div>
+
+
+
+<!-- /Borrower Info div -->
+<% if @loan_funded_percentage  != 100 %>
+<% if $visiting_user_country == "India"%>
+
+
+<% if loan.loan_amount_remaining_in_rupees > 0 %>
+<div class="right sidebar">
+<!-- Right Sidebar div -->
+<div id="choose-amount">
+
+
+<form action="<%= lend_money_to_borrower_path %>"  method="post" >
+
+
+<select name="amount_1" id="amount_paying_option_<%= loan.id %>"/>
+
+<% unless @loan_drop_down_values.blank? %>
+<option>Choose your amount</option>	
+<% @loan_drop_down_values.each_with_index do |loan_amt,i| %>
+
+	
+<% if @loan_drop_down_values.last == loan_amt %>
+<% if @loan_drop_down_values.last < loan.loan_amount_remaining_in_rupees %>
+<option value="<%= loan_amt %>">Rs. <%= loan_amt %></option>
+<option value="<%= loan.loan_amount_remaining_in_rupees.round() %>">Complete the Loan</option>
+<% elsif @loan_drop_down_values.last == loan.loan_amount_remaining_in_rupees %>
+<option value="<%= loan.loan_amount_remaining_in_rupees.round() %>">Complete the Loan</option>
+<% end %>
+<% else %>
+ <%  selected_drop_down_index  =  @loan_drop_down_values.length/2  %> 
+<option <% if @loan_drop_down_values[ selected_drop_down_index] == loan_amt %>selected="selected"<% end %> value="<%= loan_amt %>">Rs. <%= loan_amt %></option>
+<% end %>
+<% end %>
+<% end %>
+</select>
+<input type="hidden" name="id" value="<%= @borrower.id %>">
+<input type="hidden" name="loan_id" value="<%= loan.id %>">
+
+<div id="complete-loan">
+<input type="checkbox" class="left" id="complete_check_box_<%= loan.id %>"/>
+<span class="left">I want to complete the loan</span> </div>
+	
+	
+<% if user_signed_in? %>
+<input name="" type="submit" class="botton" value="" title="Lend now"  id="submit_amount_<%= loan.id %>"/>
+<% else %>
+<a href="/users/login" title="Please Login/signup to lend money to borower">
+<input name="" type="button" class="botton" value="" title="Lend now" />
+</a>
+<% end %>
+	
+
+
+
+</form>
+
+</div>
+</div>
+<!-- /Right Sidebar div -->
+<% end %>
+<% else %>
+
+
+<div class="right sidebar">
+<!-- Right Sidebar div -->
+<div id="choose-amount">
+<% if loan.amount_remaining > 0 %>
+<form action="<%= lend_money_to_borrower_path %>"  method="post" >
+  <select name="amount_1" id="amount_paying_option_<%= loan.id %>"/>
+
+<% unless @loan_drop_down_values.blank? %>
+<option>Choose your amount</option>	
+<% @loan_drop_down_values.each_with_index do |loan_amt,i| %>
+<% if @loan_drop_down_values.last == loan_amt %>
+<% if @loan_drop_down_values.last < loan.amount_remaining %>
+<option value="<%= loan_amt %>">$<%= loan_amt %></option>
+<option value="<%= loan.amount_remaining.round() %>">Complete the Loan</option>
+<% elsif @loan_drop_down_values.last == loan.amount_remaining %>
+<option value="<%= loan.amount_remaining.round() %>">Complete the Loan</option>
+<% end %>
+<% else %>
+ <%  selected_drop_down_index  =  @loan_drop_down_values.length/2  %> 
+<option <% if @loan_drop_down_values[ selected_drop_down_index] == loan_amt %>selected="selected"<% end %> value="<%= loan_amt %>">$<%= loan_amt %></option>
+<% end %>
+<% end %>
+<% end %>
+</select>
+<input type="hidden" name="id" value="<%= @borrower.id %>">
+<input type="hidden" name="loan_id" value="<%= loan.id %>">
+
+ 
+	 
+	 
+  <div id="complete-loan">
+    <input type="checkbox" class="left" id="complete_check_box_<%= loan.id %>"/>
+    <span class="left">I want to complete the loan</span>
+ 	</div>
+  	
+<% if user_signed_in? %>
+<input name="" type="submit" class="botton" value="" title="Lend now"  id="submit_amount_<%= loan.id %>"/>
+<% else %>
+<a href="/users/login" title="Please Login/signup to lend money to borower">
+<input name="" type="button" class="botton" value="" title="Lend now" />
+</a>
+<% end %>
+</form>
+<% end %>
+	
+	
+	
+	
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<% end %>
+
+
+<% end %>
+
+<div class="clear"></div>
+<div class="clear"></div>
+</div>
+<!-- /Borrowers' div -->
+<div class="divider"></div>
+<!-- /Borrowers' div -->
+
+
+<% end %>
+<% else %>
+    <div id="record_not_found" style="text-align:left;"> <p>Ooops  no loan found. Please choose another category.</p>
+    </div>
+
+<% end %>
+
+
+
+
+<div class="btm-divider"></div>
+<div class="pagination" style="padding-top:5px;"><%= will_paginate @loans %></div>
+</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+<% unless @loans.blank? %>
+<% @loans.each do |loan|  %>
+<%# @borrower = Borrower.find_loan_borrower(loan.id)%>
+$('#more_<%= loan.id %>').click(function() {
+$('#more_<%= loan.id %>').hide();
+$('#short_story_<%= loan.id %>').hide();
+$('#full_story_<%= loan.id %>').show();
+
+
+});
+$('#expanded_more_story_<%= loan.id %>').click(function() {
+$('#more_<%= loan.id %>').show();
+$('#short_story_<%= loan.id %>').show();
+$('#full_story_<%= loan.id %>').hide();
+});
+
+
+$('#complete_check_box_<%= loan.id %>').click(function() {
+if ($('#complete_check_box_<%= loan.id %>').is(':checked') == true )
+{
+  $('#amount_paying_option_<%= loan.id %>').hide();
+	 $('#amount_paying_option_<%= loan.id %> option:last-child').attr("selected","selected");
+}
+else
+{
+ $('#amount_paying_option_<%= loan.id %>').show();
+ $('#amount_paying_option_<%= loan.id %> option:first-child').attr("selected","selected");
+}
+});
+
+
+$('#submit_amount_<%= loan.id %>').click(function() {
+ if ($('#amount_paying_option_<%= loan.id %> option:selected').text() == "Choose your amount")
+  {
+	  alert("Choose your amount first");
+		 return false;
+		} 
+ else
+  {
+	  return true;
+  } 	
+ });
+ 
+$('#amount_paying_option_<%= loan.id %>').change(function() {
+ $.ajax({ async:true,
+           type:'get',
+           dataType:'script',url: '/test?loan_id='+ <%= loan.id %>+"&"+"amount_selected"+"="+$('#amount_paying_option_<%= loan.id %> option:selected').val()
+     });   
+ });
+ <% end %>
+<% end %>
+});
+
+
+
+
+</script>
+
+
+

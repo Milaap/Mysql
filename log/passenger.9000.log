@@ -1,0 +1,379 @@
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4cbef2d798b3c92434000003')}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>8}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>8}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>8}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+[ pid=3941 thr=3064216432 file=ext/nginx/HelperAgent.cpp:568 time=2010-10-26 14:06:57.582 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4cbef2d798b3c92434000003')}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>8}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+[ pid=3465 thr=-609474338 file=utils.rb:176 time=2010-11-01 11:17:09.734 ]: *** Exception PhusionPassenger::UnknownError in PhusionPassenger::Rack::ApplicationSpawner (Could not find devise-1.2.0 in any of the sources (Bundler::GemNotFound)) (process 3465, thread #<Thread:0xb75851bc>):
+	from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.2/lib/bundler/spec_set.rb:87:in `materialize'
+	from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.2/lib/bundler/spec_set.rb:81:in `map!'
+	from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.2/lib/bundler/spec_set.rb:81:in `materialize'
+	from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.2/lib/bundler/definition.rb:93:in `specs'
+	from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.2/lib/bundler/definition.rb:137:in `specs_for'
+	from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.2/lib/bundler/definition.rb:126:in `requested_specs'
+	from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.2/lib/bundler/environment.rb:23:in `requested_specs'
+	from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.2/lib/bundler/runtime.rb:11:in `setup'
+	from /usr/lib/ruby/gems/1.8/gems/bundler-1.0.2/lib/bundler.rb:100:in `setup'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/utils.rb:326:in `prepare_app_process'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/rack/application_spawner.rb:155:in `initialize_server'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/utils.rb:564:in `report_app_init_status'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/rack/application_spawner.rb:153:in `initialize_server'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server.rb:204:in `start_synchronously'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server.rb:180:in `start'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/rack/application_spawner.rb:128:in `start'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rack_application'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server_collection.rb:132:in `lookup_or_add'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/spawn_manager.rb:246:in `spawn_rack_application'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server_collection.rb:82:in `synchronize'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/spawn_manager.rb:244:in `spawn_rack_application'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/spawn_manager.rb:137:in `spawn_application'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/spawn_manager.rb:275:in `handle_spawn_application'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server.rb:357:in `__send__'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server.rb:357:in `server_main_loop'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/helper-scripts/passenger-spawn-server:99
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+[ pid=7372 thr=3066289008 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-01 11:26:34.690 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+warning: peer certificate won't be verified in this SSL session
+FBGRAPH [GET]: me?access_token=107860165938751%7C80a13368012d45251618951c-100000816800978%7Cl3jwLb0GFmqGdmt9cQDk61CZAhE
+ACCESS TOKEN: 107860165938751|80a13368012d45251618951c-100000816800978|l3jwLb0GFmqGdmt9cQDk61CZAhE
+  MONGODB milaap_development['users'].find({:facebook_uid=>"100000816800978"}, {}).limit(-1)
+  MONGODB milaap_development['$cmd'].find({"count"=>"users", "query"=>{:_id=>{"$ne"=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, :email=>"ask4prasath@gmail.com"}, "fields"=>nil}, {}).limit(-1)
+  MONGODB milaap_development['users'].update({"_id"=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {"$set"=>{"sign_in_count"=>2, "current_sign_in_at"=>Mon Nov 01 06:25:19 UTC 2010}})
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+[ pid=7372 thr=3065686896 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-01 12:07:12.884 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+[ pid=7372 thr=3065285488 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-01 12:07:13.595 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+warning: peer certificate won't be verified in this SSL session
+FBGRAPH [GET]: me?access_token=107860165938751%7C80a13368012d45251618951c-100000816800978%7Cl3jwLb0GFmqGdmt9cQDk61CZAhE
+ACCESS TOKEN: 107860165938751|80a13368012d45251618951c-100000816800978|l3jwLb0GFmqGdmt9cQDk61CZAhE
+  MONGODB milaap_development['users'].find({:facebook_uid=>"100000816800978"}, {}).limit(-1)
+  MONGODB milaap_development['$cmd'].find({"count"=>"users", "query"=>{:_id=>{"$ne"=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, :email=>"ask4prasath@gmail.com"}, "fields"=>nil}, {}).limit(-1)
+  MONGODB milaap_development['users'].update({"_id"=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {"$set"=>{"last_sign_in_at"=>Mon Nov 01 06:25:19 UTC 2010, "sign_in_count"=>3, "current_sign_in_at"=>Mon Nov 01 06:37:23 UTC 2010}})
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB milaap_development['$cmd'].find({"count"=>"loans", "query"=>{}, "fields"=>nil}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({}, {}).limit(5).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['borrowers'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>6}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>3}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>3}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({:loan_id=>8}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>3}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({:loan_id=>7}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>2}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['loans'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {:_id=>1}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({}, {}).limit(3).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB milaap_development['$cmd'].find({"count"=>"loans", "query"=>{}, "fields"=>nil}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({}, {}).limit(5).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['borrowers'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>6}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>3}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>3}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({:loan_id=>8}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>3}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({:loan_id=>7}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>2}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['$cmd'].find({"count"=>"loans", "query"=>{}, "fields"=>nil}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({}, {}).limit(5).sort([:loan_id, :desc])
+  MONGODB cursor.close 0
+  MONGODB milaap_development['borrowers'].find({:loan_id=>11}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>6}, {}).limit(-1)
+  MONGODB milaap_development['users'].find({:_id=>BSON::ObjectID('4ccaa2e598b3c9020d000001')}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({:loan_id=>10}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>3}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({:loan_id=>9}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>3}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({:loan_id=>8}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>3}, {}).limit(-1)
+  MONGODB milaap_development['borrowers'].find({:loan_id=>7}, {}).limit(-1)
+  MONGODB milaap_development['categories'].find({:category_id=>2}, {}).limit(-1)
+[ pid=10966 thr=-609802018 file=utils.rb:176 time=2010-11-01 12:38:38.528 ]: *** Exception SignalException in PhusionPassenger::Rack::ApplicationSpawner (SIGTERM) (process 10966, thread #<Thread:0xb74e51bc>):
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server.rb:343:in `select'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server.rb:343:in `server_main_loop'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server.rb:180:in `start'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/rack/application_spawner.rb:128:in `start'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/spawn_manager.rb:253:in `spawn_rack_application'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server_collection.rb:132:in `lookup_or_add'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/spawn_manager.rb:246:in `spawn_rack_application'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server_collection.rb:82:in `synchronize'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/spawn_manager.rb:244:in `spawn_rack_application'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/spawn_manager.rb:137:in `spawn_application'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/spawn_manager.rb:275:in `handle_spawn_application'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server.rb:357:in `__send__'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server.rb:357:in `server_main_loop'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/lib/phusion_passenger/abstract_server.rb:206:in `start_synchronously'
+	from /var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/support/helper-scripts/passenger-spawn-server:99
+[ pid=1845 thr=-609437478 file=utils.rb:176 time=2010-11-02 15:45:52.762 ]: *** Exception PhusionPassenger::UnknownError in PhusionPassenger::Rack::ApplicationSpawner (failed to connect to any given host:port (Mongo::ConnectionFailure)) (process 1845, thread #<Thread:0xb75971b4>):
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/mongo-1.0.7/lib/../lib/mongo/connection.rb:473:in `connect'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/mongo-1.0.7/lib/../lib/mongo/connection.rb:123:in `initialize'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/config.rb:252:in `new'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/config.rb:252:in `_master'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/config.rb:165:in `from_hash'
+	from (eval):2:in `send'
+	from (eval):2:in `from_hash'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/railtie.rb:54
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:25:in `instance_exec'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:25:in `run'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:50:in `run_initializers'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:49:in `each'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:49:in `run_initializers'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/application.rb:134:in `initialize!'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/application.rb:77:in `send'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/application.rb:77:in `method_missing'
+	from /home/milaap/code/bet_after_work/milaap/config/environment.rb:6
+	from config.ru:3:in `require'
+	from config.ru:3
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `instance_eval'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+2010/11/02 15:53:37 [crit] 1879#0: *14 open() "/var/lib/passenger-standalone/3.0.0-i686-ruby1.8.7-linux-gcc4.4.3-1002/nginx-0.8.52/proxy_temp/1/00/0000000001" failed (13: Permission denied) while reading upstream, client: 127.0.0.1, server: _, request: "GET / HTTP/1.1", upstream: "passenger:unix:/passenger_helper_server:", host: "localhost:9000"
+[ pid=1844 thr=3065396080 file=ext/nginx/HelperAgent.cpp:568 time=2010-11-02 15:53:37.702 ]: Couldn't forward the HTTP response back to the HTTP client: It seems the user clicked on the 'Stop' button in his browser.
+  MONGODB milaap_development['loans'].find({:loan_id=>1}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>2}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>3}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>1}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>2}, {}).limit(-1)
+  MONGODB milaap_development['loans'].find({:loan_id=>3}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+[ pid=4817 thr=-610191138 file=utils.rb:176 time=2010-11-08 11:08:26.741 ]: *** Exception PhusionPassenger::UnknownError in PhusionPassenger::Rack::ApplicationSpawner (failed to connect to any given host:port (Mongo::ConnectionFailure)) (process 4817, thread #<Thread:0xb74271bc>):
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/mongo-1.0.7/lib/../lib/mongo/connection.rb:473:in `connect'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/mongo-1.0.7/lib/../lib/mongo/connection.rb:123:in `initialize'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/config.rb:252:in `new'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/config.rb:252:in `_master'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/config.rb:165:in `from_hash'
+	from (eval):2:in `send'
+	from (eval):2:in `from_hash'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/railtie.rb:54
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:25:in `instance_exec'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:25:in `run'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:50:in `run_initializers'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:49:in `each'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/initializable.rb:49:in `run_initializers'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/application.rb:134:in `initialize!'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/application.rb:77:in `send'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/application.rb:77:in `method_missing'
+	from /home/milaap/code/bet_after_work/milaap/config/environment.rb:6
+	from config.ru:3:in `require'
+	from config.ru:3
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `instance_eval'
+	from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/rack-1.2.1/lib/rack/builder.rb:46:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)

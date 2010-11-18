@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MILAAP - Beyond Just Credit</title>
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<%= stylesheet_link_tag "common.css" %>
+<%#= javascript_include_tag "unitpngfix.js" %>
+<% if session[:tab] == "home"%> 
+  <%= javascript_include_tag "jquery.min.js" %>
+  <SCRIPT language="JavaScript">
+
+   <!--
+   if (document.images)
+   {
+     preload_image_object = new Image();
+     // set image url
+     image_url = new Array();
+     image_url[0] = "images/home-carousel-1.jpg";
+     image_url[1] = "images/home-carousel-2.jpg";
+     image_url[2] = "images/home-carousel-3.jpg";
+         
+
+      var i = 0;
+      for(i=0; i<=3; i++)
+        preload_image_object.src = image_url[i];
+   }
+   //-->
+</SCRIPT>  
+ 
+  
+  
+  
+  
+  
+  
+<% end %>
+
+
+
+</head>
+
+<body>
+	<div id="header"><!-- Header div -->
+	<div class="wrapper"><!-- Wrapper div -->
+		<div id="logo" class="left"><a href="/" title="MILAAP - Beyond Just Credit"><img class="ie-png" src="/images/milaap.png"/></a></div>
+		<div class="right">
+			<ul id="primary-nav" class="right">
+    <li><a href="/" class="<% if  session[:tab] == 'home'%>active<% else%><% end %>">Home</a></li>
+    <li><a href="<%= view_all_projects_url %>" title="Give a loan" class="<% if  session[:tab] == 'pledge'%>active<% else%><% end %>">Give a loan</a></li>
+    <li><a href="<%= why_milaap_path %>" title="MILAAP - Why Milaap" class="<% if  session[:tab] == 'why_milaap'%>active<% else%><% end %>">Why Milaap</a></li>
+    <li><a href="<%= who_we_are_path %>" title="Who we are" class="<% if  session[:tab] == 'who_we_are'%>active<% else%><% end %>">Who we are</a></li>
+    <li><a href="<%= how_it_work_path %>" title="MILAAP - How it works" class="<% if  session[:tab] == 'how_it_work'%>active<% else%><% end %>">How it works</a></li>
+    <li><a href="<%= get_envolved_path %>" title="Get involved with MILAAP" class="<% if  session[:tab] == 'get_envolved'%>active<% else%><% end %>">Get involved</a></li>
+    
+  </ul>
+			
+			
+			
+			
+			
+			<!-- /Primary nav div -->
+		</div>
+		<div class="clear"></div>
+
+  <% unless current_user.blank? %>
+       <ul id="member-status">
+			<li><span> Welcome,
+			 <% if !current_user.first_name.blank?%>
+			   <% unless current_user.facebook_uid.blank? %> 
+				 		 <img src="https://graph.facebook.com/<%= current_user.facebook_uid %>/picture" align="left"  width="19px;" height="19px;" style="margin-right:5px;"/> 
+				<% end %>		 
+	       <%= current_user.first_name.capitalize %>
+			
+			
+			 <% elsif !current_user.facebook_name.blank? %>
+         <img src="https://graph.facebook.com/<%= current_user.facebook_uid %>/picture" align="left"  width="19px;" height="19px;" style="margin-right:5px;"/> <%= current_user.facebook_name %>
+  
+	 	<% elsif !current_user.email.blank?%>
+      <%= current_user.email[0..15] %>
+      <% elsif !current_user.twitter_name.blank?%>
+      <%= current_user.twitter_name.capitalize %>
+      <% else %>
+      Ananymous
+      <% end %></li> |
+	   <%# if current_user.user_type == "lender" %>		
+		     <!--li><a href="<%= edit_user_account_url%>">My account</a></li> |    
+			  <%# else %> 
+			    <li><a href="<%= edit_user_account_url %>" title="My account">My account</a></li> | 
+					<%# end %> -->
+					<li><a href="/users/logout">Logout</a></li>
+		</ul>
+   
+    
+
+  <% else %> 
+
+   <ul id="member-status">
+			<li><a href="/facebook-login" title="Login with Facebook" class="active"><img style="margin-bottom:-5px;" src="/images/fb-login.gif" alt="Facebook Login"/></a></li> | 
+			<li><a id="login"  href="<%= new_user_session_url %>" title="Sign in">Sign in</a></li> | 
+			<li><a href="<%= new_user_registration_url %>" class="clear">New User? Click here</a></li>
+		</ul>
+		
+		<% end %>
+		
+		
+		
+		</div><!-- /Wrapper div -->
+
+	</div><!-- /Header div -->
+
+<%= yield %>
+	<div id="footer"><!-- Footer div -->
+
+		<div class="wrapper">
+		<ul class="left">
+      <li><a href="<%= privacy_path %>" title="Privacy Policy">Privacy Policy</a></li>
+      |
+      <li><a href="<%= terms_path %>" title="Who we are">Terms &amp; Conditions</a></li>
+      |
+      <li><a href="<%= who_we_are_path %>" title="Who we are">Who we are</a></li>
+      |
+      <li><a href="<%= why_milaap_path %>" title="Who we are">Why Milaap</a></li>
+      |
+      <li> 
+      <a href="http://blog.milaap.org/" title="MILAAP - Beyond Just Credit">Blog</a></li> |
+      <li><a href="<%= contact_us_path %>" title="Contact Milaap">Contact Us</a></li>
+
+    </ul>
+			<div class="copyright right">
+			  <p>&copy; 2010. Milaap.org. All rights reserved.</p>
+			</div>
+			<div class="clear"></div>
+		</div><!-- /Wrapper div -->
+	</div><!-- /Footer div -->
+	
+	
+	<script type="text/javascript">
+   $('#slider').nivoSlider({
+    effect:'random', //Specify sets like: 'fold,fade,sliceDown'
+    slices:15,
+    animSpeed:1000,
+    pauseTime:5000,
+    startSlide:0, //Set starting Slide (0 index)
+    directionNav:true, //Next & Prev
+    directionNavHide:true, //Only show on hover
+    controlNav:true, //1,2,3...
+    controlNavThumbs:true, //Use thumbnails for Control Nav
+    controlNavThumbsFromRel:true, //Use image rel for thumbs
+    controlNavThumbsSearch: '.jpg', //Replace this with...
+    controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+    keyboardNav:true, //Use left & right arrows
+    pauseOnHover:false, //Stop animation while hovering
+    manualAdvance:false, //Force manual transitions
+    captionOpacity:0.0, //Universal caption opacity
+    beforeChange: function(){},
+    afterChange: function(){},
+    slideshowEnd: function(){} //Triggers after all slides have been shown
+   });
+  </script>
+
+
+
+<script type="text/javascript">
+
+setTimeout(fade_out, 30000);
+function fade_out() {
+  $("#notification").fadeOut().empty();
+}
+</script>
+<%#= controller.controller_name %>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12791500-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+ 
+
+</body>
+</html>

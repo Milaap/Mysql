@@ -1,0 +1,131 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Milaap-Home</title>
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<%= stylesheet_link_tag "style-alpha.css"%>
+<%= javascript_include_tag "jquery-1.3.2.min.js" %>
+<%= javascript_include_tag "jquery.cycle.all.min.js" %>
+
+<!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script-->
+<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.1.js"></script>
+
+<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			$("#signup").fancybox({
+				'titlePosition'		: 'inside',
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			});
+
+			
+			$("#alpha-login").fancybox({
+				'titlePosition'		: 'inside',
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			});
+
+
+		});
+	</script>
+
+
+</head>
+
+<body>
+<br/><br/><br/>
+<div class="header clear"><!-- Header div -->
+ <div class="wrapper">
+  <div id="logo" class="left"><a href=""><img src="/images/milaap-logo.gif" alt="Milaap"/></a></div>
+
+  <div id="intro-text" class="right">Enabling You &amp; Me to make a sustainable social impact at the bottom of the pyramid</div>
+  <div class="clear"></div>
+ </div>
+</div><!-- /Header div -->
+
+<div id="content"><!-- Content div -->
+ <div class="wrapper">
+   <%= yield %>
+ 
+ </div>
+
+<% if user_signed_in? %>
+
+<% else %>
+<div style="display: none;">
+  <!-- Login blurb-->
+  <div id="inline1" style="width:500px;height:320px;overflow:hidden;">
+    <form method="post" id="user_new" class="user_new" action="/users/login" accept-charset="UTF-8">
+<div style="margin: 0pt; padding: 0pt; display: inline;"><input type="hidden" value="☃" name="_snowman"><input type="hidden" value="2wbLdqRz9PT5QmYT3AAaYo0Lv3NpczN+8UbNvM0oVnM=" name="authenticity_token"></div>    
+
+
+  
+
+
+      <div id="signup-new"> <img src="/images/signin_head_img.jpg" alt=""/>
+        <div class="signup-left-panel">
+          <h4>Sign in with your email</h4>
+          <label>Email id</label>
+          <input type="text" value=""   id="user_email" name="user[email]" class="input-text">
+          <label>Password</label>
+          <input type="password"  id="user_password" name="user[password]" class="input-text">
+        </div>
+        <div class="signup-right-panel">
+          <h4>Sign in with another account</h4>
+          <div style="display:block;">
+           <%#= link_to "Login with facebook", user_fb_auth_path %>
+           <a href="<%= user_fb_auth_path %>" > 
+            <img class="left" src="/images/fb-connect.gif" alt="Facebook Connect" title="Sign in with facebook"/>
+           </a>   
+            <p class="left">Sign in with facebook</p>
+            <p class="left">
+              <%#= link_to "Sign in as User with Github", user_oauth_authorize_url(:github) %></p>
+
+            <p class="clear"></p>
+          </div>
+          <div style="display:block; clear:both; padding-top:3px;"><a href="<%= url_for(user_session_path(:warden_oauth_provider => 'google')) %>"><img class="left" src="/images/Gmail_logo.png" alt="Twitter Connect" title="Sign in with Google"/></a>
+            <p class="left">Sign in with Google</p>
+          </div>
+           
+           <div style="display:block; clear:both; padding-top:3px;"><a href="<%= twitter_login_path %>"><img class="left" src="/images/twitter-connect.png" alt="Facebook Connect"/></a>
+            <p class="left">Sign up with Twitter</p>
+          </div>
+
+
+
+        </div>
+        <div class="clear"></div>
+        <div class="other-info"> <a href="/users/secret/new" class="left">Forgot password?</a><span style="padding:0 0 0 4px;" class="left">|</span>
+          <p class="left"><a href="/users/register/signup" class="left" title="Sign up with Milaap">New User?  Signup Here</a>
+          <%#= link_to 'Twitter Authentication', url_for(new_user_session_path(:warden_oauth_provider => :twitter))%>
+           <%#= link_to 'Twitter Authentication', url_for(new_user_session_path(:warden_oauth_provider => :twitter))%>
+            <%#= link_to("Login With Twitter", user_session_path(:warden_oauth_provider => 'twitter') ) %>
+
+           <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+        <input type="submit" value="" id="submit-signup">
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+</div><!-- /Content div -->
+<div id="footer"><!-- Footer div -->
+ <div class="wrapper">
+  <div class="copyright" style="text-align:center">
+   <p>&copy; 2010. Milaap.org. All rights reserved.</p>
+  </div>
+  <div class="clear"></div>
+ </div>
+
+</div><!-- /Footer div -->
+
+</body>
+</html>

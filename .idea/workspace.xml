@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9442b0fc-97d7-462e-baac-4105b9c786dc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/campaign.html.erb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/email_info.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/loan_lender.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/loan_repayment.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/milaap_balance.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/pledge_info.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/bin/b2json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/bin/j2bson" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/cache/bson-1.0.4.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/cache/bson_ext-1.0.4.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/cache/bundler/git/devise-d498cf3a4e1a3fef3f4f071d4feec6a489efe480/objects/pack/pack-7e8e3de6e2297ae1a010560c25a01a0c4cc1d3ed.idx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/cache/bundler/git/devise-d498cf3a4e1a3fef3f4f071d4feec6a489efe480/objects/pack/pack-7e8e3de6e2297ae1a010560c25a01a0c4cc1d3ed.pack" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/cache/mongo-1.0.7.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/cache/mongoid-2.0.0.beta.16.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/cache/will_paginate-3.0.pre2.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/bin/b2json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/bin/j2bson" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/bson.gemspec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/lib/bson.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/lib/bson/bson_c.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/lib/bson/bson_ruby.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/lib/bson/byte_buffer.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/lib/bson/exceptions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/lib/bson/ordered_hash.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/lib/bson/types/binary.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/lib/bson/types/code.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/lib/bson/types/dbref.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/lib/bson/types/min_max_keys.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/lib/bson/types/objectid.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/test/mongo_bson/basic_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/test/mongo_bson/binary_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/test/mongo_bson/bson_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/test/mongo_bson/byte_buffer_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/test/mongo_bson/jruby_bson_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/test/mongo_bson/jruby_encode_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/test/mongo_bson/json_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/test/mongo_bson/objectid_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson-1.0.4/test/mongo_bson/ordered_hash_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/.require_paths" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/bson_ext.gemspec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/bson_ext/cbson.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/buffer.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/buffer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/buffer.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/cbson.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/cbson.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/cbson.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/encoding_helpers.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/encoding_helpers.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/encoding_helpers.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/extconf.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/mkmf.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/cbson/version.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/bson_ext-1.0.4/ext/lib/bson_ext.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/HISTORY" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/README.rdoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/bin/bson_benchmark.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/bin/fail_if_no_c.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/examples/admin.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/examples/capped.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/examples/cursor.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/examples/gridfs.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/examples/index_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/examples/info.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/examples/queries.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/examples/simple.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/examples/strict.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/examples/types.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/collection.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/connection.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/cursor.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/db.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/exceptions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/gridfs/grid.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/gridfs/grid_ext.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/gridfs/grid_file_system.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/gridfs/grid_io.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/util/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/util/core_ext.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/util/server_version.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/lib/mongo/util/support.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/mongo.gemspec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/auxillary/1.4_features.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/auxillary/authentication_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/auxillary/autoreconnect_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/auxillary/slave_connection_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/collection_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/connection_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/conversions_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/cursor_fail_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/cursor_message_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/cursor_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/db_api_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/db_connection_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/db_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/grid_file_system_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/grid_io_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/grid_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/replica_pairs/count_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/replica_pairs/insert_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/replica_pairs/pooled_insert_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/replica_pairs/query_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/replica_sets/count_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/replica_sets/insert_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/replica_sets/pooled_insert_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/replica_sets/query_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/replica_sets/replication_ack_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/support_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/test_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/threading/test_threading_large_pool.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/threading_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/unit/collection_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/unit/connection_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/unit/cursor_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongo-1.0.7/test/unit/db_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/MIT_LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/README.rdoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/config/locales/en.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/config/locales/es.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/config/locales/fr.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/config/locales/it.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/config/locales/pl.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/config/locales/pt.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/config/locales/sv.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/associations.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/associations/embedded_in.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/associations/embeds_many.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/associations/embeds_one.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/associations/foreign_key.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/associations/meta_data.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/associations/options.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/associations/proxy.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/associations/referenced_in.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/associations/references_many.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/associations/references_many_as_array.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/associations/references_one.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/atomicity.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/attributes.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/callbacks.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/collection.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/collections.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/collections/cyclic_iterator.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/collections/master.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/collections/operations.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/collections/slaves.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/components.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/config.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/contexts.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/contexts/enumerable.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/contexts/enumerable/sort.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/contexts/ids.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/contexts/mongo.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/contexts/paging.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/criteria.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/criterion/complex.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/criterion/exclusion.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/criterion/inclusion.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/criterion/optional.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/criterion/selector.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/cursor.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/deprecation.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/dirty.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/document.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/errors.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/errors/document_not_found.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/errors/invalid_collection.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/errors/invalid_database.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/errors/invalid_field.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/errors/invalid_options.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/errors/invalid_type.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/errors/mongoid_error.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/errors/too_many_nested_attribute_records.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/errors/unsupported_version.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/errors/validations.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/array/accessors.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/array/assimilation.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/array/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/array/parentization.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/big_decimal/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/binary/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/boolean/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/date/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/datetime/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/false_class/equality.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/float/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/hash/accessors.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/hash/assimilation.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/hash/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/hash/criteria_helpers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/hash/scoping.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/integer/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/nil/assimilation.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/object/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/objectid/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/proc/scoping.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/set/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/string/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/string/inflections.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/symbol/conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/symbol/inflections.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/time_conversions.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extensions/true_class/equality.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/extras.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/factory.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/field.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/fields.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/finders.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/hierarchy.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/identity.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/indexes.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/javascript.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/javascript/functions.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/json.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/keys.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/logger.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/matchers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/matchers/all.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/matchers/default.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/matchers/exists.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/matchers/gt.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/matchers/gte.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/matchers/in.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/matchers/lt.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/matchers/lte.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/matchers/ne.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/matchers/nin.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/matchers/size.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/memoization.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/modifiers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/modifiers/command.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/modifiers/inc.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/named_scope.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/paranoia.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/paths.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/persistence.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/persistence/command.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/persistence/insert.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/persistence/insert_embedded.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/persistence/remove.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/persistence/remove_all.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/persistence/remove_embedded.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/persistence/update.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/railtie.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/railties/database.rake" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/railties/document.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/safe.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/safety.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/scope.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/state.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/timestamps.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/validations.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/validations/associated.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/validations/uniqueness.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/version.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/mongoid/versioning.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/rails/generators/mongoid/config/config_generator.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/rails/generators/mongoid/config/templates/mongoid.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/rails/generators/mongoid/model/model_generator.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/rails/generators/mongoid/model/templates/model.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/rails/generators/mongoid_generator.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/mongoid-2.0.0.beta.16/lib/rails/mongoid.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/CHANGELOG.rdoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/README.rdoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/array.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/collection.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/core_ext.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/deprecation.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/finders.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/finders/active_record.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/finders/active_resource.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/finders/base.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/finders/data_mapper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/finders/sequel.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/railtie.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/version.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/view_helpers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/view_helpers/action_view.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/view_helpers/base.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/view_helpers/link_renderer.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/view_helpers/link_renderer_base.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/lib/will_paginate/view_helpers/merb.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/collection_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/console" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/console_fixtures.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/database.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/finders/active_record_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/finders/active_resource_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/finders/activerecord_test_connector.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/finders/data_mapper_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/finders/data_mapper_test_connector.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/finders/sequel_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/finders/sequel_test_connector.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/finders_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/fixtures/admin.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/fixtures/developer.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/fixtures/developers_projects.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/fixtures/project.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/fixtures/projects.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/fixtures/replies.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/fixtures/reply.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/fixtures/schema.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/fixtures/topic.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/fixtures/topics.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/fixtures/user.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/fixtures/users.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/rcov.opts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/spec.opts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/spec_helper.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/tasks.rake" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/view_helpers/action_view_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/view_helpers/base_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/view_helpers/link_renderer_base_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/will_paginate-3.0.pre2/spec/view_helpers/view_example_group.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/specifications/bson-1.0.4.gemspec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/specifications/bson_ext-1.0.4.gemspec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/specifications/mongo-1.0.7.gemspec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/specifications/mongoid-2.0.0.beta.16.gemspec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/ruby/1.8/specifications/will_paginate-3.0.pre2.gemspec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/bson-1.0.4.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/bson_ext-1.0.4.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/mongo-1.0.7.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/mongoid-2.0.0.beta.16.gem" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/cache/will_paginate-3.0.pre2.gem" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/milaap.iml" afterPath="$PROJECT_DIR$/.idea/milaap.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/ruby/1.8/cache/bundler/git/devise-d498cf3a4e1a3fef3f4f071d4feec6a489efe480/packed-refs" afterPath="$PROJECT_DIR$/system/ruby/1.8/cache/bundler/git/devise-d498cf3a4e1a3fef3f4f071d4feec6a489efe480/packed-refs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/paypal_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/paypal_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/admin.rb" afterPath="$PROJECT_DIR$/app/models/admin.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/borrower.rb" afterPath="$PROJECT_DIR$/app/models/borrower.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/borrower_group.rb" afterPath="$PROJECT_DIR$/app/models/borrower_group.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/category.rb" afterPath="$PROJECT_DIR$/app/models/category.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/community.rb" afterPath="$PROJECT_DIR$/app/models/community.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/dealing.rb" afterPath="$PROJECT_DIR$/app/models/dealing.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/field_partner.rb" afterPath="$PROJECT_DIR$/app/models/field_partner.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/invitation.rb" afterPath="$PROJECT_DIR$/app/models/invitation.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/lender.rb" afterPath="$PROJECT_DIR$/app/models/lender.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/loan.rb" afterPath="$PROJECT_DIR$/app/models/loan.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_borrowers_list.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_borrowers_list.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_loan_funded_grap25-10 .html.erb" afterPath="$PROJECT_DIR$/app/views/home/_loan_funded_grap25-10 .html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_loan_funded_graph.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_loan_funded_graph.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_view_all_projects_right_side.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_view_all_projects_right_side.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/borrower_profile.html.erb" afterPath="$PROJECT_DIR$/app/views/home/borrower_profile.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/lend_money_to_borrower (copy).html.erb" afterPath="$PROJECT_DIR$/app/views/home/lend_money_to_borrower (copy).html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/lend_money_to_borrower.html.erb" afterPath="$PROJECT_DIR$/app/views/home/lend_money_to_borrower.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/view_all_projects (copy).html.erb" afterPath="$PROJECT_DIR$/app/views/home/view_all_projects (copy).html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/view_all_projects-20-10 .html.erb" afterPath="$PROJECT_DIR$/app/views/home/view_all_projects-20-10 .html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/view_all_projects.html.erb" afterPath="$PROJECT_DIR$/app/views/home/view_all_projects.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/add_loan_data.rb" afterPath="$PROJECT_DIR$/lib/add_loan_data.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/conevrting_inr_to_dollar.rb" afterPath="$PROJECT_DIR$/lib/conevrting_inr_to_dollar.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/facebookinfo.rb" afterPath="$PROJECT_DIR$/lib/facebookinfo.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fully_funded.rb" afterPath="$PROJECT_DIR$/lib/fully_funded.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/indian_rupees.rb" afterPath="$PROJECT_DIR$/lib/indian_rupees.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/loan_pledged.rb" afterPath="$PROJECT_DIR$/lib/loan_pledged.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/recipe-image-scraping.rb" afterPath="$PROJECT_DIR$/lib/recipe-image-scraping.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/twit.rb" afterPath="$PROJECT_DIR$/lib/twit.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/passenger.9000.log" afterPath="$PROJECT_DIR$/log/passenger.9000.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/passenger.9001.log" afterPath="$PROJECT_DIR$/log/passenger.9001.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/ruby/1.8/gems/rmagick-2.13.1/ext/RMagick/mkmf.log" afterPath="$PROJECT_DIR$/system/ruby/1.8/gems/rmagick-2.13.1/ext/RMagick/mkmf.log" />
+    </list>
+    <ignored path="milaap.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+    <option name="REVERSE_PATCH" value="false" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="milaap" />
+  </component>
+  <component name="FileColors" enabled="true" enabledForTabs="true" showNonProject="false" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="category.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/category.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="community.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/community.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dealing.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/dealing.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="email_info.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/email_info.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="field_partner.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/field_partner.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="invitation.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/invitation.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="5" selection-start="224" selection-end="224" vertical-scroll-proportion="-5.1923075">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="581" selection-end="581" vertical-scroll-proportion="-5.769231">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="40" selection-start="2437" selection-end="2437" vertical-scroll-proportion="0.33333334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="facebook_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Branch.Configurations">
+    <option name="CURRENT" value="master" />
+    <option name="CONFIGURATIONS">
+      <array>
+        <BranchConfiguration>
+          <option name="IS_AUTO_DETECTED" value="true" />
+          <option name="NAME" value="master" />
+          <option name="BRANCHES">
+            <array>
+              <BranchInfo>
+                <option name="ROOT" value="$PROJECT_DIR$" />
+                <option name="REFERENCE" value="master" />
+              </BranchInfo>
+            </array>
+          </option>
+        </BranchConfiguration>
+      </array>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="GIT_EXECUTABLE" value="/usr/bin/git" />
+    <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
+    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/db/migrate/20101117073431_loan_lender.rb" />
+        <option value="$PROJECT_DIR$/app/models/loan_repayment.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
+        <option value="$PROJECT_DIR$/lib/facebookinfo.rb" />
+        <option value="$PROJECT_DIR$/lib/loan_pledged.rb" />
+        <option value="$PROJECT_DIR$/lib/twit.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20101102131143_add_dof_to_loan.rb" />
+        <option value="$PROJECT_DIR$/lib/conevrting_inr_to_dollar.rb" />
+        <option value="$PROJECT_DIR$/lib/fully_funded.rb" />
+        <option value="$PROJECT_DIR$/lib/indian_rupees.rb" />
+        <option value="$PROJECT_DIR$/lib/recipe-image-scraping.rb" />
+        <option value="$PROJECT_DIR$/lib/add_loan_data.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="milaap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Favorites" />
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Rails.Development: milaap">
+    <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_CLASS_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="INHERITANCE_CHECK_DISABLED" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="milaap" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="spec" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="milaap" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Production: milaap" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="milaap" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Development: milaap" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="milaap" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Production: milaap" />
+      <item index="3" class="java.lang.String" itemvalue="Rails.Development: milaap" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="UPDATE_RUN_STATUS" value="false" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9442b0fc-97d7-462e-baac-4105b9c786dc" name="Default" comment="" />
+      <created>1287579371120</created>
+      <updated>1287579371120</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="56" y="24" width="1366" height="720" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3153457" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32910448" sideWeight="0.6728499" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32441473" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/home_controller.rb</url>
+          <line>35</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/models/loan.rb</url>
+          <line>22</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/models/loan.rb</url>
+          <line>27</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/models/loan.rb</url>
+          <line>30</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/models/loan.rb</url>
+          <line>32</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/models/loan.rb</url>
+          <line>33</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/models/loan.rb</url>
+          <line>34</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/models/loan.rb</url>
+          <line>35</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/lib/add_loan_data.rb</url>
+          <line>187</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/lib/add_loan_data.rb</url>
+          <line>225</line>
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/models/loan_repayment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20101012150903_create_communities.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20101026090137_add_field_to_user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb.bak">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/borrower_group.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/community.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/dealing.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/email_info.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/field_partner.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/invitation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/facebook_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="5" selection-start="224" selection-end="224" vertical-scroll-proportion="-5.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="581" selection-end="581" vertical-scroll-proportion="-5.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="40" selection-start="2437" selection-end="2437" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

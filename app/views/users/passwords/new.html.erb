@@ -1,0 +1,83 @@
+<div id="toppanelbotmborder"></div>
+<div id="newsignupmiddlepanel">
+  
+ <div id="newsignupmiddlecontent">
+ <!--div style="margin-right:22px;padding-bottom:10px;"> <%#= notice %> </div>
+ <div style="margin-right:22px;padding-bottom:10px;"><%#= alert %></div-->
+
+
+   <% if @user.errors.any? %>  
+
+   <div id="notification" style="width:250px;text-align:left;">
+      <% @user.errors.full_messages.each do |msg| %>  
+       <p><%= msg %></p>  
+     <% end %>
+
+
+     </div>
+
+
+  
+   <% end %>  
+
+
+   <form accept-charset="UTF-8" action="/users/secret" class="user_new" id="user_new" method="post">
+  <div id="newsignupleftpanel" style="height:365px;">
+   <div class="sub_header">Forgot your password?</div>
+ 
+ 
+ <%#= link_to 'Google Authentication', url_for(user_session_path(:warden_oauth_provider => 'google'))%>
+        
+
+
+   
+   <ul class="formobj">
+     <li style="height:60px;"><p>Email Address</p>
+        <input type="text" value=""   id="user_email" name="user[email]" class="input-text">
+      
+     </li>
+     <li style="height:60px;"></li>
+   
+     
+
+   
+  
+  
+  
+
+   </ul>
+   <!--p class="checbox"><input class="chkbox" name="chk" type="checkbox" value=""/>I have read and agree to the Terms & Services</p-->
+   <p class="btnbox other-info" style="top:130px;"><input name="" type="submit" class="button" value="" align="absmiddle"/>
+
+    </p>
+   <div class="other-info">
+       <p class="btnbox" style="top:140px; margin-left:130px"><a href="/users/login" style="padding-left:0px;">Sign in</a>&nbsp;|&nbsp;
+      <a href="/users/register/signup" style="padding-left:0px;">Sign up</a>  </p>  </div>
+     <div class="other-info">
+       <p class="btnbox" style="top:175px;">
+   <a href="/users/verification/new" style="padding-left:0px;line-height:19px;">Didn't receive confirmation instructions?</a><br />
+
+  <a href="/users/unblock/new" style="padding-left:0px;line-height:19px;">Didn't receive unlock instructions?</a><br />
+
+       </p>
+       <div class="clear"></div>
+     </div>
+
+
+
+     <div id="newsignupAdd2">
+       <a href="<%= user_fb_auth_path %>"> 
+            <img src="/images/fb-connect.gif" alt="Facebook Connect" title="Sign in with facebook"  style="float:left;margin-left:25px;"/>
+           </a>   
+   
+   </div>
+
+   </form>
+  </div>
+   
+  <div id="newsignuprightpanel">
+   <img src="/images/vergin_add_img.jpg" />
+  </div>
+ </div>
+</div>
+

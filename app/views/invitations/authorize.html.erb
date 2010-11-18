@@ -1,0 +1,64 @@
+<div id="toppanelbotmborder"></div>
+<div id="newsignupmiddlepanel">
+<div id="newsignupmiddlecontent">
+ 
+<%= content_tag(:title, "Enter Invitation Token") %>
+<% if  flash[:alerts] %>
+  <div id="notification" style="width:585px;text-align:left;padding:10px;">
+     <%=flash[:alerts] %>  
+  </div>
+ 
+<% end %> 
+<div id="newsignupleftpanel" style="height : 350px">
+
+<%= form_for :invitation, :url => get_invitation_token_invitations_url(@invitation.invitation_token), :html => {:method => :post, :id =>"user_new", :class => "user_new"} do |f| %>
+<%= f.error_messages %>
+<div class = "sub_header">Get Aothorized</div>
+<ul class="formobj"  style="height : 350px;">
+  <!--  <li>
+	  <p>
+	    <%= f.label :first_name %><br />
+	    <%= f.text_field :first_name %>
+	  </p>
+    </li>
+   
+    <li> 
+	  <p>
+	    <%= f.label :last_name %><br />
+	    <%= f.text_field :last_name %>
+	  </p>
+   </li>
+   -->
+    <li>
+	  <p>
+	    <%= f.label "enter email" %><br />
+	    <%= f.text_field :recipient_email%>
+	  </p>
+    </li>
+    <li></li>
+    <li>
+	  <p>
+	    <%= f.label "enter authorize token"%><br />
+	    <%= f.text_field :invitation_token%>
+	  </p>
+     </li>
+</ul>
+ <div class="other-info">
+       <p class="btnbox" style="top:280px;">
+	  <%= link_to "send invitaion", new_invitation_path%>
+       </p>
+       <div class="clear"></div>
+     </div>
+
+
+<p class="btnbox other-info" style="top:220px;"><input name="" type="submit" class="button" value="" align="absmiddle"/>
+<!--<p class="btnbox other-info" style="top:220px;"><%= f.submit "Get Aothorized", :html => {:class => "button", :id =>"submit-signup", :align => "absmiddle"}%></p>-->
+
+<% end %>
+</div>
+<div id="newsignuprightpanel">
+ 
+   <img src="/images/vergin_add_img.jpg" />
+  </div>
+</div>
+</div>

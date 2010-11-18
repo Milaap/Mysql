@@ -1,0 +1,298 @@
+class HomeController < ApplicationController
+ 
+before_filter :check_invitation_code, :except =>[:index,:verify_invitation_code,:about,:how_it_work,:get_envolved,:contact_us,:advisory_board,:team,:volunteer,:terms,:jobs,:privacy,:who_we_are,:thank_you,:why_milaap]
+ 
+
+#layout 'alpha', :only=>[:verify_invitation_code]
+layout 'application', :except=>[:verify_invitation_code]
+
+
+ def index
+    session[:borrower_id] = nil
+    session[:loan_id] = nil
+    session[:amount] = nil
+    session[:transaction_fee] = nil 
+    @title= "MILAAP - Beyond Just Credit"
+    session[:tab] = "home"  
+    @feature_borrower = Borrower.last
+    @borrowers = Borrower.all(:conditions => {:borrower_id.ne => @feature_borrower.borrower_id}).limit(3).order_by([:loan_id,:desc])
+    
+
+    #if user_signed_in?
+    #  p " ----ok ---------"
+      #flash[:notice] = "Thank you for signing up with us. We'll be launching our website soon in October, so stay tuned!" 
+      #redirect_to destroy_user_session_url
+   # end
+ end
+
+ def borrower_profile
+  @title= "MILAAP - Beyond Just Credit"
+  @borrower = Borrower.first(:conditions => {:borrower_id => params[:borrower_id]})
+  unless @borrower.blank?
+    @loan = Loan.first(:conditions => {:loan_id =>@borrower.loan_id})
+    @loan_repayments = LoanRepayment.all(:conditions => {:loan_id =>@borrower.loan_id})
+    @category = Category.first(:conditions => {:category_id =>@loan.category_id})
+    @loan_lenders = LoanLender.all(:conditions => {:loan_id =>@loan.loan_id})
+    @loan_funded_percentage = (100 * (@loan.loan_amount_in_dollar - @loan.amount_remaining))/@loan.loan_amount_in_dollar
+    @loan_drop_down_values = Loan.find_loan_drop_down_values(@loan)
+  end 
+end
+
+ def view_all_projects
+   @categories = Category.all
+   if request.xhr? 
+     unless params[:loan_status].blank?  and  params[:loan_amount].blank? and params[:social_impact].blank? and params[:poverty_level].blank? and params[:loan_category].blank? 
+     categories =  params[:loan_category].split(",")   
+     @categories = Category.all(:conditions => {:permalink.in =>categories}) 
+     unless @categories.blank?
+       @cat_ids =  @categories.map{|x| x.category_id  }.join(',')   
+       logger.info "******************"
+       logger.info @cat_ids
+       logger.info "******************"
+     end 
+
+     loan_statuses = params[:loan_status].split(",")      
+     social_impacts = params[:social_impact].split(",")
+     loan_amounts = params[:loan_amount].split(",")
+     poverty_levels = params[:poverty_level].split(",")
+     unless loan_statuses.blank?
+       loan_statuses.each do |loan_status|
+         if loan_status == "Fully funded"
+           unless loan_amounts.blank?
+             loan_amounts.each do |loan_amount|
+               if loan_amount == "0-50"
+                # @loans = Loan.all(:conditions => {:category_id.in=>@cat_ids,:loan_amount_in_dollar.gt=>0,:loan_amount_in_dollar.lte=>50,
+                                #   :social_impact.in=>social_impacts}) 
+               elsif loan_amount == "50-100" 
+               elsif loan_amount == "100-250"  
+                  p "**** I am in ========"  
+
+                  @loans = Loan.all(:conditions =>{:category_id.in=>@cat_ids,:loan_amount_in_dollar.gte=>100,:loan_amount_in_dollar.lte=>250,
+			           :social_impact.in=>social_impacts}) 
+
+              
+                 logger.info "************************************************"    
+                render :update do |page| 
+                 page.replace_html "borrowers_result_id",:partial=>"borrowers_list"               
+                end  
+               elsif loan_amount == "greater than 250"   
+               end                    
+             end   
+           end               
+         end
+       end  
+     end
+     @loans = @loans.order_by([:loan_id,:desc])
+     @loans = Loan.paginate :page => params[:page], :per_page =>6
+
+    
+     end 
+   else
+     @title= "MILAAP - Beyond Just Credit"
+     @loans = Loan.all.order_by([:loan_id,:desc])
+     @loans = @loans.paginate :page => params[:page], :per_page =>6
+   end
+ end
+
+ def lender_profile
+  @title= "MILAAP - Beyond Just Credit"
+ end
+
+ def lend_money_to_borrower
+ 
+
+  @categories = Category.all
+  begin  
+   if request.post?
+    p "************"
+    p params
+    p "************" 
+    session[:borrower_id] = params[:borrower_id]
+    session[:loan_id] = params[:loan_id]
+    session[:amount] = params[:amount_1]  
+    @borrower = Borrower.first(:conditions => {:borrower_id => params[:borrower_id]})
+    @loan = Loan.first(:conditions => {:loan_id =>session[:loan_id]})
+    @loan_funded_percentage = Loan.first(:conditions => {:loan_id =>params[:loan_id]})
+    @amount  = params[:amount_1]
+    session[:transaction_fee] = ((@amount.to_f*4)/100).round(2)
+    p "***************"  
+    p session[:transaction_fee]    
+
+   else
+    @borrower = Borrower.first(:conditions => {:borrower_id =>  session[:borrower_id]})
+    @loan = Loan.first(:conditions => {:loan_id =>session[:loan_id]})
+    @amount = session[:amount] 
+     
+    session[:transaction_fee] = ((@amount.to_f*4)/100).round(2)
+     p "***************"  
+    p session[:transaction_fee]    
+   end
+  rescue
+   redirect_to root_path 
+  end
+ end
+ 
+  def about
+    @title= "About MILAAP - Beyond Just Credit"
+  end
+  
+  def contact_us
+    @title= "MILAAP - Beyond Just Credit"
+  end
+
+  def get_envolved
+    @title= "MILAAP - Beyond Just Credit"
+    session[:tab] ="get_envolved"
+  end
+
+  def how_it_work
+    @title= "MILAAP - Beyond Just Credit"
+    session[:tab] ="how_it_work" 
+  end  
+  
+  
+  def advisory_board
+  end  
+  
+  def team
+  end
+  
+  def volunteer
+  end
+  
+  def terms
+  end
+  
+  def jobs
+  end
+  
+  
+  def privacy
+  end
+  
+  def who_we_are
+   session[:tab] ="who_we_are"
+  end
+
+  def alpha_home
+    
+  end
+  
+ def thank_you
+ end
+
+  def why_milaap
+    @title= "MILAAP - Why Milaap"
+    session[:tab] ="why_milaap" 
+  end  
+
+ def verify_invitation_code 
+  #session[:original_uri] = request.env["HTTP_REFERER"]
+  #p "************ I am here too********************"  
+  #p session[:original_uri]
+  if user_signed_in?
+    if current_user.invitation_flag == true
+      session[:correct_invitation_token] = true
+    elsif current_user.invitation_flag == false
+      unless params[:invitation].blank?  
+        p "**************** I am here *******************"
+        @invitation =  Invitation.first(:conditions => {:invitation_token => params[:invitation]})
+        unless @invitation.blank?
+          
+	 if current_user.email == @invitation.recipient_email 
+	   session[:correct_invitation_token] = true
+	   current_user.invitation_flag=true
+	   current_user.save 
+	   redirect_to alpha_home_url 
+         else
+          flash[:notice] = "Please enter valid invitation code to access this page"
+          redirect_to :back  
+         end
+         
+        else
+         flash[:notice] = "Please enter valid invitation code to access this page"
+         redirect_to :back  
+        end
+      else
+         flash[:notice] = "Please enter valid invitation code to access this page"
+         #redirect_to :back
+      end
+    end
+  else
+    unless params[:invitation].blank? 
+      @invitation =  Invitation.first(:conditions => {:invitation_token => params[:invitation]})
+      unless @invitation.blank?
+       session[:correct_invitation_token] = true
+       redirect_to new_user_registration_path
+      else 
+	if session[:correct_invitation_token]
+         redirect_to view_all_projects_path
+	end
+      end  
+    end
+  end 
+ end 
+
+
+
+  #def verify_invitation_code 
+   #if user_signed_in?
+      #if current_user.invitation_flag == true 
+       #session[:correct_invitation_token] = true
+      #end  
+     #if request.post?
+     
+      #if current_user.invitation_flag == true 
+       #session[:correct_invitation_token] = true
+      #else  
+       #unless params[:invitation].blank? 
+	 #@invitation =  Invitation.first(:conditions => {:invitation_token => params[:invitation]})
+	 #unless @invitation.blank?
+	   #if current_user.email == @invitation.recipient_email 
+	    #session[:correct_invitation_token] = true
+	    #redirect_to alpha_home_url 
+	    #current_user.invitation_flag=true
+	    #current_user.save 
+	    #redirect_to view_all_projects_path
+	   #else
+	     #flash[:notice] = "Please enter valid invitation code"
+	    # redirect_to :back  
+	   #end  
+	 #else 
+	  # flash[:notice] = "Invalid invitation code"
+	 #  redirect_to :back  
+	# end
+       #end
+      
+      #end 
+     #else
+      #p "====raju=="
+      #if current_user.invitation_flag == true 
+      # session[:correct_invitation_token] = true
+      #else
+       #session[:correct_invitation_token] = false  
+     # end   
+     
+    #end
+   #else
+     #if request.post?
+      #unless params[:invitation].blank? 
+	 #@invitation =  Invitation.first(:conditions => {:invitation_token => params[:invitation]})
+	 #unless @invitation.blank?
+           #session[:correct_invitation_token] = true
+	  # redirect_to alpha_home_url
+         #else  
+	  # flash[:notice] = "Please enter valid invitation code"
+	 #  redirect_to :back  
+        # end
+       #else 
+        #flash[:notice] = "Invalid invitation code"
+	#redirect_to :back 
+    #   end  
+       
+   #  end  
+  # end
+ #end 
+    
+  
+end

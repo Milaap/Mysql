@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MILAAP - Beyond Just Credit</title>
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+<%= stylesheet_link_tag "common.css" %>
+<%= javascript_include_tag "jquery.js" %>
+<%= javascript_include_tag "rails.js" %>
+<%#= csrf_meta_tag %>
+
+
+<!--[if lt IE 7]> <script type="text/javascript" src="js/unitpngfix.js"></script><![endif]-->
+</head>
+
+<body>
+	<div id="header"><!-- Header div -->
+	<div class="wrapper"><!-- Wrapper div -->
+		<div id="logo" class="left"><a href="/"><img class="ie-png" src="/images/milaap.png"/></a></div>
+		<div class="right">
+			<div class="clear"></div>
+			<ul id="primary-nav" style="display:block;"><!-- Primary nav div -->
+				<li><a href="/" title="MILAAP - Beyond Just Credit" class="<% if  session[:tab] == 'home'%>active<% else%><% end %>">Home</a>
+				</li>
+				
+				<% if user_signed_in? %>
+				<%#= current_user.loan_pledged %>
+	<% if current_user.loan_pledged == true %> 
+	<li><a href="<%= view_all_projects_url %>" title="Give a loan" class="<% if  session[:tab] == 'pledge'%>active<% else%><% end %>">Give a loan</a></li>
+	<% else %>
+	<li><a href="<%= pledge_url %>" title="Pledge a loan" " class="<% if  session[:tab] == 'pledge'%>active<% else%><% end %>">Pledge a loan</a></li>
+	<% end %>
+	<% else %>
+	<li><a href="<%= pledge_url %>" title="Pledge a loan" class="<% if  session[:tab] == 'pledge'%>active<% else%><% end %>">Pledge a loan</a></li>
+	<% end %>
+				  <li><a href="<%= why_milaap_path %>" title="MILAAP - Why Milaap" class="<% if  session[:tab] == 'why_milaap'%>active<% else%><% end %>">Why Milaap</a></li>
+    <li><a href="<%= who_we_are_path %>" title="Who we are" class="<% if  session[:tab] == 'who_we_are'%>active<% else%><% end %>">Who we are</a></li>
+    <li><a href="<%= how_it_work_path %>" title="MILAAP - How it works" class="<% if  session[:tab] == 'how_it_work'%>active<% else%><% end %>">How it works</a></li>
+    <li><a href="<%= get_envolved_path %>" title="Get involved with MILAAP" class="<% if  session[:tab] == 'get_envolved'%>active<% else%><% end %>">Get involved</a></li>
+				
+				
+				
+				
+				
+			</ul><!-- /Primary nav div -->
+		</div>
+		<div class="clear"></div>
+			
+			<% unless current_user.blank? %>
+			<ul id="member-status" style="display:block;">
+				<li> <%if !current_user.facebook_name.blank? %>
+      <img src="https://graph.facebook.com/<%= current_user.facebook_uid %>/picture" align="left" height="19px;" width="19px;"/>
+ <span style="margin-left:5px;"><%= current_user.facebook_name %>
+      <% elsif !current_user.email.blank?%>
+      <%= current_user.email[0..15] %>
+      <% elsif !current_user.twitter_name.blank?%>
+      <%= current_user.twitter_name %>
+      <% else %>
+      Ananymous
+      <% end %></span></li> | 
+				<li><a href="/users/logout">Logout</a></li>
+				<li><a href="" class="clear"></a></li>
+			</ul>
+			
+		  <% end %>	
+		</div><!-- /Wrapper div -->
+
+	</div><!-- /Header div -->
+	
+		<%= yield %>
+	
+	<div id="footer"  style="margin-top:0px;"><!-- Footer div -->
+		<div class="wrapper">
+			<ul class="left">
+			  <li><a title="Privacy Policy" href="/privacy">Privacy Policy</a></li> | <li><a title="Terms and Conditions" href="/terms">Terms &amp; Conditions</a></li> | <li><a title="MILAAP - Beyond Just Credit" href="http://blog.milaap.org/">Blog</a></li> | <li><a title="Contact Milaap" href="/contact-us">Contact Us</a></li>
+			</ul>
+			<div class="copyright right">
+			  <p>&copy; 2010. Milaap.org. All rights reserved.</p>
+			</div>
+			<div class="clear"></div>
+		</div><!-- /Wrapper div -->
+	</div><!-- /Footer div -->
+
+<script type="text/javascript">
+ $(".accordion h4").click(function(){
+        $(this).next("p").toggle("slow")
+        $(this).toggleClass("active");
+             
+        });
+
+
+$("#choose-amount input").hover(
+  function () {
+    $(this).addClass("btnhover");
+  },
+  function () {
+    $(this).removeClass("btnhover");
+  }
+);
+setTimeout(fade_out, 10000);
+function fade_out() {
+  $("#notification").fadeOut().empty();
+}
+
+</script>
+
+
+     <script type="text/javascript">
+    	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    	</script>
+    	<script type="text/javascript">
+    	var pageTracker = _gat._getTracker("UA-4054156-1");
+    	pageTracker._setDomainName("none");
+    	pageTracker._setAllowLinker(true);
+    	pageTracker._setAllowHash(false);
+    	pageTracker._initData();
+    	pageTracker._trackPageview();
+    	</script>  
+
+</body>
+</html>

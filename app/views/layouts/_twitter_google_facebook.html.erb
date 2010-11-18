@@ -1,0 +1,9 @@
+<div style="display:block;"> <a href="/facebook-login<%#= user_fb_auth_path %>" > <img class="left" src="/images/fb-connect.gif" alt="Facebook Connect" title="Sign in with facebook"/> </a>
+  <p class="left">Sign in with facebook</p>
+</div>
+<div style="display:block; clear:both; padding-top:3px;"><a href="/google-login<%#= url_for(user_session_path(:warden_oauth_provider => 'google')) %>"><img class="left" src="/images/Gmail_logo.png" alt="Twitter Connect" title="Sign in with Google"/></a>
+  <p class="left">Sign in with Google</p>
+</div>
+<!--div style="display:block; clear:both; padding-top:3px;"><a href="<%#= twitter_login_path %>"><img class="left" src="/images/twitter-connect.png" alt="Facebook Connect"/></a>
+  <p class="left">Sign up with Twitter</p>
+</div-->
