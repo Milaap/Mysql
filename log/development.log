@@ -29092,3 +29092,2295 @@ ActionController::RoutingError (No route matches "/undefined"):
   
 
 Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 19 15:57:24 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.2ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__621204928_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (123.9ms)
+Completed 200 OK in 159ms (Views: 125.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at Fri Nov 19 15:57:24 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at Fri Nov 19 15:57:26 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at Fri Nov 19 15:57:26 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/borrower-profile/1/nirmala-shah" for 127.0.0.1 at Fri Nov 19 15:57:28 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"nirmala-shah", "id"=>"1"}
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (87.9ms)
+Completed 200 OK in 463ms (Views: 90.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-1.jpg" for 127.0.0.1 at Fri Nov 19 15:57:28 +0530 2010
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-1.jpg", "id"=>"1"}
+  [1m[36mBorrower Load (0.5ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoan Load (0.3ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.4ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.1ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (0.1ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.0ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (75.5ms)
+Completed 200 OK in 459ms (Views: 79.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/borrower-profile/1/undefined" for 127.0.0.1 at Fri Nov 19 15:57:29 +0530 2010
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"undefined", "id"=>"1"}
+  [1m[35mBorrower Load (0.2ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.2ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.0ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (149.5ms)
+Completed 200 OK in 458ms (Views: 153.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-2.jpg" for 127.0.0.1 at Fri Nov 19 15:57:29 +0530 2010
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-2.jpg", "id"=>"1"}
+  [1m[36mBorrower Load (0.2ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.0ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.1ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (0.1ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.0ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 475ms (Views: 84.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-3.jpg" for 127.0.0.1 at Fri Nov 19 15:57:30 +0530 2010
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-3.jpg", "id"=>"1"}
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.0ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (147.9ms)
+Completed 200 OK in 490ms (Views: 152.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/jquery.rails.js" for 127.0.0.1 at Fri Nov 19 15:57:31 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/borrower/" for 127.0.0.1 at Fri Nov 19 15:57:31 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/images/" for 127.0.0.1 at Fri Nov 19 15:57:31 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at Fri Nov 19 15:57:34 +0530 2010
+  Processing by Devise::SessionsController#new as HTML
+Rendered users/sessions/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 53ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/images/home-carousel-1.jpg" for 127.0.0.1 at Fri Nov 19 15:57:34 +0530 2010
+
+ActionController::RoutingError (No route matches "/users/images/home-carousel-1.jpg"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at Fri Nov 19 15:57:34 +0530 2010
+
+ActionController::RoutingError (No route matches "/users/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/images/home-carousel-2.jpg" for 127.0.0.1 at Fri Nov 19 15:57:34 +0530 2010
+
+ActionController::RoutingError (No route matches "/users/images/home-carousel-2.jpg"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/users/images/home-carousel-3.jpg" for 127.0.0.1 at Fri Nov 19 15:57:34 +0530 2010
+
+ActionController::RoutingError (No route matches "/users/images/home-carousel-3.jpg"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/facebook-login" for 127.0.0.1 at Fri Nov 19 15:57:36 +0530 2010
+  Processing by FacebookController#facebook_login as HTML
+Redirected to https://graph.facebook.com/oauth/authorize?scope=offline_access%2Cemail%2Cpublish_stream&client_id=3427782e254e946dde3f83314bc8fa09&type=web_server&redirect_uri=http%3A%2F%2Flocalhost%3A3001%2Ffacebook-callback
+Completed 302 Found in 2ms
+
+
+Started GET "/facebook-callback?code=80a13368012d45251618951c-100000816800978%7CtERGusY2TalMaCKwRCIhREXdJFM" for 127.0.0.1 at Fri Nov 19 15:57:38 +0530 2010
+  Processing by FacebookController#facebook_call as HTML
+  Parameters: {"code"=>"80a13368012d45251618951c-100000816800978|tERGusY2TalMaCKwRCIhREXdJFM"}
+FB USER:
+<#Hashie::Mash education=[<#Hashie::Mash school=<#Hashie::Mash id="114495048567517" name="bharath university"> type="College" year=<#Hashie::Mash id="116575101703833" name="2009">>, <#Hashie::Mash school=<#Hashie::Mash id="115588345121836" name="SRM Nightingale"> type="High School" year=<#Hashie::Mash id="110828485622727" name="2004">>] email="ask4prasath@gmail.com" first_name="Prasath" hometown=<#Hashie::Mash id="102186159822587" name="Chennai, Tamil Nadu"> id="100000816800978" last_name="Venkatraman" link="http://www.facebook.com/profile.php?id=100000816800978" locale="en_US" location=<#Hashie::Mash id="106377336067638" name="Bangalore, India"> name="Prasath Venkatraman" quotes="Alcohol doesn't solve any problems; but then, think again, neither does milk. ?" timezone=5.5 updated_time="2010-09-17T17:44:07+0000" verified=true>
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`facebook_uid` = '100000816800978') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('ask4prasath@gmail.com')) AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  COMMIT
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2010-11-19 10:27:41', `last_sign_in_at` = '2010-11-18 13:26:29', `sign_in_count` = 3, `updated_at` = '2010-11-19 10:27:41' WHERE (`users`.`id` = 1)
+  [1m[36mSQL (46.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3001/welcome
+Completed 302 Found in 3237ms
+
+
+Started GET "/welcome" for 127.0.0.1 at Fri Nov 19 15:57:41 +0530 2010
+  Processing by HomeController#welcome as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered home/welcome.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 54ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at Fri Nov 19 15:57:41 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/view-all-projects" for 127.0.0.1 at Fri Nov 19 15:57:43 +0530 2010
+  Processing by HomeController#view_all_projects as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mLoan Load (0.2ms)[0m  SELECT `loans`.* FROM `loans` ORDER BY id desc
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`loan_id` = 1) LIMIT 1[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered home/_loan_funded_graph.html.erb (1.0ms)
+Rendered home/_view_all_projects_right_side.html.erb (2.1ms)
+Rendered home/view_all_projects.html.erb within layouts/application (183.7ms)
+Completed 200 OK in 199ms (Views: 185.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/javascripts/jquery.rails.js" for 127.0.0.1 at Fri Nov 19 15:57:43 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/borrower/" for 127.0.0.1 at Fri Nov 19 15:57:43 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/" for 127.0.0.1 at Fri Nov 19 15:57:43 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/borrower-profile/1/nirmala-shah" for 127.0.0.1 at Fri Nov 19 15:57:46 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"nirmala-shah", "id"=>"1"}
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (181.7ms)
+Completed 200 OK in 604ms (Views: 183.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/javascripts/jquery.rails.js" for 127.0.0.1 at Fri Nov 19 15:57:47 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/borrower/" for 127.0.0.1 at Fri Nov 19 15:57:47 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/" for 127.0.0.1 at Fri Nov 19 15:57:47 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started POST "/lend-money-to-borrower" for 127.0.0.1 at Fri Nov 19 15:57:52 +0530 2010
+  Processing by HomeController#lend_money_to_borrower as HTML
+  Parameters: {"amount_1"=>"1000", "borrower_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered home/lend_money_to_borrower.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 199ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/borrower/" for 127.0.0.1 at Fri Nov 19 15:57:53 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/images/" for 127.0.0.1 at Fri Nov 19 15:57:53 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/borrower/" for 127.0.0.1 at Fri Nov 19 15:58:05 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/" for 127.0.0.1 at Fri Nov 19 15:58:05 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 19 16:04:20 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mBorrower Load (0.4ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` LIMIT 3[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+Rendered home/_email_updates.html.erb (0.3ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__620597208_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (86.5ms)
+Completed 200 OK in 98ms (Views: 88.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at Fri Nov 19 16:04:20 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at Fri Nov 19 16:04:22 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/borrower/new" for 127.0.0.1 at Fri Nov 19 16:04:27 +0530 2010
+  Processing by FieldpartnerController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered fieldpartner/new.html.erb within layouts/application (83.8ms)
+Completed 200 OK in 99ms (Views: 92.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/borrower/images/home-carousel-1.jpg" for 127.0.0.1 at Fri Nov 19 16:04:27 +0530 2010
+
+ActionController::RoutingError (No route matches "/borrower/images/home-carousel-1.jpg"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/borrower/images/home-carousel-2.jpg" for 127.0.0.1 at Fri Nov 19 16:04:27 +0530 2010
+
+ActionController::RoutingError (No route matches "/borrower/images/home-carousel-2.jpg"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/borrower/images/home-carousel-3.jpg" for 127.0.0.1 at Fri Nov 19 16:04:28 +0530 2010
+
+ActionController::RoutingError (No route matches "/borrower/images/home-carousel-3.jpg"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/borrower/undefined" for 127.0.0.1 at Fri Nov 19 16:04:28 +0530 2010
+
+ActionController::RoutingError (No route matches "/borrower/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/borrower/new" for 127.0.0.1 at Fri Nov 19 16:04:56 +0530 2010
+  Processing by BorrowerController#new as HTML
+Rendered borrower/_form.html.erb (612.5ms)
+Rendered borrower/new.html.erb within layouts/borrower (614.1ms)
+Completed   in 624ms
+
+ActionView::Template::Error (undefined method `borrowers_path' for #<#<Class:0xb5d662e8>:0xb5d64a9c>):
+    1: 
+    2: 
+    3: <%= form_for @borrower do |f| %>
+    4: 
+    5:     <%= f.submit %>
+    6: 
+  app/views/borrower/_form.html.erb:3:in `_app_views_borrower__form_html_erb___1051322443__622132658_532656'
+  app/views/borrower/new.html.erb:4:in `_app_views_borrower_new_html_erb___192064317__622126128_0'
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (523.9ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (533.5ms)
+
+
+Started GET "/borrower/new" for 127.0.0.1 at Fri Nov 19 16:11:51 +0530 2010
+  Processing by BorrowerController#new as HTML
+Rendered borrower/new.html.erb within layouts/borrower (477.5ms)
+Completed   in 487ms
+
+ActionView::Template::Error (undefined method `borrowers_path' for #<#<Class:0xb615a714>:0xb6158f2c>):
+    1: <h1>Borrower Form</h1>
+    2: 
+    3: 
+    4: <%= form_for @borrower do |f| %>
+    5: 
+    6:     <%= f.submit %>
+    7: 
+  app/views/borrower/new.html.erb:4:in `_app_views_borrower_new_html_erb___192064317__620053568_0'
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (504.3ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (510.9ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+
+
+Started GET "/borrower/new" for 127.0.0.1 at Fri Nov 19 16:12:26 +0530 2010
+  Processing by BorrowerController#new as HTML
+Rendered borrower/new.html.erb within layouts/borrower (506.6ms)
+Completed   in 516ms
+
+ActionView::Template::Error (undefined method `borrowers_path' for #<#<Class:0xb603c0f8>:0xb603b1bc>):
+    1: <h1>Borrower Form</h1>
+    2: 
+    3: 
+    4: <%= form_for @borrower do |f| %>
+    5: 
+    6:     <%= f.submit %>
+    7: 
+  app/views/borrower/new.html.erb:4:in `_app_views_borrower_new_html_erb___192064317__620637528_0'
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (469.9ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (534.6ms)
+
+
+Started GET "/borrower/new" for 127.0.0.1 at Fri Nov 19 16:14:36 +0530 2010
+  Processing by BorrowerController#new as HTML
+Rendered borrower/new.html.erb within layouts/borrower (571.9ms)
+Completed   in 581ms
+
+ActionView::Template::Error (undefined method `borrowers_path' for #<#<Class:0xb6142fc4>:0xb6142088>):
+    1: <h1>Borrower Form</h1>
+    2: 
+    3: 
+    4: <%= form_for @borrower do |f| %>
+    5: 
+    6:     <%= f.submit %>
+    7: 
+  app/views/borrower/new.html.erb:4:in `_app_views_borrower_new_html_erb___192064317__620098938_0'
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (428.0ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (495.1ms)
+
+
+Started GET "/borrower/new" for 127.0.0.1 at Fri Nov 19 16:15:35 +0530 2010
+  Processing by BorrowerController#new as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered borrower/new.html.erb within layouts/borrower (183.1ms)
+Completed 200 OK in 193ms (Views: 185.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/borrower/new" for 127.0.0.1 at Fri Nov 19 16:23:53 +0530 2010
+  Processing by BorrowerController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered borrower/new.html.erb within layouts/borrower (69.4ms)
+Completed 200 OK in 78ms (Views: 71.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/borrower/new" for 127.0.0.1 at Fri Nov 19 16:23:56 +0530 2010
+  Processing by BorrowerController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered borrower/new.html.erb within layouts/borrower (85.6ms)
+Completed 200 OK in 95ms (Views: 88.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/borrower/new" for 127.0.0.1 at Fri Nov 19 16:27:17 +0530 2010
+  Processing by BorrowerController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered borrower/new.html.erb within layouts/borrower (185.6ms)
+Completed 200 OK in 197ms (Views: 188.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/borrower/create" for 127.0.0.1 at Fri Nov 19 16:27:22 +0530 2010
+  Processing by BorrowerController#create as HTML
+  Parameters: {"commit"=>"Create Borrower", "authenticity_token"=>"+Bjy73+SrMCCDhE6zVn87o9NfKdQC3yzt8CZh9WHIs0=", "_snowman"=>"\342\230\203", "borrower"=>{"name"=>"", "photo"=>"", "interest_rate"=>"", "country"=>"fgf", "loan_id"=>"", "term"=>"", "district"=>"", "poverty_level"=>"", "taluka"=>"gfg", "village"=>"gf", "gender"=>"", "borrower_story"=>"", "home_image"=>"", "date_disbursed"=>"", "SHG"=>"gfg", "community_id"=>"", "loan_amount"=>"gfgf", "age"=>"gfgfg", "date_of_final_payment"=>"", "state"=>""}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `borrowers`[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `borrowers` (`SHG`, `age`, `avg_monthly_income`, `borrower_group_id`, `borrower_story`, `community_id`, `country`, `created_at`, `credit_rating`, `date_disbursed`, `date_of_final_payment`, `district`, `education`, `field_partner_id`, `gender`, `home_image`, `impact_story_image`, `interest_rate`, `lender_id`, `loan_amount`, `loan_id`, `name`, `name_of_student`, `occupation`, `photo`, `poverty_level`, `profile_image`, `purpose`, `relationship_with_applicant`, `search_image`, `state`, `taluka`, `term`, `updated_at`, `village`) VALUES ('gfg', 0, NULL, NULL, '', NULL, 'fgf', '2010-11-19 10:57:23', NULL, NULL, NULL, '', NULL, NULL, '', '', NULL, NULL, NULL, 0.0, NULL, '', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, '', 'gfg', NULL, '2010-11-19 10:57:23', 'gf')
+  [1m[36mSQL (72.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered borrower/create.html.erb within layouts/borrower (50.8ms)
+Completed 200 OK in 167ms (Views: 55.5ms | ActiveRecord: 73.4ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.2ms)[0m  SELECT `borrowers`.* FROM `borrowers` ORDER BY borrowers.id DESC LIMIT 1
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 19 16:32:57 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mBorrower Load (0.3ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` LIMIT 3[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+Rendered home/index.html.erb within layouts/application (47.8ms)
+Completed   in 58ms
+
+ActionView::Template::Error (Couldn't find Loan without an ID):
+    37:       <%  @borrowers.each_with_index do |borrower,i| %>
+    38: 			<%# p borrower.loan_id %>	
+    39: 			
+    40: 			<% @loan = Loan.find(borrower.loan_id)%>
+    41: 			<%#= @loan %>
+    42: 					<div class="project-details" <% if i ==2 %>style="margin-right: 0pt;"<% end %>>
+    43: 					 
+  app/views/home/index.html.erb:40:in `_app_views_home_index_html_erb__925297321__620297118_0'
+  app/views/home/index.html.erb:37:in `each'
+  app/views/home/index.html.erb:37:in `each_with_index'
+  app/views/home/index.html.erb:37:in `_app_views_home_index_html_erb__925297321__620297118_0'
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (445.8ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (515.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 19 16:33:24 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` LIMIT 3[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+Rendered home/index.html.erb within layouts/application (47.9ms)
+Completed   in 58ms
+
+ActionView::Template::Error (Couldn't find Loan without an ID):
+    37:       <%  @borrowers.each_with_index do |borrower,i| %>
+    38: 			<%# p borrower.loan_id %>	
+    39: 			
+    40: 			<% @loan = Loan.find(borrower.loan_id)%>
+    41: 			<%#= @loan %>
+    42: 					<div class="project-details" <% if i ==2 %>style="margin-right: 0pt;"<% end %>>
+    43: 					 
+  app/views/home/index.html.erb:40:in `_app_views_home_index_html_erb__925297321__620391218_0'
+  app/views/home/index.html.erb:37:in `each'
+  app/views/home/index.html.erb:37:in `each_with_index'
+  app/views/home/index.html.erb:37:in `_app_views_home_index_html_erb__925297321__620391218_0'
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (461.7ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (526.9ms)
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` ORDER BY borrowers.id DESC LIMIT 1[0m
+  [1m[35mSQL (45.4ms)[0m  DELETE FROM `borrowers` WHERE (`borrowers`.`id` = 2)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 19 16:39:45 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mBorrower Load (0.3ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` LIMIT 3[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__620446628_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (97.6ms)
+Completed 200 OK in 108ms (Views: 99.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at Fri Nov 19 16:39:45 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at Fri Nov 19 16:39:46 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 19 16:40:13 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.4ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__620116248_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`id` = 1) LIMIT 1
+Rendered home/index.html.erb within layouts/application (123.6ms)
+Completed 200 OK in 135ms (Views: 125.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at Fri Nov 19 16:40:14 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at Fri Nov 19 16:40:15 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.2ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at Fri Nov 19 16:40:15 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 16:41:00 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.3ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__623862568_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 200ms (Views: 69.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 16:41:00 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 16:41:01 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/" for 59.178.166.120 at Fri Nov 19 16:42:21 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__625262058_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (135.2ms)
+Completed 200 OK in 145ms (Views: 137.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 59.178.166.120 at Fri Nov 19 16:42:22 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 59.178.166.120 at Fri Nov 19 16:42:24 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 16:42:43 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.3ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__625403778_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (140.0ms)
+Completed 200 OK in 149ms (Views: 141.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 16:42:43 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 16:42:45 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/borrower/new" for 172.21.100.250 at Fri Nov 19 16:44:12 +0530 2010
+  Processing by BorrowerController#new as HTML
+Rendered borrower/new.html.erb within layouts/borrower (117.8ms)
+Completed 200 OK in 127ms (Views: 120.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/borrower/new" for 172.21.100.250 at Fri Nov 19 16:47:13 +0530 2010
+  Processing by BorrowerController#new as HTML
+Rendered borrower/new.html.erb within layouts/borrower (54.7ms)
+Completed 200 OK in 65ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 16:47:30 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.4ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__623867668_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (73.6ms)
+Completed 200 OK in 84ms (Views: 75.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 16:47:31 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 16:47:32 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/borrower-profile/1/nirmala-shah" for 172.21.100.250 at Fri Nov 19 16:48:11 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"nirmala-shah", "id"=>"1"}
+  [1m[35mBorrower Load (0.2ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.0ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (82.6ms)
+Completed 200 OK in 461ms (Views: 85.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-1.jpg" for 172.21.100.250 at Fri Nov 19 16:48:11 +0530 2010
+
+
+Started GET "/javascripts/jquery.rails.js" for 172.21.100.250 at Fri Nov 19 16:48:11 +0530 2010
+
+
+Started GET "/borrower-profile/1/images/home-carousel-2.jpg" for 172.21.100.250 at Fri Nov 19 16:48:12 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+
+
+Started GET "/borrower-profile/1/undefined" for 172.21.100.250 at Fri Nov 19 16:48:12 +0530 2010
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-3.jpg" for 172.21.100.250 at Fri Nov 19 16:48:12 +0530 2010
+
+
+Started GET "/images/borrower/" for 172.21.100.250 at Fri Nov 19 16:48:12 +0530 2010
+
+
+Started GET "/images/" for 172.21.100.250 at Fri Nov 19 16:48:12 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-3.jpg", "id"=>"1"}
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-1.jpg", "id"=>"1"}
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-2.jpg", "id"=>"1"}
+  [1m[36mBorrower Load (4.5ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"undefined", "id"=>"1"}
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.1ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.8ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.1ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mSQL (4.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (8.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.2ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[35mFieldPartner Load (0.1ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[36mCommunity Load (0.0ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (208.6ms)
+Completed 200 OK in 794ms (Views: 214.8ms | ActiveRecord: 5.7ms)
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (83.1ms)
+Completed 200 OK in 892ms (Views: 87.9ms | ActiveRecord: 0.8ms)
+Rendered home/borrower_profile.html.erb within layouts/application (247.4ms)
+Completed 200 OK in 1001ms (Views: 256.4ms | ActiveRecord: 13.5ms)
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 979ms (Views: 68.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/borrower-profile/1/nirmala-shah" for 59.178.166.120 at Fri Nov 19 16:49:03 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"nirmala-shah", "id"=>"1"}
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.0ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.0ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (1.9ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.1ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (187.6ms)
+Completed 200 OK in 524ms (Views: 189.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-1.jpg" for 59.178.166.120 at Fri Nov 19 16:49:04 +0530 2010
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-1.jpg", "id"=>"1"}
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.0ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+
+
+Started GET "/javascripts/jquery.rails.js" for 59.178.166.120 at Fri Nov 19 16:49:04 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+
+
+Started GET "/borrower-profile/1/images/home-carousel-2.jpg" for 59.178.166.120 at Fri Nov 19 16:49:04 +0530 2010
+  [1m[36mFieldPartner Load (4.3ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+
+
+Started GET "/borrower-profile/1/images/home-carousel-3.jpg" for 59.178.166.120 at Fri Nov 19 16:49:04 +0530 2010
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+
+
+Started GET "/borrower-profile/1/undefined" for 59.178.166.120 at Fri Nov 19 16:49:04 +0530 2010
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-2.jpg", "id"=>"1"}
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+
+
+Started GET "/images/borrower/" for 59.178.166.120 at Fri Nov 19 16:49:04 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered home/borrower_profile.html.erb within layouts/application (191.1ms)
+Completed 200 OK in 582ms (Views: 191.4ms | ActiveRecord: 4.6ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"undefined", "id"=>"1"}
+  [1m[36mLoanRepayment Load (0.1ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+
+
+Started GET "/images/" for 59.178.166.120 at Fri Nov 19 16:49:04 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+  [1m[35mBorrower Load (0.4ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.9ms)
+  [1m[35mCategory Load (2.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.1ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-3.jpg", "id"=>"1"}
+  [1m[36mLoan Load (1.9ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[36mBorrower Load (2.7ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.1ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.1ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (0.1ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.0ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (84.0ms)
+Completed 200 OK in 541ms (Views: 89.2ms | ActiveRecord: 2.4ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.0ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (0.1ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.0ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (161.2ms)
+Completed 200 OK in 583ms (Views: 165.7ms | ActiveRecord: 3.2ms)
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (85.3ms)
+Completed 200 OK in 794ms (Views: 90.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/borrower-profile/1/nirmala-shah" for 116.88.200.81 at Fri Nov 19 16:49:17 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"nirmala-shah", "id"=>"1"}
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.1ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.0ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (0.1ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.0ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (145.7ms)
+Completed 200 OK in 464ms (Views: 147.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/jquery.rails.js" for 116.88.200.81 at Fri Nov 19 16:49:19 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/" for 116.88.200.81 at Fri Nov 19 16:49:19 +0530 2010
+
+
+Started GET "/images/borrower/" for 116.88.200.81 at Fri Nov 19 16:49:19 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/borrower-profile/1/nirmala-shah" for 172.21.100.250 at Fri Nov 19 16:50:38 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"nirmala-shah", "id"=>"1"}
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 442ms (Views: 80.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-1.jpg" for 172.21.100.250 at Fri Nov 19 16:50:38 +0530 2010
+
+
+Started GET "/javascripts/jquery.rails.js" for 172.21.100.250 at Fri Nov 19 16:50:38 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+
+
+Started GET "/borrower-profile/1/images/home-carousel-2.jpg" for 172.21.100.250 at Fri Nov 19 16:50:38 +0530 2010
+
+
+Started GET "/borrower-profile/1/images/home-carousel-3.jpg" for 172.21.100.250 at Fri Nov 19 16:50:38 +0530 2010
+
+
+Started GET "/borrower-profile/1/undefined" for 172.21.100.250 at Fri Nov 19 16:50:38 +0530 2010
+
+
+Started GET "/images/borrower/" for 172.21.100.250 at Fri Nov 19 16:50:38 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.8ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/images/" for 172.21.100.250 at Fri Nov 19 16:50:38 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-2.jpg", "id"=>"1"}
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (2.5ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+
+
+Started GET "/images/borrower/" for 172.21.100.250 at Fri Nov 19 16:50:39 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+
+
+Started GET "/images/" for 172.21.100.250 at Fri Nov 19 16:50:39 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (21.2ms)
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-1.jpg", "id"=>"1"}
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"undefined", "id"=>"1"}
+  [1m[36mBorrower Load (4.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (4.2ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[35mLoan Load (2.5ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-3.jpg", "id"=>"1"}
+  [1m[35mLoan Load (4.9ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (1.8ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[36mLoanRepayment Load (0.1ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (2.7ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.1ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mLoanLender Load (0.1ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.0ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (82.5ms)
+Completed 200 OK in 726ms (Views: 87.3ms | ActiveRecord: 7.0ms)
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (0.1ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.0ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (3.8ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+Rendered home/borrower_profile.html.erb within layouts/application (177.1ms)
+Completed 200 OK in 645ms (Views: 181.8ms | ActiveRecord: 11.3ms)
+  [1m[36mCommunity Load (0.0ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (233.7ms)
+Completed 200 OK in 784ms (Views: 239.1ms | ActiveRecord: 9.0ms)
+Rendered home/borrower_profile.html.erb within layouts/application (190.9ms)
+Completed 200 OK in 681ms (Views: 201.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/facebook-login" for 172.21.100.250 at Fri Nov 19 16:50:48 +0530 2010
+  Processing by FacebookController#facebook_login as HTML
+Redirected to https://graph.facebook.com/oauth/authorize?scope=offline_access%2Cemail%2Cpublish_stream&client_id=3427782e254e946dde3f83314bc8fa09&type=web_server&redirect_uri=http%3A%2F%2Fpartner.milaap.org%3A3001%2Ffacebook-callback
+Completed 302 Found in 1ms
+
+
+Started GET "/borrower-profile/1/nirmala-shah" for 172.21.100.250 at Fri Nov 19 16:53:14 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"nirmala-shah", "id"=>"1"}
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.0ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.0ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (0.1ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.0ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (77.3ms)
+Completed 200 OK in 1059ms (Views: 79.3ms | ActiveRecord: 0.4ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+
+
+Started GET "/borrower-profile/1/nirmala-shah" for 172.21.100.250 at Fri Nov 19 16:53:35 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"nirmala-shah", "id"=>"1"}
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.0ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (59.7ms)
+Completed 200 OK in 1135ms (Views: 61.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-1.jpg" for 172.21.100.250 at Fri Nov 19 16:53:37 +0530 2010
+
+
+Started GET "/borrower-profile/1/images/home-carousel-2.jpg" for 172.21.100.250 at Fri Nov 19 16:53:37 +0530 2010
+
+
+Started GET "/borrower-profile/1/undefined" for 172.21.100.250 at Fri Nov 19 16:53:37 +0530 2010
+
+
+Started GET "/javascripts/jquery.rails.js" for 172.21.100.250 at Fri Nov 19 16:53:37 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+
+
+Started GET "/borrower-profile/1/images/home-carousel-3.jpg" for 172.21.100.250 at Fri Nov 19 16:53:37 +0530 2010
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-1.jpg", "id"=>"1"}
+
+
+Started GET "/images/borrower/" for 172.21.100.250 at Fri Nov 19 16:53:37 +0530 2010
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (23.8ms)
+
+
+Started GET "/images/" for 172.21.100.250 at Fri Nov 19 16:53:37 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-2.jpg", "id"=>"1"}
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"undefined", "id"=>"1"}
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-3.jpg", "id"=>"1"}
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.0ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.1ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.0ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mSQL (4.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (1.0ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mFieldPartner Load (0.6ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[35mLoanLender Load (0.0ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mCommunity Load (0.1ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (288.4ms)
+Completed 200 OK in 1293ms (Views: 300.3ms | ActiveRecord: 1.1ms)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 1211ms (Views: 70.6ms | ActiveRecord: 0.9ms)
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 1430ms (Views: 63.7ms | ActiveRecord: 5.6ms)
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (65.8ms)
+Completed 200 OK in 1420ms (Views: 70.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 16:54:39 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` LIMIT 3[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__624275538_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (70.5ms)
+Completed 200 OK in 81ms (Views: 72.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 16:54:42 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 16:54:43 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/borrower-profile/1/nirmala-shah" for 172.21.100.250 at Fri Nov 19 16:54:49 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"nirmala-shah", "id"=>"1"}
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.0ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.0ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (0.1ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.1ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (142.6ms)
+Completed 200 OK in 1075ms (Views: 144.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/jquery.rails.js" for 172.21.100.250 at Fri Nov 19 16:54:50 +0530 2010
+
+
+Started GET "/images/borrower/" for 172.21.100.250 at Fri Nov 19 16:54:50 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+
+
+Started GET "/images/" for 172.21.100.250 at Fri Nov 19 16:54:50 +0530 2010
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+
+
+Started GET "/borrower-profile/1/images/home-carousel-1.jpg" for 172.21.100.250 at Fri Nov 19 16:54:50 +0530 2010
+
+
+Started GET "/borrower-profile/1/images/home-carousel-2.jpg" for 172.21.100.250 at Fri Nov 19 16:54:50 +0530 2010
+
+
+Started GET "/borrower-profile/1/images/home-carousel-3.jpg" for 172.21.100.250 at Fri Nov 19 16:54:50 +0530 2010
+
+
+Started GET "/borrower-profile/1/undefined" for 172.21.100.250 at Fri Nov 19 16:54:50 +0530 2010
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.8ms)
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"images/home-carousel-1.jpg", "id"=>"1"}
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"images/home-carousel-2.jpg", "id"=>"1"}
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"undefined", "id"=>"1"}
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"images/home-carousel-3.jpg", "id"=>"1"}
+
+
+Started GET "/javascripts/jquery.rails.js" for 172.21.100.250 at Fri Nov 19 16:54:51 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/images/" for 172.21.100.250 at Fri Nov 19 16:54:51 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+
+
+Started GET "/images/borrower/" for 172.21.100.250 at Fri Nov 19 16:54:51 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (3.2ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mSQL (1.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[36mSQL (1.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mLoanLender Load (2.4ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[35mBorrower Load (2.2ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (102.1ms)
+Completed 200 OK in 1286ms (Views: 104.2ms | ActiveRecord: 0.4ms)
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (2.0ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+Rendered home/borrower_profile.html.erb within layouts/application (161.0ms)
+Completed 200 OK in 1405ms (Views: 161.2ms | ActiveRecord: 7.8ms)
+  [1m[36mFieldPartner Load (0.3ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[36mFieldPartner Load (5.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+  [1m[35mCommunity Load (2.3ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (171.1ms)
+Completed 200 OK in 1518ms (Views: 179.7ms | ActiveRecord: 1.8ms)
+Rendered home/borrower_profile.html.erb within layouts/application (295.0ms)
+Completed 200 OK in 1608ms (Views: 289.8ms | ActiveRecord: 11.4ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 16:57:05 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.3ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__621335878_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (118.5ms)
+Completed 200 OK in 153ms (Views: 120.3ms | ActiveRecord: 0.5ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 16:59:43 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__624473808_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 201ms (Views: 64.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 16:59:44 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 16:59:46 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 17:00:46 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.3ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__625873308_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (136.7ms)
+Completed 200 OK in 146ms (Views: 138.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 17:00:47 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 17:00:50 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 17:09:42 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.3ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__626040298_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (136.1ms)
+Completed 200 OK in 754ms (Views: 137.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 17:09:44 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 17:09:59 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__625724588_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (134.3ms)
+Completed 200 OK in 743ms (Views: 136.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 17:10:00 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 17:10:04 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.6ms)
+
+
+Started GET "/borrower-profile/1/nirmala-shah" for 172.21.100.250 at Fri Nov 19 17:10:05 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"nirmala-shah", "id"=>"1"}
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (82.0ms)
+Completed 200 OK in 1088ms (Views: 84.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/jquery.rails.js" for 172.21.100.250 at Fri Nov 19 17:10:06 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/" for 172.21.100.250 at Fri Nov 19 17:10:06 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/images/borrower/" for 172.21.100.250 at Fri Nov 19 17:10:06 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-1.jpg" for 172.21.100.250 at Fri Nov 19 17:10:06 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"images/home-carousel-1.jpg", "id"=>"1"}
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.0ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.0ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (0.1ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.0ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (154.1ms)
+Completed 200 OK in 1046ms (Views: 156.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-2.jpg" for 172.21.100.250 at Fri Nov 19 17:10:07 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"images/home-carousel-2.jpg", "id"=>"1"}
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.0ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (173.5ms)
+Completed 200 OK in 1118ms (Views: 175.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-3.jpg" for 172.21.100.250 at Fri Nov 19 17:10:09 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"images/home-carousel-3.jpg", "id"=>"1"}
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.0ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.0ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (0.1ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.1ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (79.7ms)
+Completed 200 OK in 1050ms (Views: 81.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/borrower-profile/1/undefined" for 172.21.100.250 at Fri Nov 19 17:10:10 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"undefined", "id"=>"1"}
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.0ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (148.2ms)
+Completed 200 OK in 1034ms (Views: 150.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/javascripts/jquery.rails.js" for 172.21.100.250 at Fri Nov 19 17:10:11 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/borrower/" for 172.21.100.250 at Fri Nov 19 17:10:11 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/" for 172.21.100.250 at Fri Nov 19 17:10:11 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 17:10:58 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__624469388_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 802ms (Views: 67.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 17:10:59 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 17:11:02 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 17:11:27 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.3ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__625896318_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (138.0ms)
+Completed 200 OK in 750ms (Views: 140.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 17:11:29 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 17:11:33 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 17:27:46 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.3ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__626019728_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (140.8ms)
+Completed 200 OK in 755ms (Views: 143.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 17:27:47 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 17:27:50 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 116.88.200.81 at Fri Nov 19 18:02:47 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.7ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__625820388_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (144.1ms)
+Completed 200 OK in 1426ms (Views: 146.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/undefined" for 116.88.200.81 at Fri Nov 19 18:02:55 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 18:11:10 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__625414948_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (142.3ms)
+Completed 200 OK in 3693ms (Views: 145.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:11:14 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:11:18 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/view-all-projects" for 172.21.100.250 at Fri Nov 19 18:14:43 +0530 2010
+  Processing by HomeController#view_all_projects as HTML
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories`
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` ORDER BY id desc[0m
+  [1m[35mBorrower Load (0.2ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`loan_id` = 1) LIMIT 1
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered home/_loan_funded_graph.html.erb (1.1ms)
+Rendered home/_view_all_projects_right_side.html.erb (2.5ms)
+Rendered home/view_all_projects.html.erb within layouts/application (164.5ms)
+Completed 200 OK in 746ms (Views: 166.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/jquery.rails.js" for 172.21.100.250 at Fri Nov 19 18:14:44 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/images/borrower/" for 172.21.100.250 at Fri Nov 19 18:14:44 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/" for 172.21.100.250 at Fri Nov 19 18:14:44 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 18:16:56 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__624314628_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 654ms (Views: 63.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:16:57 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:17:00 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:17:00 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 18:19:10 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__624715768_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (64.5ms)
+Completed 200 OK in 1291ms (Views: 66.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:19:12 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:19:15 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:19:15 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 18:19:50 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__624640328_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (75.3ms)
+Completed 200 OK in 1778ms (Views: 77.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:19:52 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:19:57 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:19:58 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 18:20:59 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__624750488_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (68.6ms)
+Completed 200 OK in 1773ms (Views: 70.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:21:01 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:21:04 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:21:04 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/milaap/code/bet_after_work/milaap/vendor/plugins/authlogic/rails/init.rb. (called from /home/milaap/code/bet_after_work/milaap/system/ruby/1.8/gems/railties-3.0.0.rc/lib/rails/plugin.rb:78)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 18:25:49 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` LIMIT 3
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+Rendered home/_email_updates.html.erb (0.3ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__624766658_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 2411ms (Views: 65.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:25:52 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:25:55 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:25:55 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/borrower-profile/1/nirmala-shah" for 172.21.100.250 at Fri Nov 19 18:25:55 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"nirmala-shah", "id"=>"1"}
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (77.6ms)
+Completed 200 OK in 2762ms (Views: 80.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-1.jpg" for 172.21.100.250 at Fri Nov 19 18:25:58 +0530 2010
+
+
+Started GET "/javascripts/jquery.rails.js" for 172.21.100.250 at Fri Nov 19 18:25:58 +0530 2010
+
+
+Started GET "/borrower-profile/1/images/home-carousel-2.jpg" for 172.21.100.250 at Fri Nov 19 18:25:58 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+
+
+Started GET "/borrower-profile/1/images/home-carousel-3.jpg" for 172.21.100.250 at Fri Nov 19 18:25:58 +0530 2010
+
+
+Started GET "/images/borrower/" for 172.21.100.250 at Fri Nov 19 18:25:58 +0530 2010
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/borrower-profile/1/undefined" for 172.21.100.250 at Fri Nov 19 18:25:58 +0530 2010
+
+
+Started GET "/images/" for 172.21.100.250 at Fri Nov 19 18:25:58 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (14.5ms)
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-1.jpg", "id"=>"1"}
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-2.jpg", "id"=>"1"}
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"undefined", "id"=>"1"}
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-3.jpg", "id"=>"1"}
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.0ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.0ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mLoan Load (8.2ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mFieldPartner Load (3.7ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mSQL (3.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (3.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mSQL (6.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.6ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mCategory Load (2.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mLoan Load (4.5ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.7ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[35mLoanRepayment Load (0.1ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCommunity Load (8.4ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (499.5ms)
+Completed 200 OK in 3208ms (Views: 504.7ms | ActiveRecord: 12.4ms)
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (104.2ms)
+Completed 200 OK in 3017ms (Views: 108.9ms | ActiveRecord: 8.2ms)
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (127.8ms)
+Completed 200 OK in 3155ms (Views: 151.4ms | ActiveRecord: 10.9ms)
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (93.7ms)
+Completed 200 OK in 3335ms (Views: 99.1ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/" for 172.21.100.250 at Fri Nov 19 18:26:16 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` LIMIT 3[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+Rendered home/_email_updates.html.erb (0.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_home_index_html_erb__925297321__624255078_0 at /home/milaap/code/bet_after_work/milaap/app/views/home/index.html.erb:82)
+Rendered home/index.html.erb within layouts/application (74.2ms)
+Completed 200 OK in 2447ms (Views: 77.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:26:19 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/undefined" for 172.21.100.250 at Fri Nov 19 18:26:21 +0530 2010
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/borrower-profile/1/nirmala-shah" for 172.21.100.250 at Fri Nov 19 18:29:06 +0530 2010
+  Processing by HomeController#borrower_profile as HTML
+  Parameters: {"name"=>"nirmala-shah", "id"=>"1"}
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.5ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.8ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.0ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (0.1ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.1ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+Rendered home/borrower_profile.html.erb within layouts/application (338.5ms)
+Completed 200 OK in 3113ms (Views: 353.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/borrower-profile/1/images/home-carousel-1.jpg" for 172.21.100.250 at Fri Nov 19 18:29:09 +0530 2010
+
+
+Started GET "/javascripts/jquery.rails.js" for 172.21.100.250 at Fri Nov 19 18:29:09 +0530 2010
+
+
+Started GET "/borrower-profile/1/images/home-carousel-2.jpg" for 172.21.100.250 at Fri Nov 19 18:29:09 +0530 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.rails.js"):
+  
+
+
+
+Started GET "/borrower-profile/1/undefined" for 172.21.100.250 at Fri Nov 19 18:29:09 +0530 2010
+
+
+Started GET "/borrower-profile/1/images/home-carousel-3.jpg" for 172.21.100.250 at Fri Nov 19 18:29:09 +0530 2010
+
+
+Started GET "/images/borrower/" for 172.21.100.250 at Fri Nov 19 18:29:09 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (19.9ms)
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-1.jpg", "id"=>"1"}
+
+
+Started GET "/images/" for 172.21.100.250 at Fri Nov 19 18:29:09 +0530 2010
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/images/borrower/" for 172.21.100.250 at Fri Nov 19 18:29:09 +0530 2010
+
+ActionController::RoutingError (No route matches "/images/borrower"):
+  
+
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+Rendered system/ruby/1.8/gems/actionpack-3.0.0.rc/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-2.jpg", "id"=>"1"}
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"images/home-carousel-3.jpg", "id"=>"1"}
+  Processing by HomeController#borrower_profile as */*
+  Parameters: {"name"=>"undefined", "id"=>"1"}
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mBorrower Load (0.1ms)[0m  [1mSELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoan Load (0.1ms)[0m  SELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1
+  [1m[36mLoanRepayment Load (0.0ms)[0m  [1mSELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)[0m
+  [1m[35mCategory Load (0.0ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+  [1m[36mLoanLender Load (0.1ms)[0m  [1mSELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)[0m
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[36mFieldPartner Load (1.7ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[35mCommunity Load (0.1ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+  [1m[36mCategory Load (2.2ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[35mFieldPartner Load (3.9ms)[0m  SELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1
+  [1m[36mCommunity Load (0.1ms)[0m  [1mSELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.1ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+Rendered home/borrower_profile.html.erb within layouts/application (323.6ms)
+Completed 200 OK in 3032ms (Views: 326.9ms | ActiveRecord: 2.1ms)
+Rendered home/borrower_profile.html.erb within layouts/application (228.8ms)
+Completed 200 OK in 2964ms (Views: 237.2ms | ActiveRecord: 4.3ms)
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (85.7ms)
+Completed 200 OK in 2972ms (Views: 90.6ms | ActiveRecord: 3.0ms)
+  [1m[35mBorrower Load (0.1ms)[0m  SELECT `borrowers`.* FROM `borrowers` WHERE (`borrowers`.`id` = 1) LIMIT 1
+  [1m[36mLoan Load (0.1ms)[0m  [1mSELECT `loans`.* FROM `loans` WHERE (`loans`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanRepayment Load (0.0ms)[0m  SELECT `loan_repayments`.* FROM `loan_repayments` WHERE (`loan_repayments`.`loan_id` = 1)
+  [1m[36mCategory Load (0.0ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1[0m
+  [1m[35mLoanLender Load (0.0ms)[0m  SELECT `loan_lenders`.* FROM `loan_lenders` WHERE (`loan_lenders`.`loan_id` = 1)
+++++++++++++++++++++Akluj Malshiras Solapur Maharashtra INDIA+++++++++++++++++++++++
+_______#<struct Ym4r::GmPlugin::Geocoding::Placemark address="Akluj-Malshiras Rd, Akluj, Maharashtra, India", country_code="IN", administrative_area="Maharashtra", sub_administrative_area="Solapur", locality="Akluj", dependent_locality="", thoroughfare="Akluj-Malshiras Rd", postal_code="", longitude=75.0055611, latitude=17.8902025, accuracy=6>-------------
+========17.890202575.0055611===========
+  [1m[36mFieldPartner Load (0.1ms)[0m  [1mSELECT `field_partners`.* FROM `field_partners` WHERE (`field_partners`.`field_partner_id` IS NULL) LIMIT 1[0m
+  [1m[35mCommunity Load (0.0ms)[0m  SELECT `communities`.* FROM `communities` WHERE (`communities`.`id` = 1) LIMIT 1
+Rendered home/borrower_profile.html.erb within layouts/application (147.4ms)
+Completed 200 OK in 5842ms (Views: 152.1ms | ActiveRecord: 0.4ms)

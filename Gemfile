@@ -29,5 +29,5 @@ gem "ym4r"
 gem "exception_notification", :git => "http://github.com/rails/exception_notification.git", :require =>  'exception_notifier'
 gem "hpricot"
 gem "geo_ip"
-
+gem "geokit"
 

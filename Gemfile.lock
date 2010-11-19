@@ -72,6 +72,7 @@ GEM
       oauth2
       rest-client
     geo_ip (0.2.0)
+    geokit (1.5.0)
     haml (3.0.17)
     hashie (0.3.1)
     hpricot (0.8.2)
@@ -139,6 +140,7 @@ DEPENDENCIES
   devise_oauth2_facebook!
   exception_notification!
   geo_ip
+  geokit
   haml
   hpricot
   json

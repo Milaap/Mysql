@@ -9,7 +9,8 @@ class HomeController < ApplicationController
 layout  'application'
 
  def index
-#      find_geo_location
+    puts "========================================#{request.remote_ip}"
+      find_geo_location
     session[:id] = nil
     session[:loan_id] = nil
     session[:amount] = nil

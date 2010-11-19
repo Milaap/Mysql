@@ -6,41 +6,20 @@ class ApplicationController < ActionController::Base
   #before_filter :authenticate_user!
  #  protect_from_forgery
   def  find_geo_location
-#		begin
-#			if cookies[:visiting_user_country].blank?
-#				geo_location = GeoIp.geolocation("#{request.remote_ip}")
-#				@country =  geo_location[:country_name]
-#				unless @country.blank?
-#					if @country == "Reserved"
-						$visiting_user_country = "India" 
-#					else
-#						$visiting_user_country = @country
-#					end
-#				end
-#				cookies[:visiting_user_country] = {
-#					:value => $visiting_user_country ,
-#					:expires => 30.days.from_now.utc
-#				}
-#			else
-#				geo_location = GeoIp.geolocation("#{request.remote_ip}")
-#				@country =  geo_location[:country_name]
-#				unless @country.blank?
-#					if @country == "Reserved"
-#						$visiting_user_country = "India"
-#					else
-#						$visiting_user_country = @country
-#					end
-#				end
-#				if  $visiting_user_country !=  cookies[:visiting_user_country]
-#					cookies[:visiting_user_country] = {
-#						:value => $visiting_user_country ,
-#						:expires => 30.days.from_now.utc
-#					}
-#				end
-#			end
-#		rescue
-#      $visiting_user_country = "United states"
-#		end
+    a = Geokit::Geocoders::MultiGeocoder.geocode("#{request.remote_ip.to_s}").country_code
+    puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#{a}"
+
+			if cookies[:visiting_user_country].blank?
+				geo_location = Geokit::Geocoders::MultiGeocoder.geocode("#{request.remote_ip}").country_code
+        puts "--------------------------------#{request.remote_ip}"
+        puts "--------------------------------#{geo_location}"				
+      	if  $visiting_user_country !=  cookies[:visiting_user_country]
+					cookies[:visiting_user_country] = {
+						:value => $visiting_user_country ,
+						:expires => 30.days.from_now.utc
+					}
+		    end	   
+	    end
 	end
 
  def check_invitation_code

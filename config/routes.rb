@@ -1,8 +1,9 @@
 Millap::Application.routes.draw do
-  
-  get "fieldpartner/new"
 
-  get "fieldpartner/create"
+  controller :borrower do
+    get 'borrower/new', :to => :new, :as => :new
+    post 'borrower/create', :to => :create, :as => :create
+  end
 
   controller :fieldpartner do
     get 'fp/new', :to => :new, :as => :new

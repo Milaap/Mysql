@@ -1,0 +1,27 @@
+<h1>Borrower Form</h1>
+
+
+<%= form_for @borrower, :url => {:controller => :borrower, :action => :create} do |f| %>
+  <%= f.label :gender %> <%= f.text_field :gender %><br />
+  <%= f.label :age %><%= f.text_field :age %><br />
+  <%= f.label :SHG %><%= f.text_field :SHG %><br />
+  <%= f.label :village %><%= f.text_field :village %><br />
+  <%= f.label :taluka %><%= f.text_field :taluka %><br />
+  <%= f.label  :state %><%= f.text_field  :state %><br />
+  <%= f.label :country %><%= f.text_field :country %><br />
+  <%= f.label :loan_amount %><%= f.text_field :loan_amount %><br />
+  <%= f.label :interest_rate %><%= f.text_field :interest_rate %><br />
+  <%= f.label :date_disbursed %><%= f.text_field :date_disbursed %><br />
+  <%= f.label :date_of_final_payment %><%= f.text_field :date_of_final_payment %><br />
+  <%= f.label :photo %><%= f.text_field :photo %><br />
+  <%= f.label :borrower_story %><%= f.text_field :borrower_story %><br />
+  <%= f.label :poverty_level %><%= f.text_field :poverty_level %><br />
+  <%= f.label :district %><%= f.text_field :district %><br />
+  <%= f.label :term %><%= f.text_field :term %><br />
+  <%= f.label :name %><%= f.text_field :name %><br />
+  <%= f.label :home_image %><%= f.text_field :home_image %><br />
+  <%= f.label :loan_id %><%= f.text_field :loan_id %><br />
+  <%= f.label :community_id %><%= f.text_field :community_id %><br />
+    <%= f.submit %>
+
+<% end %>
